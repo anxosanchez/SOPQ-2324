@@ -1,16 +1,17 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   page-navigation: true
   title: "SOPQ 2324"
-  description: "Homepage da asignatrua Simulación e Optimización de Procesos Químicos"
-  site-url: https://anxosanchez.github.io/sopq/
-  repo-url: https://github.com/anxosanchez/sopq.git
+  description: "Web da asignatrua Simulación e Optimización de Procesos Químicos"
+  site-url: https://anxosanchez.github.io/SOPQ-2324
+  repo-url: https://github.com/anxosanchez/SOPQ-2324
   repo-actions: [edit, issue]
   
   page-footer:
-    background: "#7eb7c2" #primary
+    background: "#D9E3E4" #"#7eb7c2" #primary "#D9E3E4"
     left: |
       &copy; Copyright 2023, Anxo Sánchez
     right: |
@@ -22,9 +23,9 @@ website:
     align: center
     tools: 
       - icon: github
-        href: https://github.com/anxosanchez/sopq
+        href: https://github.com/anxosanchez/SOPQ-2324
         text: "GitHub"
-      - icon: orcid
+      - icon: /imaxes/orcid.png
         href: https://orcid.org/423420398
         text: Orcid
         menu:

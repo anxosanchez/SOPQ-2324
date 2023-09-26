@@ -8,9 +8,9 @@ title: " Page Not Found "
 
 ## 404 PAGE NOT FOUND
 
-The page your are looking for might have benen removed, have its name changed or is tmporarily unavailable.
+The page your are looking for might have been removed, have its name changed or is tmporarily unavailable.
 
-![index.qmd](anxoblogiconlogo.bmp){width=200}
+A páxina que estás a buscar poido ser eliminada, cambiada de nome ou non está dispoñible.
 
 </center>
 

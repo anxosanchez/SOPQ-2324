@@ -1,5 +1,124 @@
 [
   {
+    "objectID": "simulacion-de-procesos-gl.html#resumo-das-clases-teóricas",
+    "href": "simulacion-de-procesos-gl.html#resumo-das-clases-teóricas",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Resumo das clases teóricas",
+    "text": "Resumo das clases teóricas\n\n\n\n\n\n\n\nConceptos\nNivel\n\n\n\n\nFundamentos da simulación de procesos\nBásico\n\n\nIntrodución á simulación de procesos\nBásico\n\n\nRexistro de novos compoñentes\nBásico\n\n\nEstimación de propiedades físicas para simulación de procesos\nBásico\n\n\nSimulación de correntes de reciclado\nBásico"
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#simulación-de-procesos",
+    "href": "simulacion-de-procesos-gl.html#simulación-de-procesos",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Simulación de procesos",
+    "text": "Simulación de procesos\n A simulación de procesos é unha técnica computacional empregada en varias industrias para:\n- Modelar\n- Analizar e\n- Optimizar procesos complexos.\n - Implica a creación dunha representación ou modelo dixital dun sistema ou proceso real para simular o seu comportamento en diferentes condicións."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#qué-implica-a-simulación-de-procesos",
+    "href": "simulacion-de-procesos-gl.html#qué-implica-a-simulación-de-procesos",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Qué implica a simulación de procesos?",
+    "text": "Qué implica a simulación de procesos?\nA simulación de procesos consiste en varias operacións ou tarefas como se mostra no seguinte gráfico\n\n\n\n\nflowchart TD\n  A[Inicio] --&gt; B[Modelado]\n  B --&gt; C[Entrada de Datos]\n  C --&gt; D[Simulación]\n  D --&gt; E[Visualización]\n  E --&gt; F[Análise]\n  F --&gt; G[Optimización]\n  G --&gt; H[Aplicación]\n  H --&gt; I[Fin]"
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#modelado",
+    "href": "simulacion-de-procesos-gl.html#modelado",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Modelado",
+    "text": "Modelado\n A simulación de procesos comeza coa creación dun modelo matemático ou computacional que representa:\n - Os compoñentes\n- As variables e\n- As interaccións clave dun proceso físico.\n Este modelo pode basearse en:\n- Ecuacións matemáticas\n- Datos empíricos\n Ou unha combinación de ambos."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#simulación",
+    "href": "simulacion-de-procesos-gl.html#simulación",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Simulación",
+    "text": "Simulación\nUnha vez que o modelo se desenvolve, impleméntase no software de simulación. O software usa algoritmos para: - Realizar cálculos numéricos - Resolver ecuacións para simular o comportamento do proceso ao longo do tempo."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#parámetros-de-entrada",
+    "href": "simulacion-de-procesos-gl.html#parámetros-de-entrada",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Parámetros de entrada",
+    "text": "Parámetros de entrada\nOs usuarios poden introducir varios parámetros: - Condicións de funcionamento - Especificacións de equipos - Variables de proceso, etc.  \npara explorar diferentes escenarios e estudar como os cambios afectan o proceso."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#visualización",
+    "href": "simulacion-de-procesos-gl.html#visualización",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Visualización",
+    "text": "Visualización\nO software de simulación de procesos adoita proporcionar representacións visuais de: - O proceso simulado, incluíndo - gráficos - animacións.  Isto permite aos usuarios obter información sobre o rendemento e o comportamento do sistema."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#análise",
+    "href": "simulacion-de-procesos-gl.html#análise",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Análise",
+    "text": "Análise\nOs usuarios poden analizar os resultados da simulación para avaliar: - A eficiencia - O rendemento - A seguridade do proceso.  Esta análise axuda a: - Identificar posibles bloqueos de botella - Optimizar o uso de recursos - Mellorar o deseño xeral do proceso."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#optimización",
+    "href": "simulacion-de-procesos-gl.html#optimización",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Optimización",
+    "text": "Optimización\nA simulación de procesos pódese usar para atopar o conxunto óptimo de: - parámetros ou -condicións  que leven ao resultado desexado, tales como: - Maximizar o rendemento da produción ou - Minimizar o consumo de enerxía. ## Aplicacións:\nA simulación de procesos se utiliza en diversas industrias, incluyendo la ingeniería química, la manufactura, el petróleo y el gas, la farmacéutica y el transporte, para modelar y mejorar procesos como reacciones químicas, líneas de producción, cadenas de suministro, entre otros."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#beneficios",
+    "href": "simulacion-de-procesos-gl.html#beneficios",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Beneficios:",
+    "text": "Beneficios:\n A simulación de procesos pode levar a:\n- Un aforro de custos\n- Unha mellor calidade do produto\n- Unha redución de riscos\n- Unha maior seguridade de produción\n permitindo probas virtuais e optimización antes de implementar cambios nos procesos do mundo real."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#fluxogramas",
+    "href": "simulacion-de-procesos-gl.html#fluxogramas",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Fluxogramas",
+    "text": "Fluxogramas\nAlexander C. Dimian (2003)  \n\nO diagrama de fluxo é unha descrición sistémica de fluxos de materiais e enerxía en a planta de proceso mediante simulación informática co ámbito de proxectar unha nova planta ou mellorar o rendemento dunha planta existente. \nO diagrama de fluxo pode usarse como axuda para implementar un control en toda a planta estratexia, así como para xestionar o funcionamento da planta."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#simulación---deseño---optimización-e-síntese-de-procesos-químicos",
+    "href": "simulacion-de-procesos-gl.html#simulación---deseño---optimización-e-síntese-de-procesos-químicos",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Simulación - Deseño - Optimización e Síntese de Procesos Químicos",
+    "text": "Simulación - Deseño - Optimización e Síntese de Procesos Químicos\n\nModelo de Linnhoff"
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#modelo-de-deseño-de-capas-da-cebola-linnhoff",
+    "href": "simulacion-de-procesos-gl.html#modelo-de-deseño-de-capas-da-cebola-linnhoff",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Modelo de deseño de capas da cebola (Linnhoff)",
+    "text": "Modelo de deseño de capas da cebola (Linnhoff)\n\nModelo de Linnhoff[Modelo de capa d] ::: {.notes} Dentro da síntese de procesos, un dos modelos importantes para guiar o fluxo a síntese é o modelo de cebola informado por primeira vez en Linnhoff et al. (1982). Como se mostra na figura 1.3, o exercicio de deseño de procesos comeza desde o núcleo do proceso e móvese cara a fóra. No centro da cebola, deseñase primeiro o sistema do reactor. O deseño do reactor inflúe nas estruturas de separación e reciclaxe segunda capa da cebola. A continuación, as estruturas do reactor e do separador ditan o requisitos xerais de calefacción e refrixeración do proceso. Polo tanto, o sistema de recuperación de calor deséñase a continuación, na terceira capa. Un sistema de utilidade no cuarto A continuación deséñase a capa para proporcionar requisitos adicionais de calefacción e refrixeración, que non se poden satisfacer mediante un sistema de recuperación de calor. Na capa final, o O sistema de tratamento de residuos está deseñado para xestionar varias emisións/efluentes o proceso, previo á descarga ambiental final. Nunha sección posterior deste capítulo, empregarase o modelo de cebola para guiar a simulación do fluxo integrado de procesos químicos. ::: ## Resumo\nA simulación de procesos é unha poderosa ferramenta que permite a proba virtual e a análise de procesos complexos, facilitando a decisión e a optimización nunha ampla gama de industrias."
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#arquitectura-de-simuladores-de-proceso",
+    "href": "simulacion-de-procesos-gl.html#arquitectura-de-simuladores-de-proceso",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Arquitectura de simuladores de proceso",
+    "text": "Arquitectura de simuladores de proceso\n\nModular secuencial\n\nBaseado no concepto de modularidade, que estende o concepto da enxeñaría de operación unitaria a un cálculo da unidades de operación mediante un o código informático responsable do cálculo das unidades de proceso.\n\nO cálculo de todo o fluxograma se fai unidade a unidade seguindo unha secuencia de cálculo.\n\n\nO orientado á ecuacións (Simultáneameo - Non modular)\n\nO modelo completo do fluxograma exprésase en forma dun gran sistema disperso de ecuacións alxébricas non lineais, que se solucionan simultaneamente para todas as incógnitas.\n\nModular Simultáneo Combinación de secuencial-modular e orientado á ecuación enfoques"
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#simuladores-de-procesos-comerciais-para-estado-estacionario",
+    "href": "simulacion-de-procesos-gl.html#simuladores-de-procesos-comerciais-para-estado-estacionario",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Simuladores de procesos Comerciais para Estado Estacionario",
+    "text": "Simuladores de procesos Comerciais para Estado Estacionario\n\nSequenciais – Modulares\n\nAspen Plus\nAspen Hysys\nChemCAD\nPRO II\nUniSim"
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#simuladores-de-procesos-comerciais-para-estado-estacionario-1",
+    "href": "simulacion-de-procesos-gl.html#simuladores-de-procesos-comerciais-para-estado-estacionario-1",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Simuladores de procesos Comerciais para Estado Estacionario",
+    "text": "Simuladores de procesos Comerciais para Estado Estacionario\n\nOrientados a Ecuación\n\ngProms\nVMGSim\nAspen Plus in EO\nAspen Custom Modeler ::::"
+  },
+  {
+    "objectID": "simulacion-de-procesos-gl.html#servizos-de-propiedades-físicas",
+    "href": "simulacion-de-procesos-gl.html#servizos-de-propiedades-físicas",
+    "title": "Introdución á Simulación de Procesos",
+    "section": "Servizos de propiedades físicas",
+    "text": "Servizos de propiedades físicas\n\nSubministran estimacións para varias propiedades físicas diferentes mentres a simulación está funcionando.\nO equilibrio de fase representa unha das propiedades físicas máis importantes, xa que moitas simulacións de procesos químicos implican destilación, separación, evaporación ou separación líquido - líquidos.\nResolven os balances de masa e enerxía para estas operacións que require a predicción:\n\nVapor - Equilibrio líquido (VLE)\nLíquido - Equilibrio líquido (LLE)\n\n\n\n\n\n\n\n\nNote\n\n\n\nA estimación de propiedades físicas pode consumir ata o 90% do tempo de computación dunha simulación. Os paquetes de propiedades úsanse para predecir o equilibrio de fase e o comportamento de compoñentes puros e sistemas de mestura\n\n\n\n\n\n\n\nhttps://github.com/anxosanchez/sopq"
+  },
+  {
     "objectID": "posts/posts.html",
     "href": "posts/posts.html",
     "title": "Blog",
@@ -11,14 +130,119 @@
     "href": "index.html",
     "title": "SOPQ 23-24: Simulación e Optimización de Procesos Químicos",
     "section": "",
-    "text": "Esta páxina contén un esquema dos temas, contido e tarefas para o semestre. Ten en conta que este horario actualizarase a medida que avanza o semestre, con todos os cambios documentados aquí."
+    "text": "Overview\nEsta páxina contén un esquema dos temas, contido e tarefas para o semestre. Ten en conta que este horario actualizarase a medida que avanza o semestre, con todos os cambios documentados aquí.\n\n\nClass meetings\n\n\n\n\n\n\n\n\n\nLecture\nSection 001\nMon & Wed 10:05 - 11:20am\nReuben-Cooke 130\n\n\n\nSection 002\nMon & Wed 1:25 - 2:40pm\nOld Chem 116\n\n\nLab\nLab 01\nTue 10:05 - 11:20am\nReuben-Cooke 129\n\n\n\nLab 02\nTue 11:45am - 1pm\nLSRC A155\n\n\n\nLab 03\nThu 10:05 - 11:20am\nReuben-Cooke 129\n\n\n\nLab 04\nThu 11:45am - 1pm\nSocial Sciences 124\n\n\n\n\n\nTeaching team\n\nProfesor\n\n\n\n\n\n\nAnxo Sánchez\n\n\n\n\n\n\n\nTitorías\nLugar\n\n\n\n\n\nDespacho 205 EEI Sede Cidade\n\n\nOu por cita previa.*\nVideoconferencia Teams"
   },
   {
-    "objectID": "index.html#teaching-assistants",
-    "href": "index.html#teaching-assistants",
-    "title": "SOPQ 23-24: Simulación e Optimización de Procesos Químicos",
-    "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n\n\n\n\nClick here for schedule of office hours.\n\n\n\n\n\n\n\n\n\n\n\nName\nRole\n\n\n\n\n\nSam Rosen\nHead TA\nLab 01: Tue 10:05 - 11:20am\n\n\nBethany Astor\nTA\nLab 02: Tue 11:45am - 1pm\n\n\nJon Campbell\nTA\n\n\n\nDonald Cayton\nTA\nLab 02: Tue 11:45am - 1pm\n\n\nAllison Li\nTA\n\n\n\nMitchelle Mojekwu\nTA\nLab 04: Thu 11:45am - 1pm\n\n\nBen Thorpe\nTA\n\n\n\nLinxuan Wang\nTA\nLab 03: Thu 10:05 - 11:20am\n\n\nXiaojun Zheng\nTA\nLab 04: Thu 11:45am - 1pm"
+    "objectID": "guia.html",
+    "href": "guia.html",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Materia: Simulación e optimización de procesos químicos Código: V12G350V Titulación: Grao en Enxeñaría en Química Industrial Descritores:\n\n\n\nCreditos ECTS\nSeleción\nCurso\nCuadrimestre\n\n\n\n\n6\nOB\n4\n1c\n\n\nLingua de impartición\nGalego,Inglés\n\n\n\n\nDepartamento\nEnxeñaría Química\n\n\n\n\nCoordinador/a\nSánchez Bermúdez, Ángel Manuel\n\n\n\n\nProfesorado\nSánchez Bermúdez, Ángel Manuel\n\n\n\n\nCorreo-e\nasanchez@uvigo.gal\n\n\n\n\nWeb\nhttp://http://eqea.uvigo.es\n\n\n\n\n\n\n\n\nAsignatura obrigatoria que se imparten no 7º cuadrimestre do Grao en Química Industrial, unha vez que o alumno estudou as materias nas que deben demostrar os coñecementos necesarios sobre:\n- Métodos numéricos empregados na enxeñaría química.\n- Deseño de reactores químicos.\n- Deseño de equipos para operacións de separación.\n- Deseño de equipos de transferencia de calor empregados en procesos químicos.\n- Control e seguridade dos procesos químicos.\nEsta materia impártese no último ano. O alumno accede despois de adquirir e desenvolver habilidades para xestionar facilmente as ferramentas informáticas da informática dixital, nas que o uso seguirá funcionando e afondar.\n\n\n\n\n\n\n\n\n\n\nCódigo\nDescrición\n\n\n\n\nB3\nCG3 Coñecemento en materias básicas e tecnolóxicas que os capacite para a aprendizaxe de novos métodos e teorías, e os dote de versatilidade para adaptarse a novas situacións.\n\n\nB4\nCG4 Capacidade para resolver problemas con iniciativa, toma de decisións, creatividade, razoamento crítico e capacidade para comunicar e transmitir coñecementos, habilidades e destrezas no campo da enxeñaría industrial na mención de Química Industrial.\n\n\nC20\nCE20 Capacidade para a análise, deseño, simulación e optimización de procesos e produtos.\n\n\nD2\nT2 Resolución de problemas.\n\n\nD6\nCT6 Aplicación da informática no ámbito de estudo.\n\n\nD8\nCT8 Toma de decisións.\n\n\nD9\nCT9 Aplicar coñecementos.\n\n\nD10\nCT10 Aprendizaxe e traballo autónomos.\n\n\nD17\nCT17 Traballo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nResultados previstos na materia\nResultados de Formación e Aprendizaxe\n\n\n\n\nSimular un diagrama de fluxo dun proceso en réxime estacionario. Coñecer os métodos mais importantes de simulación de procesos (modular e baseado en ecuacións). Analizar as características estructurais dun proceso químico e determinar o orde de cálculo das unidades,establecer o fluxo de información e seleccionar as variables ou correntes de corte de forma axeitada. Resolver problemas de gran escala modelados por sistemas de ecuacións alxebraicas (sistemas dispersos).\nB3 B4  C20  D6 D8 D9 D10 D17\n\n\nAnalizar un proceso, determinar os seus graos de libertade e escoller as mellores variables para a súa optimización. &gt;br&gt; Coñecer os fundamentos básicos dos algoritmos mais importantes de optimización determinista, tanto en variable continua como discreta.  Modelar axeitadamente un problema de optimización e/ou síntese de procesos e utilizar as ferramientas axeitadas para resolverlo.\nB3 B4  C20  D6 D9 D17\n\n\nCoñecer os fundamentos básicos do deseño de procesos mediante simuladores de proceso. A descomposición xerárquica e os fundamentos do deseño baseado en superestructuras. Aplicar os conceptos de integración de enerxía para o deseño de redes de intercambio de calor. Saber adquirir y utilizar información bibliográfica y técnica referida a esta materia. Coñecemento e aplicación da terminología inglesa empregada para descreber os conceptos correspondientes a esta materia.\nB3 B4  C20  D2 D6 D9 D10\n\n\n\n\n\n\n\n\nTEMA 1. SIMULACIÓN DE PROCESOS. DIAGRAMAS DE FLUXO.\n- Simulacións por computador.\n- Tipos de simuladores.\n- Optimización.\nTEMA 2. SIMULACIÓN SECUENCIAL MODULAR.\n- Descomposición de sistemas a gran escala.\n- Algoritmos de particionamento.\n- Descomposición de Redes Cíclicas Máximas.\nTEMA 3. SIMULACIÓN ORIENTADA A ECUACIÓNS.\n- Método de factorización local (criterio de Markowitz).\n- Reordenación \"a priori\" de matrices dispersas. Fase numérica.\nTEMA 4. GRAOS DE LIBERDADE DUN DIAGRAMA DE FLUXO.\n- Graos de liberdade.\n- Solución de ecuacións\n- Sistemas de ecuacións nonlineais.\n- Selección das variables de deseño.\nTEMA 5. PROPIEDADES FÍSICAS EN SIMULADORES DE PROCESOS QUÍMICOS.\n- Obtención e uso de propiedades físicas.\n- Uso dos sistemas de cálculo de propiedades físicas.\nTEMA 6. DESEÑO CONCEPTUAL DE PROCESOS.\n- Síntese xerárquica.\n- Síntese baseada na programación matemática. \nEXEMPLOS DE APLICACIÓN\n- Síntese de redes de cambiadores de calor (método de deseño \"pinch\").\n- Extensións do método de \"pinch\".\n\n\n\nTEMA 7. OPTIMIZACIÓN DE PROCESOS QUÍMICOS.\n- Conceptos básicos sobre optimización. \n- Optimización non liñal sin restriccións.\n- Conceptos básicos da optimización non liñal con restriccións (igualdade e desigualdade).\nTEMA 8. MÉTODOS NUMÉRICOS DE OPTIMIZACIÓN. OPTIMIZACIÓN SIN RESTRICCIÓNS.\n- Optimización multivariable sen restriccións.\n- Método de gradiente.\n- Método de Newton.\n- Métodos da secante.\nTEMA 9. PROGRAMACIÓN LIÑAL (LP).\n- Definicións e teoremas básicos da programación liñal.\n- Resolución do problema.\n- O algoritmo Simplex.\n- Programación cuadrática.\nTEMA 10. MÉTODOS NUMÉRICOS PARA A OPTIMIZACIÓN DE PROBLEMAS NON LIÑAIS CON RESTRICCIÓNS.\n- Métodos de penalización, barreira e Lagranxiana aumentada.\n- Programación cuadrática sucesiva.\n- Método do gradiente reducido.\nESTUDO DE CASOS\n- Exemplos prácticos de aplicación en industrias químicas e de proceso.\n- Utilizando software de simulación e optimización de procesos.\n\n\n\n\n\n\n\n\n\n\n\n\n\nActividade\nHoras na aula\nHoras fóra da aula\nHoras totais\n\n\n\n\nActividades introdutorias\n2\n8\n10\n\n\nLección maxistral\n6\n0\n16\n\n\nAprendizaxe baseado en proxectos\n12\n36\n48\n\n\nEstudo de casos\n6\n0\n6\n\n\nSimulación\n0\n18\n18\n\n\nPrácticas con apoio das TIC\n24\n0\n24\n\n\nResolución de problemas de forma autónoma\n0\n25\n25\n\n\nMetodoloxías baseadas en investigación\n0\n10\n10\n\n\nExame de preguntas de desenvolvemento\n10\n3\n3\n\n\n\n*Os datos que aparecen na táboa de planificación son de carácter orientador, considerando a heteroxeneidade do alumnado.\n\n\n\nDescrición | Actividades introdutorias|Presentación e introducción ó uso dos programas de simulación e optimización: Matlab, Pyhton- Cantera, COCO SIMULATOR, CHEMPSEP, DWSIM, HYSYS e ASPEN PLUS Lección maxistral Presentación verbal organizada de temas referidos ós contidos da asignatura, impartidos polo profesor con axudas visuais. Este método didáctico didáctico, implica a comunicación unidireccional do presentador activo ós estudiantes. Aprendizaxe baseado en proxectos\nOs estudantes traballarán nun proxecto durante un período de tempo prolongado (o cuatrimestre) que os involucre na resolución dun problema do mundo real ou na resposta a unha pregunta complexa. Demostran os seus coñecementos e habilidades creando un produto público ou unha presentación para un público real. Estudo de casos Se plantexan escenarios baseados en situacións nas que os alumnos observan, analizan, rexistran, implementan, conclúen, resumen ou recomendan. Os estudos de casos créanse e utilízanse como ferramenta de análise e discusión. Simulación O alumno ten que preparar, e documentar, unha simulación que implique un proceso orixinal, a mellora de un proceso documentado ou a optimización dun proceso ou planta existente, así como crear unha presentación pública do seu traballo. Prácticas con apoio das TIC\nSe plantexarán simulacións de parte de procesos ou unidades de operación para resolver coas distintas ferramentas informáticas que se contemplan na materia (simuladores de proceso, linguaxes de programación, etc.). Resolución de problemas de forma autónoma\nSe plantexará a resolución de problemas de libros tradicionais da enxeñaría química que serán resoltos mediante as ferramentas propostas na materia, como alternativa ós métodos tradicionais de resolución. Metodoloxías baseadas en investigación O alumno deberá documentar o uso de sistemas de busca bibliográfica asi como de datos de interese na web (fontes de información titoriais, etc.).\n\n\n\nMetodoloxías Descrición Simulación O alumno propondrá unha simulación de un proceso novo, mellora de un existente ou optimización de un proceso ou planta ou, no seu caso, debe adoptar o asignado polo profesor que titorará de xeito individualizado ou por grupo cada unha das simulacións da clase. Aprendizaxe baseado en proxectos\nO profesor propondrá pequenos proxectos que os alumnos han de resolver mediante as ferramentas que se lles indiquen na clase e entragar para a súa puntuación dacordo á rúbrica correspondente que será publicada na plataforma de e-learning. Cada alumno debe entragar o traballo realizado en clase ó finalizar a mesma. Os proxectos recibirán unha puntuación acorde á rúbrica que se publicará na plataforma de e-learning. Estudo de casos Se plantexan escenarios baseados en situacións nas que os alumnos observan, analizan, rexistran, implementan, conclúen, resumen ou recomendan. Non haberá probas. Prácticas con apoio das TIC\nNa aula informática ou na aula de teoría se farán simulacións e resolución de problemas mediante ferramentas informáticas que han de ser entregados no memo día polos alumnos. cualificación estará rubricada por rúbrica públicada na plataforma de e-learning.\n\n\n\nDescrición CualificaciónResultados de Formación e Aprendizaxe Aprendizaxe baseado en proxectos\nSe realizará durante todo o semestre e se entregará ó concluir as clases presenciais e antes do exame final. A cualificación estará rubricada por rúbrica públicada na plataforma de e-learning.\nSimulación O alumno debe realizae e entregar unha simulación que contribúe á avaliación continua e que debe ser realizada de xeito tutelado durante todo o semestre. A cualificación estará rubricada por rúbrica públicada na plataforma de e-learning.\n\n\n\nResolución de problemas de forma autónoma\nPeriódicamente o alimno debe entregar resoltos os problemas que se lle plantexan.\n\n\n\nExame de preguntas de desenvolvemento\nCorreesponde ó exame final da asignatura que, no caso de renuncia á avaliación continua, será o total da nota. Está constituído por un ou varios casos, ou simulacións e a súa correccióne stará asemesmo rubricada.\n\n\n\n\n\n\nAlumnos con avaliación continua: A avaliación continua aplicaráse na primeira convocatoria.\nPara os alumnos con renuncia concedida oficialmente polo centro á avaliación continua o exame final valerá o 100%.\nCompromiso ético: Espérase que o alumno presente un comportamento ético adecuado. No caso de detectar un\ncomportamento non ético (copia, plaxio, utilización de aparellos electrónicos non autorizados, e outros) considerarase que o alumno non reúne os requisitos necesarios para superar a materia. Neste caso a cualificación global no presente curso académico será de suspenso (0,0).\n\n\n\n\n\n\n\nKamal I.M. Al-Malah, Aspen Plus: Chemical Engineering Applications , 1st Edition, Wiley, 2016 Juma Haydary, Chemical Process Design and Simulation: Aspen Plus and Aspen Hysys Applications , 1st Edition, AIChE, 2019. D.M. Himmelblau, K.B. Bischoff, Análisis y Simulación de Procesos , Reverté, 2004 Simant Ranjan Upreti, PROCESS MODELING AND SIMULATION FOR CHEMICAL ENGINEERS , 1st Edition, Wiley, 2017\n\n\n\nDavid. M. Himmelblau, Optimization of Chemical Processes , 2nd Edition, McGraw-Hill Higher Education, 2001\n\n\n\n\n\n\n\nControl e instrumentación de procesos químicos/V12G350V\nDeseño de plantas químicas e de proceso/V12G350V\nModelaxe de procesos biotecnolóxicos/V12G350V\n\n\n\n\n\nXestión e posta en servizo de plantas químicas e de proceso/V12G350V\nOptimización de produtos/V12G350V\nProcesos e produtos biotecnolóxicos/V12G350V\nQuímica orgánica industrial/V12G350V\n\n\n\n\n\nEnxeñaría química I/V12G350V\nTermodinámica e transmisión de calor/V12G350V\nExperimentación en química industrial I/V12G350V\nExperimentación en química industrial II/V12G350V\nEnxeñaría química II/V12G350V\nReactores e biotecnoloxía/V12G350V\nCalor e frío na industria de proceso/V12G350V\nTécnicas e xestión medioambientais/V12G350V\n\n\n\n\n\nOs pilares que sustentan esta materia concrétanse no uso das técnicas de cálculo numérico, aplicado ós contidos proprios da enxeñaría química: balances de materia i enerxía , fenómenos de trasporte, termodinámica, fluidodinámica, termotecnia, operacións de separación, reactores , control de procesos , etc.)."
+  },
+  {
+    "objectID": "guia.html#datos-identificativos",
+    "href": "guia.html#datos-identificativos",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Materia: Simulación e optimización de procesos químicos Código: V12G350V Titulación: Grao en Enxeñaría en Química Industrial Descritores:\n\n\n\nCreditos ECTS\nSeleción\nCurso\nCuadrimestre\n\n\n\n\n6\nOB\n4\n1c\n\n\nLingua de impartición\nGalego,Inglés\n\n\n\n\nDepartamento\nEnxeñaría Química\n\n\n\n\nCoordinador/a\nSánchez Bermúdez, Ángel Manuel\n\n\n\n\nProfesorado\nSánchez Bermúdez, Ángel Manuel\n\n\n\n\nCorreo-e\nasanchez@uvigo.gal\n\n\n\n\nWeb\nhttp://http://eqea.uvigo.es"
+  },
+  {
+    "objectID": "guia.html#descrición-xeral",
+    "href": "guia.html#descrición-xeral",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Asignatura obrigatoria que se imparten no 7º cuadrimestre do Grao en Química Industrial, unha vez que o alumno estudou as materias nas que deben demostrar os coñecementos necesarios sobre:\n- Métodos numéricos empregados na enxeñaría química.\n- Deseño de reactores químicos.\n- Deseño de equipos para operacións de separación.\n- Deseño de equipos de transferencia de calor empregados en procesos químicos.\n- Control e seguridade dos procesos químicos.\nEsta materia impártese no último ano. O alumno accede despois de adquirir e desenvolver habilidades para xestionar facilmente as ferramentas informáticas da informática dixital, nas que o uso seguirá funcionando e afondar."
+  },
+  {
+    "objectID": "guia.html#resultados-de-formación-e-aprendizaxe",
+    "href": "guia.html#resultados-de-formación-e-aprendizaxe",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Código\nDescrición\n\n\n\n\nB3\nCG3 Coñecemento en materias básicas e tecnolóxicas que os capacite para a aprendizaxe de novos métodos e teorías, e os dote de versatilidade para adaptarse a novas situacións.\n\n\nB4\nCG4 Capacidade para resolver problemas con iniciativa, toma de decisións, creatividade, razoamento crítico e capacidade para comunicar e transmitir coñecementos, habilidades e destrezas no campo da enxeñaría industrial na mención de Química Industrial.\n\n\nC20\nCE20 Capacidade para a análise, deseño, simulación e optimización de procesos e produtos.\n\n\nD2\nT2 Resolución de problemas.\n\n\nD6\nCT6 Aplicación da informática no ámbito de estudo.\n\n\nD8\nCT8 Toma de decisións.\n\n\nD9\nCT9 Aplicar coñecementos.\n\n\nD10\nCT10 Aprendizaxe e traballo autónomos.\n\n\nD17\nCT17 Traballo en equipo."
+  },
+  {
+    "objectID": "guia.html#resultados-previstos-na-materia",
+    "href": "guia.html#resultados-previstos-na-materia",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Resultados previstos na materia\nResultados de Formación e Aprendizaxe\n\n\n\n\nSimular un diagrama de fluxo dun proceso en réxime estacionario. Coñecer os métodos mais importantes de simulación de procesos (modular e baseado en ecuacións). Analizar as características estructurais dun proceso químico e determinar o orde de cálculo das unidades,establecer o fluxo de información e seleccionar as variables ou correntes de corte de forma axeitada. Resolver problemas de gran escala modelados por sistemas de ecuacións alxebraicas (sistemas dispersos).\nB3 B4  C20  D6 D8 D9 D10 D17\n\n\nAnalizar un proceso, determinar os seus graos de libertade e escoller as mellores variables para a súa optimización. &gt;br&gt; Coñecer os fundamentos básicos dos algoritmos mais importantes de optimización determinista, tanto en variable continua como discreta.  Modelar axeitadamente un problema de optimización e/ou síntese de procesos e utilizar as ferramientas axeitadas para resolverlo.\nB3 B4  C20  D6 D9 D17\n\n\nCoñecer os fundamentos básicos do deseño de procesos mediante simuladores de proceso. A descomposición xerárquica e os fundamentos do deseño baseado en superestructuras. Aplicar os conceptos de integración de enerxía para o deseño de redes de intercambio de calor. Saber adquirir y utilizar información bibliográfica y técnica referida a esta materia. Coñecemento e aplicación da terminología inglesa empregada para descreber os conceptos correspondientes a esta materia.\nB3 B4  C20  D2 D6 D9 D10"
+  },
+  {
+    "objectID": "guia.html#contidos",
+    "href": "guia.html#contidos",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "TEMA 1. SIMULACIÓN DE PROCESOS. DIAGRAMAS DE FLUXO.\n- Simulacións por computador.\n- Tipos de simuladores.\n- Optimización.\nTEMA 2. SIMULACIÓN SECUENCIAL MODULAR.\n- Descomposición de sistemas a gran escala.\n- Algoritmos de particionamento.\n- Descomposición de Redes Cíclicas Máximas.\nTEMA 3. SIMULACIÓN ORIENTADA A ECUACIÓNS.\n- Método de factorización local (criterio de Markowitz).\n- Reordenación \"a priori\" de matrices dispersas. Fase numérica.\nTEMA 4. GRAOS DE LIBERDADE DUN DIAGRAMA DE FLUXO.\n- Graos de liberdade.\n- Solución de ecuacións\n- Sistemas de ecuacións nonlineais.\n- Selección das variables de deseño.\nTEMA 5. PROPIEDADES FÍSICAS EN SIMULADORES DE PROCESOS QUÍMICOS.\n- Obtención e uso de propiedades físicas.\n- Uso dos sistemas de cálculo de propiedades físicas.\nTEMA 6. DESEÑO CONCEPTUAL DE PROCESOS.\n- Síntese xerárquica.\n- Síntese baseada na programación matemática. \nEXEMPLOS DE APLICACIÓN\n- Síntese de redes de cambiadores de calor (método de deseño \"pinch\").\n- Extensións do método de \"pinch\".\n\n\n\nTEMA 7. OPTIMIZACIÓN DE PROCESOS QUÍMICOS.\n- Conceptos básicos sobre optimización. \n- Optimización non liñal sin restriccións.\n- Conceptos básicos da optimización non liñal con restriccións (igualdade e desigualdade).\nTEMA 8. MÉTODOS NUMÉRICOS DE OPTIMIZACIÓN. OPTIMIZACIÓN SIN RESTRICCIÓNS.\n- Optimización multivariable sen restriccións.\n- Método de gradiente.\n- Método de Newton.\n- Métodos da secante.\nTEMA 9. PROGRAMACIÓN LIÑAL (LP).\n- Definicións e teoremas básicos da programación liñal.\n- Resolución do problema.\n- O algoritmo Simplex.\n- Programación cuadrática.\nTEMA 10. MÉTODOS NUMÉRICOS PARA A OPTIMIZACIÓN DE PROBLEMAS NON LIÑAIS CON RESTRICCIÓNS.\n- Métodos de penalización, barreira e Lagranxiana aumentada.\n- Programación cuadrática sucesiva.\n- Método do gradiente reducido.\nESTUDO DE CASOS\n- Exemplos prácticos de aplicación en industrias químicas e de proceso.\n- Utilizando software de simulación e optimización de procesos."
+  },
+  {
+    "objectID": "guia.html#planificación-horaria-das-clases",
+    "href": "guia.html#planificación-horaria-das-clases",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Actividade\nHoras na aula\nHoras fóra da aula\nHoras totais\n\n\n\n\nActividades introdutorias\n2\n8\n10\n\n\nLección maxistral\n6\n0\n16\n\n\nAprendizaxe baseado en proxectos\n12\n36\n48\n\n\nEstudo de casos\n6\n0\n6\n\n\nSimulación\n0\n18\n18\n\n\nPrácticas con apoio das TIC\n24\n0\n24\n\n\nResolución de problemas de forma autónoma\n0\n25\n25\n\n\nMetodoloxías baseadas en investigación\n0\n10\n10\n\n\nExame de preguntas de desenvolvemento\n10\n3\n3\n\n\n\n*Os datos que aparecen na táboa de planificación son de carácter orientador, considerando a heteroxeneidade do alumnado."
+  },
+  {
+    "objectID": "guia.html#metodoloxía-docente",
+    "href": "guia.html#metodoloxía-docente",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Descrición | Actividades introdutorias|Presentación e introducción ó uso dos programas de simulación e optimización: Matlab, Pyhton- Cantera, COCO SIMULATOR, CHEMPSEP, DWSIM, HYSYS e ASPEN PLUS Lección maxistral Presentación verbal organizada de temas referidos ós contidos da asignatura, impartidos polo profesor con axudas visuais. Este método didáctico didáctico, implica a comunicación unidireccional do presentador activo ós estudiantes. Aprendizaxe baseado en proxectos\nOs estudantes traballarán nun proxecto durante un período de tempo prolongado (o cuatrimestre) que os involucre na resolución dun problema do mundo real ou na resposta a unha pregunta complexa. Demostran os seus coñecementos e habilidades creando un produto público ou unha presentación para un público real. Estudo de casos Se plantexan escenarios baseados en situacións nas que os alumnos observan, analizan, rexistran, implementan, conclúen, resumen ou recomendan. Os estudos de casos créanse e utilízanse como ferramenta de análise e discusión. Simulación O alumno ten que preparar, e documentar, unha simulación que implique un proceso orixinal, a mellora de un proceso documentado ou a optimización dun proceso ou planta existente, así como crear unha presentación pública do seu traballo. Prácticas con apoio das TIC\nSe plantexarán simulacións de parte de procesos ou unidades de operación para resolver coas distintas ferramentas informáticas que se contemplan na materia (simuladores de proceso, linguaxes de programación, etc.). Resolución de problemas de forma autónoma\nSe plantexará a resolución de problemas de libros tradicionais da enxeñaría química que serán resoltos mediante as ferramentas propostas na materia, como alternativa ós métodos tradicionais de resolución. Metodoloxías baseadas en investigación O alumno deberá documentar o uso de sistemas de busca bibliográfica asi como de datos de interese na web (fontes de información titoriais, etc.)."
+  },
+  {
+    "objectID": "guia.html#atención-personalizada",
+    "href": "guia.html#atención-personalizada",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Metodoloxías Descrición Simulación O alumno propondrá unha simulación de un proceso novo, mellora de un existente ou optimización de un proceso ou planta ou, no seu caso, debe adoptar o asignado polo profesor que titorará de xeito individualizado ou por grupo cada unha das simulacións da clase. Aprendizaxe baseado en proxectos\nO profesor propondrá pequenos proxectos que os alumnos han de resolver mediante as ferramentas que se lles indiquen na clase e entragar para a súa puntuación dacordo á rúbrica correspondente que será publicada na plataforma de e-learning. Cada alumno debe entragar o traballo realizado en clase ó finalizar a mesma. Os proxectos recibirán unha puntuación acorde á rúbrica que se publicará na plataforma de e-learning. Estudo de casos Se plantexan escenarios baseados en situacións nas que os alumnos observan, analizan, rexistran, implementan, conclúen, resumen ou recomendan. Non haberá probas. Prácticas con apoio das TIC\nNa aula informática ou na aula de teoría se farán simulacións e resolución de problemas mediante ferramentas informáticas que han de ser entregados no memo día polos alumnos. cualificación estará rubricada por rúbrica públicada na plataforma de e-learning."
+  },
+  {
+    "objectID": "guia.html#avaliación",
+    "href": "guia.html#avaliación",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Descrición CualificaciónResultados de Formación e Aprendizaxe Aprendizaxe baseado en proxectos\nSe realizará durante todo o semestre e se entregará ó concluir as clases presenciais e antes do exame final. A cualificación estará rubricada por rúbrica públicada na plataforma de e-learning.\nSimulación O alumno debe realizae e entregar unha simulación que contribúe á avaliación continua e que debe ser realizada de xeito tutelado durante todo o semestre. A cualificación estará rubricada por rúbrica públicada na plataforma de e-learning."
+  },
+  {
+    "objectID": "guia.html#section",
+    "href": "guia.html#section",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Resolución de problemas de forma autónoma\nPeriódicamente o alimno debe entregar resoltos os problemas que se lle plantexan."
+  },
+  {
+    "objectID": "guia.html#section-1",
+    "href": "guia.html#section-1",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Exame de preguntas de desenvolvemento\nCorreesponde ó exame final da asignatura que, no caso de renuncia á avaliación continua, será o total da nota. Está constituído por un ou varios casos, ou simulacións e a súa correccióne stará asemesmo rubricada."
+  },
+  {
+    "objectID": "guia.html#section-2",
+    "href": "guia.html#section-2",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Alumnos con avaliación continua: A avaliación continua aplicaráse na primeira convocatoria.\nPara os alumnos con renuncia concedida oficialmente polo centro á avaliación continua o exame final valerá o 100%.\nCompromiso ético: Espérase que o alumno presente un comportamento ético adecuado. No caso de detectar un\ncomportamento non ético (copia, plaxio, utilización de aparellos electrónicos non autorizados, e outros) considerarase que o alumno non reúne os requisitos necesarios para superar a materia. Neste caso a cualificación global no presente curso académico será de suspenso (0,0)."
+  },
+  {
+    "objectID": "guia.html#bibliografía.-fontes-de-información",
+    "href": "guia.html#bibliografía.-fontes-de-información",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Kamal I.M. Al-Malah, Aspen Plus: Chemical Engineering Applications , 1st Edition, Wiley, 2016 Juma Haydary, Chemical Process Design and Simulation: Aspen Plus and Aspen Hysys Applications , 1st Edition, AIChE, 2019. D.M. Himmelblau, K.B. Bischoff, Análisis y Simulación de Procesos , Reverté, 2004 Simant Ranjan Upreti, PROCESS MODELING AND SIMULATION FOR CHEMICAL ENGINEERS , 1st Edition, Wiley, 2017\n\n\n\nDavid. M. Himmelblau, Optimization of Chemical Processes , 2nd Edition, McGraw-Hill Higher Education, 2001"
+  },
+  {
+    "objectID": "guia.html#recomendacións",
+    "href": "guia.html#recomendacións",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Control e instrumentación de procesos químicos/V12G350V\nDeseño de plantas químicas e de proceso/V12G350V\nModelaxe de procesos biotecnolóxicos/V12G350V\n\n\n\n\n\nXestión e posta en servizo de plantas químicas e de proceso/V12G350V\nOptimización de produtos/V12G350V\nProcesos e produtos biotecnolóxicos/V12G350V\nQuímica orgánica industrial/V12G350V\n\n\n\n\n\nEnxeñaría química I/V12G350V\nTermodinámica e transmisión de calor/V12G350V\nExperimentación en química industrial I/V12G350V\nExperimentación en química industrial II/V12G350V\nEnxeñaría química II/V12G350V\nReactores e biotecnoloxía/V12G350V\nCalor e frío na industria de proceso/V12G350V\nTécnicas e xestión medioambientais/V12G350V"
+  },
+  {
+    "objectID": "guia.html#outros-comentarios",
+    "href": "guia.html#outros-comentarios",
+    "title": "Guía Docente",
+    "section": "",
+    "text": "Os pilares que sustentan esta materia concrétanse no uso das técnicas de cálculo numérico, aplicado ós contidos proprios da enxeñaría química: balances de materia i enerxía , fenómenos de trasporte, termodinámica, fluidodinámica, termotecnia, operacións de separación, reactores , control de procesos , etc.)."
   },
   {
     "objectID": "about.html",
