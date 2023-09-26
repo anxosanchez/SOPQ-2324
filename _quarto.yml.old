@@ -42,7 +42,7 @@ website:
 
     contents:
       - section: "Información xeral"
-        contents:
+      contents:
         - href: course-overview.qmd
           text: "Información da materia" 
         - href: index.qmd
@@ -62,7 +62,7 @@ website:
         - href: computing-r-resources.qmd
           text: R resources
       - section: "Proxecto"
-        contents:
+      contents:
         - href: project-instructions.qmd
           text: Instrucións
         - href: project-tips.qmd
