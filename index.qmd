@@ -1,0 +1,38 @@
+---
+title: "SOPQ 23-24: Simulación e Optimización de Procesos Químicos"
+tbl-colwidths: [5,10,30,5,5,5,5,5,5,5]
+#navbar: false
+---
+
+
+# Overview
+
+Esta páxina contén un esquema dos temas, contido e tarefas para o semestre.
+Ten en conta que este horario actualizarase a medida que avanza o semestre, con todos os cambios documentados aquí.
+
+# Class meetings
+
+|             |             |                           |                     |
+|-------------|-------------|---------------------------|---------------------|
+| **Lecture** | Section 001 | Mon & Wed 10:05 - 11:20am | Reuben-Cooke 130    |
+|             | Section 002 | Mon & Wed 1:25 - 2:40pm   | Old Chem 116        |
+| **Lab**     | Lab 01      | Tue 10:05 - 11:20am       | Reuben-Cooke 129    |
+|             | Lab 02      | Tue 11:45am - 1pm         | LSRC A155           |
+|             | Lab 03      | Thu 10:05 - 11:20am       | Reuben-Cooke 129    |
+|             | Lab 04      | Thu 11:45am - 1pm         | Social Sciences 124 |
+
+# Teaching team
+
+### Profesor
+
+::: {.callout-tip appearance="simple" icon="false"}
+ 
+[Anxo Sánchez](https://www.uvigo.gal/asanchez/) 
+
+| Titorías             | Lugar                        |
+|----------------------|------------------------------|
+|                      | Despacho 205 EEI Sede Cidade |
+| Ou por cita previa.* | Videoconferencia Teams       |
+
+:::
+

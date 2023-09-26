@@ -1,1 +1,2 @@
-# SOPQ-2324
+# sopq
+Web of Simulation and Optimizatin of Chemical Processes

@@ -1,0 +1,82 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "SOPQ 2324"
+  description: "Homepage da asignatrua Simulación e Optimización de Procesos Químicos"
+  site-url: https://anxosanchez.github.io/sopq/
+  repo-url: https://github.com/anxosanchez/sopq.git
+  repo-actions: [edit, issue]
+  
+  page-footer:
+    background: "#7eb7c2" #primary
+    left: |
+      &copy; Copyright 2023, Anxo Sánchez
+    right: |
+      Este site está inspirado no site STA 210, deseñado por Maria
+
+  sidebar:
+    background: "#7eb7c2" # primary
+    logo: "images/logo.png"
+    align: center
+    tools: 
+      - icon: github
+        href: https://github.com/anxosanchez/sopq
+        text: "GitHub"
+      - icon: orcid
+        href: https://orcid.org/423420398
+        text: Orcid
+        menu:
+          - text: Moovi
+            url: https://moovi.uvigo.gal/course/view.php?id=18537
+          - text: Campusremoto 
+            url: https://campusremoto.uigo.gal
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents: 
+      - href: almanaque.qmd
+        text: Programación
+      - href: guia.qmd
+        text: Guía Docente
+      - href: soporte.qmd
+        text: Soporte
+      - href: links.qmd
+        text: Ligazóns recomendadas
+      - section: Computing
+        contents: 
+        - href: computing-access.qmd
+          text: Access
+        - href: computing-troubleshooting.qmd
+          text: Troubleshooting
+        - href: computing-r-resources.qmd
+          text: R resources
+      - section: Project
+        contents:
+        - href: project-instructions.qmd
+          text: Instructions
+        - href: project-tips.qmd
+          text: Tips + resources
+      - href: stats-experience.qmd
+        text: Statistics experience
+        
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss]
+    mainfont: "Open Sans"
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+
+execute:
+  freeze: auto
+
+editor: visual    
+    
+
+
+
+
+
