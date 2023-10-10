@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SOPQ 2324 - Separación flash</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Separación flash</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Separación flash</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../imaxes/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/anxosanchez/SOPQ-2324" rel="" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/anxo-s%C3%A1nchez-berm%C3%BAdez-79086321/" rel="" title="Linkedin" class="quarto-navigation-tool px-1" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Información xeral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Información da materia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía Docente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Profesorado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../links.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ligazońs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FAQ</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Computing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing-access.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing-troubleshooting.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Troubleshooting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing-r-resources.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Proxecto</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-instructions.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instrucións</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-tips.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tips + recusos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="tutorial-3-separación-de-flash" class="level1">
+<h1>Tutorial #3: Separación de flash</h1>
+<p>Abre a túa simulación da semana pasada que esperas que gardaches. Seleccione a pestana Separadores na Biblioteca de modelos de equipos e tómese un minuto para familiarizarse cos diferentes tipos de separadores que están dispoñibles e as súas aplicacións, como se mostra na barra de estado. Usaremos un separador Flash usando un rigoroso equilibrio vapor-líquido-líquido para separar o noso fluxo para unha maior purificación.</p>
+<p>Unha mestura que conteña 50,0% en peso de acetona e 50,0% en peso de auga debe ser separada en dous fluxos: un enriquecido en acetona e outro en auga. O proceso de separación consiste na extracción da acetona da auga en metil isobutil cetona (MIBK), que disolve a acetona pero é case inmiscible coa auga. O obxectivo xeral deste problema é separar a corrente de alimentación en dúas correntes que teñan unha pureza superior ao 90% de auga e acetona respectivamente.</p>
+<p>Esta operación unitaria pode usarse para representar unha serie de pezas de equipamento da vida real, incluíndo tambores de sobretensión de alimentación en procesos de refino e sedimentadores como neste problema. Unha destilación instantánea (ou separación) é, esencialmente, un proceso de separación dunha etapa e para o noso problema esperamos dividir a nosa mestura en dúas correntes; un composto que contén principalmente por auga e acetona e outro composto principalmente por MIBK e auga.</p>
+<ol type="1">
+<li>Selecciona o separador <strong>Flash3</strong> e engade un ao teu fluxograma de proces.</li>
+<li>Selecciona o fluxo de material da biblioteca de fluxos de materia e engade un fluxo de produto deixando o separador de flash desde o lado superior, medio e inferior (onde as frechas vermellas indican que é necesario un produto). Non conectes nada aínda.</li>
+</ol>
+<p>Esquema:</p>
+<p>Notarás que eliminei a táboa de fluxos e as condicións do fluxo da miña folla de fluxo da semana pasada. Fixen isto para reducir a cantidade de cousas na pantalla e engadirei de novo ao final deste tutorial. Podes deixar o teu na folla de fluxo do proceso mentres traballas neste tutorial ou podes eliminalos e engadilos de novo ao final do titorial.</p>
+<p>Acetona. - Descrición do problema • Engadir unha unidade de destilación flash • Actualización da entrada do usuario - Execución da simulación e comprobación dos resultados • Xeración de diagramas Txy e Pxy</p>
+<p>Engadir unha unidade de destilación flash:</p>
+<p>igura 1: Separador de flash</p>
+<p>Para conectar o fluxo de alimentación ao separador de flash, fai clic co botón dereito no fluxo de produtos do teu mesturador (o meu chámase PRODUCT1). Seleccione a opción reconectar destino e anexa este fluxo á frecha de entrada do tambor separador de flash. Despois de renomear os teus fluxos como creas oportuno, a folla de fluxo do teu proceso debería parecer similar á da Figura 2.</p>
+<p>Notarás que o estado da simulación cambiou a “Entrada obrigatoria incompleta” debido á nova operación da unidade que engadimos á nosa folla de fluxo do proceso. Ao facer cambios drásticos nunha simulación existente como a que temos, o mellor é reiniciar a simulación como fixemos no Titorial #2. Faino agora e despois abra a xanela do navegador de datos.</p>
+<p>Figura 2: folla de fluxo completada</p>
+<p>Para que a nosa simulación modele correctamente o equilibrio VLL, necesitaremos cambiar o método termodinámico de IDEAL. No navegador de datos, seleccione especificacións en</p>
+<p>Todas as entradas do usuario están completas, excepto a que está na pestana de bloques. Unha das boas características de Aspen é que só precisa engadir datos de entrada a novos fluxos de alimentación e novos equipos e completará os cálculos para determinar as composicións de todos os novos fluxos intermedios e de produtos. Non obstante, esta aracterística ten unha trampa. Ten en conta que seleccionamos orixinalmente o noso método termodinámico baseado na nosa simulación orixinal e máis sinxela. Aspen non o obriga a volver á selección termodinámica para confirmar que o usuario seleccionou a base termodinámica adecuada para o seu problema e isto pode levar a problemas de converxencia e resultados pouco realistas se non se considera.</p>
+<pre><code>Actualizando a entrada do usuario:</code></pre>
+<p>Aspen Tutorial #</p>
+<p>Aspen Tutorial #</p>
+<pre><code>Figura 3: Método base termodinámico</code></pre>
+<p>Podes notar que a opción do método Propiedade tamén cambia automaticamente ao método <strong>SRK</strong>. Isto está ben.</p>
+<p>Na pestana Propiedades. Cambie o método Base de <strong>IDEAL</strong> a <strong>SRK</strong> (ecuación de estado de <strong>Soave-Redlich Kwong</strong>) como se mostra na Figura 3. A próxima semana comentaremos os diferentes métodos termodinámicos, polo que agora non se tratará en profundidade.</p>
+<p>Na nosa simulación, especificaremos que a temperatura e a presión do noso <strong>separador flash</strong> sexan iguais aos mesmos valores que os nosos fluxos de alimentación (75º F e 50 psi). Despois de introducir estes dous valores, notarás que o estado da simulación cambia a “Entrada obrigatoria completa”.</p>
+<p>Abre a pestana de entrada para o bloque <strong>FLASH1</strong> baixo a pestana de bloques no navegador de datos. Notarás que se pode especificar dúas das catro variables para o separador flash, dependendo da túa aplicación particular. Estas opcións móstranse na Figura 4.</p>
+<p>Figura 4: Opcións de entrada de datos flash</p>
+<p>Neste punto, o seu fluxo de proceso debería parecer o que se ve na Figura 5 (como se mencionou anteriormente, agora coloquei a táboa de fluxo e as condicións de fluxo do proceso no meu fluxo).</p>
+<p>Execución da simulación e comprobación dos resultados:</p>
+<p>Especificación</p>
+<p>Executa a túa simulación neste momento. Como no tutorial n.º 2, asegúrate de comprobar os teus resultados tanto para a converxencia como para o estado de execución. Ao facelo, notarás un aviso do sistema que xorde debido a cambios na simulación que fixemos. Siga as suxestións presentadas por Aspen e cambie ao método STEAMNBS segundo o recomendado (Suxestión: o cambio está na pestana de propiedades). Reinicia e volve executar a túa simulación despois de facer este cambio.</p>
+<pre><code>Opcións</code></pre>
+<pre><code>Figura 5: folla de fluxo do proceso completado</code></pre>
+<p>Notarás que a nosa simulación dá como resultado unha separación case perfecta da auga da mestura de MIBK e acetona. Non obstante, na vida real esta mestura non é tan fácil de separar. Este resultado da simulación é causado directamente polos métodos termodinámicos que seleccionamos e verás a influencia que xoga a termodinámica no titorial da próxima semana.</p>
+<p>Aspen e outros programas de simulación son esencialmente unha enorme base de datos de propiedades físicas e termodinámicas. Ilustraremos este feito xerando un diagrama Txy para o noso fluxo de acetona MIBK para usar para especificar a nosa columna de destilación nunhas poucas semanas. Na barra de menú, seleccione Ferramentas/Análise/Propiedade/Binario. Cando teña feito isto, abrirase a xanela de Análise binaria como se mostra na Figura 6.</p>
+<p>Aspen Tutorial #</p>
+<p>Debido ao desorde adicional na pantalla, recomendaría eliminar as condicións de fluxo do proceso neste momento. Estes valores están dispoñibles na táboa de fluxos e non proporcionan moito beneficio adicional para a nosa aplicación.</p>
+<pre><code>Xeración de diagramas Txy e Pxy:</code></pre>
+<pre><code>Figura 6: Xanela de análise binaria</code></pre>
+<p>Cando seleccione este botón, o gráfico Txy aparecerá na súa pantalla como se mostra na Figura 7.</p>
+<p>Notarás que esta opción pode usarse para xerar enerxía Txy, Pxy ou Gibbs de diagramas de mestura. Seleccione a análise Txy. Tamén tes a opción de completar esta análise para calquera dos compoñentes que se especificaron na túa simulación. Faremos unha análise sobre a mestura de MIBK e acetona polo que selecciona estes compoñentes en consecuencia. Ao facer unha análise deste tipo, o usuario tamén ten a opción de especificar que compoñente se usará para o eixe x (que fracción molar de compoñente será diagramada). O predeterminado é o compoñente que se indique como compoñente 1. Asegúrate de crear o diagrama para a fracción molar de MIBK. Cando remates a túa entrada, fai clic no botón Ir na parte inferior da xanela.</p>
+<p>Aspen Tutorial #</p>
+<p>A xanela de análise binaria abrirase tamén detrás deste gráfico automaticamente (chegaremos a esa xanela nun minuto).</p>
+<p>Pecha a xanela de trazado neste momento. A xanela dos resultados da análise binaria debería mostrarse agora na súa pantalla. Esta xanela móstrase na Figura 8. Podes ver que esta xanela mostra unha gran táboa de datos termodinámicos para os nosos dous compoñentes seleccionados.</p>
+<pre><code>Figura 7: Gráfico Txy para MIBK e acetona</code></pre>
+<p>No paso 2 do asistente de trazado preséntanse cinco opcións para as variables que pode representar para este sistema. O gamma representa o coeficiente de actividade líquida dos compoñentes e está representado en función da fracción molar. O resto do asistente de trazado permítelle seleccionar o compoñente e modificar algunhas das características da trama que está a crear e, ao premer o botón de finalización, debería abrirse a parcela seleccionada. De novo, a trama pódese editar aínda máis facendo clic co botón dereito sobre a trama e seleccionando propiedades. Nos deberes desta semana irás entregando un gráfico do coeficiente de actividade líquida, polo que podes facelo agora se queres. En caso contrario, pode gardar a súa simulación para a próxima semana cando examinemos os distintos métodos termodinámicos utilizados por Aspen.</p>
+<p>Podemos usar estes datos para trazar unha serie de cousas diferentes usando o botón do asistente de trazado na parte inferior da pantalla. Selecciona ese botón agora.</p>
+<p>A xanela de trazado pódese editar facendo clic co botón dereito na xanela de trazado e seleccionando propiedades. Na xanela de propiedades o usuario pode modificar os títulos, as escalas dos eixes, o tipo de letra e a cor da trama. A xanela de trazado tamén se pode imprimir directamente desde Aspen premendo a tecla de impresión.</p>
+<p>Aspen Tutorial #</p>
+<pre><code>Figura 8: Xanela de resultados da análise binaria</code></pre>
+<p>Aspen Tutorial #</p>
+<p>A próxima semana: Métodos Termodinámicos</p>
+<pre><code>Pregunta:</code></pre>
+<pre><code>0.</code></pre>
+<pre><code>Fractura masiva</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>0.</code></pre>
+<pre><code>100.</code></pre>
+<pre><code>75,</code></pre>
+<pre><code>0.</code></pre>
+<pre><code>Mole Flow</code></pre>
+<pre><code>2.</code></pre>
+<pre><code>METIO-01 rastro</code></pre>
+<pre><code>50.</code></pre>
+<pre><code>lb/h
+1.</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>2.</code></pre>
+<pre><code>Temperatura F psi 75,</code></pre>
+<pre><code>4.</code></pre>
+<pre><code>METIO-</code></pre>
+<pre><code>Presión</code></pre>
+<pre><code>2.</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>0.</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>0.</code></pre>
+<ol type="a">
+<li>Proporcione unha copia da táboa de fluxos completa desenvolvida no Titorial #3 que mostra a composición dos tres fluxos de produtos resultantes da súa separación flash. Consello: pode seleccionar a táboa na folla de fluxo do proceso e copiala e pegala nun documento de Word se o desexa. b) Imprimir e entregar unha copia da gráfica do coeficiente de actividade líquida para o sistema MIBK/acetona (Suxestión: gamma).</li>
+</ol>
+<pre><code>AUGA</code></pre>
+<pre><code>-0,</code></pre>
+<pre><code>1.</code></pre>
+<pre><code>200.</code></pre>
+<pre><code>50.</code></pre>
+<pre><code>ALIMENTAR</code></pre>
+<pre><code>lbmol/h</code></pre>
+<pre><code>-0,</code></pre>
+<pre><code>3.</code></pre>
+<pre><code>Mole Flow</code></pre>
+<pre><code>1.</code></pre>
+<pre><code>50.</code></pre>
+<pre><code>Caudal de volume cuft/h 3.</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>rastro</code></pre>
+<pre><code>75,</code></pre>
+<pre><code>rastro</code></pre>
+<pre><code>75,
+50.</code></pre>
+<pre><code>100.000 0.</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>0.</code></pre>
+<p>Solución:</p>
+<pre><code>-0,</code></pre>
+<pre><code>VINAGRE NE 0.500 3 ppm</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>M-A</code></pre>
+<pre><code>1.</code></pre>
+<pre><code>AUGA</code></pre>
+<pre><code>-0,</code></pre>
+<pre><code>lbmol/h</code></pre>
+<p>Aspen Tutorial #</p>
+<pre><code>1.</code></pre>
+<pre><code>50.</code></pre>
+<pre><code>Entalpía</code></pre>
+<pre><code>3.</code></pre>
+<pre><code>0.</code></pre>
+<pre><code>MMBtu/h</code></pre>
+<pre><code>0,
+0,</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>74.</code></pre>
+<pre><code>151.
+0.</code></pre>
+<pre><code>Vapor Frac</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>Titoría 1</code></pre>
+<pre><code>-0,</code></pre>
+<pre><code>0.</code></pre>
+<pre><code>50.</code></pre>
+<pre><code>Fluxo de masa 48.</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>0,</code></pre>
+<pre><code>MIBK 1 PRODUTO1VAPPRO D1W-A</code></pre>
+<pre><code>VINAGRE NE</code></pre>
+<pre><code>ID de emisión</code></pre>
+<pre><code>2.</code></pre>
+<pre><code>Titoría #3 Tarefas e solución</code></pre>
+<pre><code>0,35 0,9 0,</code></pre>
+<pre><code>METHY-01 14.696 psi</code></pre>
+<pre><code>0,4 0,45 0,5 0,55 Molefrac
+líquida METHY-</code></pre>
+<pre><code>1
+0,</code></pre>
+<pre><code>ACETONA 14.696 psi</code></pre>
+<pre><code>Gamma líquido 1,005 1,01 1,015 1,02 1,025 1,03 1,035 1,04 1,045 1,05 1,</code></pre>
+<pre><code>0 0,05 0.1 0,15 0,65 0,7 0,75 0,8 0,</code></pre>
+</section>
+<section id="aspen-tutorial" class="level1">
+<h1>Aspen Tutorial</h1>
+<pre><code>0,2 0,25 0,</code></pre>
+<pre><code>Gamma para METHY-01/ACETONA</code></pre>
+<p>This is a offline tool, your data stays locally and is not send to any server! Feedback &amp; Bug Reports</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2023, Anxo Sánchez</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/anxosanchez/SOPQ-2324/edit/main/posts/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="nav-footer-right">Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</div>
+  </div>
+</footer>
+
+
+
+</body></html>

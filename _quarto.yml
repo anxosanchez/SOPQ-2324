@@ -11,30 +11,30 @@ website:
   repo-actions: [edit, issue]
   
   page-footer:
-    background: "#D9E3E4" #"#7eb7c2" #primary "#D9E3E4"
+    background: "#000002" # "#D9E3E4" #"#7eb7c2" #primary "#D9E3E4"
     left: |
       &copy; Copyright 2023, Anxo Sánchez
     right: |
       Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel
 
   sidebar:
-    background: "#D9E3E4" #"#7eb7c2" # primary
-    logo: "imaxes/logo-pequeno.png"
+    background: "#000002" #"#7eb7c2"  # "#D9E3E4" primary
+    logo: "imaxes/logo.png"
     align: center
     tools: 
       - icon: github
         href: https://github.com/anxosanchez/SOPQ-2324
         text: "GitHub"
-      - icon: orcid.org
-        href: https://orcid.org/my-orcid?orcid=0000-0002-9757-1752
-        text: Orcid
-        menu:
-          - text: Foro
-            url: https://moovi.uvigo.gal/mod/forum/view.php?id=759112
-          - text: Campusremoto 
-            url: https://campusremotouvigo.gal/access/public/meeting/682475815
-          - text: Moovi
-            url: https://moovi.uvigo.gal 
+      - icon: linkedin
+        href: https://www.linkedin.com/in/anxo-s%C3%A1nchez-berm%C3%BAdez-79086321/
+        text: Linkedin
+    menu:
+      - text: Foro
+        url: https://moovi.uvigo.gal/mod/forum/view.php?id=759112
+      - text: Campusremoto 
+        url: https://campusremotouvigo.gal/access/public/meeting/682475815
+      - text: Moovi
+        url: https://moovi.uvigo.gal
     
     style: "docked"
     search: true
@@ -53,6 +53,8 @@ website:
           text: Profesorado
         - href: links.qmd
           text: Ligazońs
+        - href: course-faq.qmd            
+          text: FAQ
       - section: "Computing"
         contents: 
         - href: computing-access.qmd
@@ -73,10 +75,11 @@ format:
   html:
     theme:
       light: [cosmo, theme.scss]
+      dark: [solar, theme-dark.scss]
     mainfont: "Open Sans"
     code-copy: true
     code-overflow: wrap
-    toc: true
+    toc: false
 
 execute:
   freeze: auto

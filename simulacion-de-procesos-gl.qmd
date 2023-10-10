@@ -215,9 +215,9 @@ flowchart TD
     C <--> D
     D <--> E[[Biblioteca de Unidades de Operación]] 
     D <--> F[[Métodos Termodinámicos]]
-    D <--> G[[]]Rutinas numéricas
+    D <--> G[[utinas numéricas]]
     H(Bases de datos de coste e dimensións) --> E
-    I(Bases de datos de Propiedade Físicas) --> E
+I(Bases de datos de Propiedades Físicas) --> E
 ```
 
 
