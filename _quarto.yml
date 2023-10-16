@@ -18,7 +18,7 @@ website:
       Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel
 
   sidebar:
-    background: "#000002" #"#7eb7c2"  # "#D9E3E4" primary
+    background: "#D9E3E4" #"#7eb7c2"  # "#D9E3E4" primary
     logo: "imaxes/logo.png"
     align: center
     tools: 
@@ -65,9 +65,9 @@ website:
           text: R resources
       - section: "Proxecto"
         contents:
-        - href: project-instructions.qmd
+        - href: project-description.qmd
           text: Instrucións
-        - href: project-tips.qmd
+        - href: project-tips-resources.qmd
           text: Tips + recusos
 
         
