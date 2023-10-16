@@ -11,7 +11,7 @@ website:
   repo-actions: [edit, issue]
   
   page-footer:
-    background: "#000002" # "#D9E3E4" #"#7eb7c2" #primary "#D9E3E4"
+    background: "#7eb7c2" # "#000002" "#D9E3E4" "#7eb7c2" primary "#D9E3E4"
     left: |
       &copy; Copyright 2023, Anxo Sánchez
     right: |
