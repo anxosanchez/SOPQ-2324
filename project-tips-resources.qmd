@@ -120,17 +120,7 @@ Be sure all plot titles and axis labels are visible and easy to read.
 
 ❌ **NO! The x-axis is hard to read because the names overlap.**
 
-```{r}
-ggplot(data = mpg, aes(x = manufacturer)) +
-  geom_bar()
-```
-
-✅ **YES! Names are readable**
-
-```{r}
-ggplot(data = mpg, aes(y = manufacturer)) +
-  geom_bar()
-```
+✅ **YES! Names are readable**```
 
 ### Do a little more to make the plot look professional!
 
@@ -141,18 +131,6 @@ ggplot(data = mpg, aes(y = manufacturer)) +
 -   *Optional: Added color - Use a coordinated color scheme throughout paper / presentation*
 -   *Optional: Applied a theme - Use same theme throughout paper / presentation*
 
-```{r}
-mpg %>%
-  count(manufacturer) %>%
-  mutate(manufacturer = str_to_title(manufacturer)) %>%
-  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +
-  geom_bar(stat = "identity", fill = "steelblue") +
-  labs(x = "Manufacturer", 
-       y = "Count", 
-       title = "The most common manufacturer is Dodge") +
-  theme_minimal() 
-```
-
 ### Tables and model output
 
 -   Use the `kable` function from the knitr package to neatly output all tables and model output.
@@ -160,12 +138,6 @@ mpg %>%
 
     -   Use the `digits` argument to display only 3 or 4 significant digits.
     -   Use the `caption` argument to add captions to your table.
-
-```{r}
-model <- lm(mpg ~ hp, data = mtcars)
-tidy(model) %>%
-  kable(digits = 3)
-```
 
 ### Guidelines for communicating results
 
