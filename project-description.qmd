@@ -1,36 +1,28 @@
 ---
-title: "Project description"
+title: "Descrición do Proxecto da Asignatura"
 ---
 
 ## Timeline
 
-[Topic ideas](#topic-ideas) due Fri, Feb 18
+[Ideas para o proxecto](#topic-ideas) due Fri, Feb 18
 
-[Proposal](#project-proposal) due Fri, Mar 18
+[Propota de proxecto](#project-proposal) due Fri, Mar 18
 
-[Draft report](#draft-report) due Fri, Apr 8
+[Borrador de informe](#draft-report) due Fri, Apr 8
 
-[Peer review](#peer-review) due Fri, Apr 15
+[Informe Final](#written-report) due Mon, Apr 25
 
-[Final report](#written-report) due Mon, Apr 25
+[Presentación en vídeo + slides](#video-presentation--slides) Thu, Apr 28
 
-[Video presentation + slides](#video-presentation--slides) and [final GitHub repo](#reproducibility---organization) due Thu, Apr 28
+## Introdución
 
-[Presentation comments](#presentation-comments) due Sat, Apr 30
+**O Proxecto**: Pensa en unha idea ou concepto da Enxeñaría Química e desenvólvea en forma de demostración, utilidade, simulación ou programa de cálculo ou deseño. Ese é o verdadeiro obxecivo. Trátase de que uses a simulación ou a optimización para ilustar de algún xeito algúns dos aspectos mais importantes da enxeñaría química.
 
-## Introduction
-
-**O Proxecto**: *Pilla unha idea ou concepto da Enxeñaría Química e desenvóolvea en forma de demostración, utilidade, simulación ou programa de cálculo ou deseño. Ese é o verdadeiro obxecivo.*
-
-O obxectivo do proxecto final é que uses a simulación ou a optimización para ilustar de algún xeito algúns dos aspectos mais importantes da enxeñaría química.
-
-O modelo no que te basees xa pode existir, ou ben, podes plantexar un por ti mesmo sobre algún tema que che insterse especialmente, ou buscalo na web.
-
-O obxectivo deste proxecto é que demostre as competencias adquiridas na materia en forma de un caso práctico xa sexa de deseño, solución, mellora ou simple simulación demostrativa.
+O modelo no que te basees xa pode existir, ou ben, podes plantexar un por ti mesmo sobre algún tema que che insterse especialmente, ou buscalo na web. O teu obxectivo ca realización do proxecto debe de ser a demostraci´on das túas competencias adquiridas na materia en forma de un caso práctico xa sexa de deseño, solución, mellora ou simple simulación demostrativa.
 
 A linguaxe de programación no é tan importante coma a idea. Non obstante a simulación debe presentar ó usuario unha interface (ou GUI) que o faga útil (por exemplo formularios de excel, widgets de python, GUI's de Matlab, etc.).
 
-Todas os traballo deben estar acompañados da súa documentación, tanto do obxectivo, método, algortimo, código e interface, así comop un emmplod e aplicación xa terminado.
+Todos os traballos deben estar acompañados da súa documentación, tanto do obxectivo, método, algortimo, código e interface, así comop un emmplod e aplicación xa terminado.
 
 Antes de pasar á realización do mesmo deberás entregar (entregable en MOOVI) un preproxecto quye deberá ser aprobado polo teu profesor, En caso de que a túa proposta non sexa axeitada ou non cunpla cun nivel acorde ca asignatura, non poderás empezar e debesrás reescribir a túa proposta, ben sexa sonbre o mesmo tema ou sobre outro.
 
@@ -44,8 +36,7 @@ Os catro entregables primarios para o proxecto final son
 - Un código executable debvidamente documentado acorde ó documento anterior.
 - Unha presentación en formato slides mais unha presentación de vídeo
  
- ## ideas {#topic-ideas}
-
+## Ideas para o proxecto {#topic-ideas}
 
 #### Introduction and data
 
