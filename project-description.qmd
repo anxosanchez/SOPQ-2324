@@ -39,225 +39,128 @@ Os entregables obligatorios para o proxecto final son
 
 ## Ideas para o proxecto {#topic-ideas}
 
-#### Introduction and data
+#### Introdución e propósito
 
--   State the source of the data set.
--   Describe when and how it was originally collected (by the original data curator, not necessarily how you found the data)
--   Describe the observations and the general characteristics being measured in the data
+- Indique a fonte e o propósito da simulacion.
+- Describe a fonte(s) de inspiración e a utilidade que lle ves.
+- Describe as observacións e as características para plantexala e desenvolvela.
 
-#### Research question
+#### Pregunta de utilidade
 
--   Describe a research question you're interested in answering using this data.
+- Describe para uqé se podería utilizar a túa simulació e os potenciais usuarios da mesma.
 
-#### Glimpse of data
+## Proposta de proxeto {#project-proposal}
 
--   Use the `glimpse` function to provide an overview of each data set
+O propósito da proposta do proxecto é axudarche a pensar na túa estratexia de análise cedo.
 
-Submit the PDF of the topic ideas to Gradescope.
-Mark all pages associated with each data set.
+Inclúe o seguinte na proposta:
 
-## Project proposal {#project-proposal}
+### Sección 1 - Introdución
 
-The purpose of the project proposal is to help you think about your analysis strategy early.
+A sección de introdución inclúe
 
-Include the following in the proposal:
+- Unha introdución ao tema que estás simulando.
+- A motivación para a da túa elección (citando calquera bibliografía relevante).
+- A pregunta ou problema xeral que desexas resolver.
+- As túas hipóteses sobre a cuestión.
+ 
+### Sección 2 - Descrición dos datos
 
-### Section 1 - Introduction
+Nesta sección, describirás o conxunto de datos que vas usar. Isto inclúe
 
-The introduction section includes
+- Descrición das observacións no conxunto de datos, variables, librerías etc.,
+- Descrición de como se procederá orixinalmente á realización da simulación, a interface e os usuarios ña que vai dirixida.
+ 
+### Sección 3 - Enfoque da análise
 
--   an introduction to the subject matter you're investigating
--   the motivation for your research question (citing any relevant literature)
--   the general research question you wish to explore
--   your hypotheses regarding the research question of interest.
+Nesta sección, proporcionarás unha breve visión xeral do teu enfoque de análise da simulación. Isto inclúe:
 
-### Section 2 - Data description
+- Descrición da variables de resposta.
+- Estatísticas de visualización gráfica e nmérica das variable de resposta.
+- Lista de variables que vas a consideradar na simulación.
+- Técnica de modelado numérico (regresión lineal múltiple, ODE,etc.).
 
-In this section, you will describe the data set you wish to explore.
-This includes
+### Dicionario de datos (enunciado de variables principais)
 
--   description of the observations in the data set,
--   description of how the data was originally collected (not how you found the data but how the original curator of the data collected it).
+- Inclúe un dicionario de datos para todas as variables do conxunto de datos da simulación.
+- Crea un ficheiro "Readme" do teu proxecto en texto plano no cartafol principal.
 
-### Section 3 - Analysis approach
+### Envío
 
-In this section, you will provide a brief overview of your analysis approach.
-This includes:
+Mete todos os teus ficheiros finais nda proposta e entrégaos nun ficheiro zip, ou creao un repositorio ou disco compartido (por exemplo GitHub ou OneDrive) e envía o PDF da súa proposta ca ligazón ó repositorio.
 
--   Description of the response variable.
--   Visualization and summary statistics for the response variable.
--   List of variables that will be considered as predictors
--   Regression model technique (multiple linear regression and logistic regression)
+### Cualficación das propostas
 
-### Data dictionary (aka code book)
+|Total |10 ptos |
+| ---------------------- | -------- |
+| Introdución |3 ptos |
+| Descrición dos datos |2 ptos |
+| Enfoque da análise |4 ptos |
+| Dicionario de datos |1 pts |
 
-Submit a data dictionary for all the variables in your data set in the `README` of your project repo, in the `data` folder.
-Link to this file from your proposal writeup.
+Cada compoñente cualificarase do seguinte xeito:
 
-### Submission
+- Cumpre as expectativas (crédito completo): Todos os elementos necesarios están completados e son precisos. A narración está escrita con claridade, todas as táboas e visualizacións están ben formatadas e o traballo sería presenta nun look profesional.
 
-Push all of your final changes to the GitHub repo, and submit the PDF of your proposal to Gradescope.
+- Cerca das expectativas (crédito medio): Hai algúns elementos que faltan e/ou imprecisos. Hai algúns problemas co formato.
 
-### Proposal grading
+- Non cumpre as expectativas (sen crédito): Faltan os elementos principais. O traballo non está perfectamente formateado e non presentaría nun look profesional.
 
-| Total                | 10 pts |
-|----------------------|--------|
-| **Introduction**     | 3 pts  |
-| **Data description** | 2 pts  |
-| **Analysis plan**    | 4 pts  |
-| **Data dictionary**  | 1 pts  |
+## Borrador de informe {#Draft-Report}
 
-Each component will be graded as follows:
+O propósito do borrador é darche a oportunidade de obter comentarios anticipados sobre a túa simulación. Polo tanto, o borrador e centraranse principalmente nunha análise exploratoria da simulación, modelado de datos e interpretacións iniciais do obxectivo.
 
--   **Meets expectations (full credit)**: All required elements are completed and are accurate.
-    The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.
+Escribe o borrador no ficheiro **escrito-informe** no repo do seu proxecto ou engrégao en **MOOVI**.
 
--   **Close to expectations (half credit)**: There are some elements missing and/or inaccurate.
-    There are some issues with formatting.
+A continuación móstrase unha breve descrición das seccións para centrarse no borrador:
 
--   **Does not meet expectations (no credit)**: Major elements missing.
-    Work is not neatly formatted and would not be presentable in a professional setting.
+### Introdución e datos
 
-## Draft report {#draft-report}
+Esta sección inclúe unha introdución á motivación da simulación, datos implicado e obxecto d mesma. Describe os datos e definicións de variables clave. Tamén debe incluír algunha análise exploratorios do proceso.
 
-The purpose of the draft and peer review is to give you an opportunity to get early feedback on your analysis.
-Therefore, the draft and peer review will focus primarily on the exploratory data analysis, modeling, and initial interpretations.
+### Metodoloxía
 
-Write the draft in the **written-report.qmd** file in your project repo.
-You do not need to submit the draft on Gradescope.
+Esta sección inclúe unha breve descrición do seu proceso de modelado. Explica o razoamento do tipo de modelo que estás encaixando, as variables de predición consideradas para o modelo incluíndo calquera interacción. Ademais, mostra como chegas ós requeriments finais que lle pos á túa simulación, describindo o proceso de selección de modelos, calquera transformacións variables (se é necesario) e calquera outra consideración relevante que formaron parte ds mesma.
 
-Below is a brief description of the sections to focus on in the draft:
+Explica tamén a linguaxe de programacion que vas a usa e cáles son as rzóns da túa elección.
 
-### Introduction and data
+### Resultados
 
-This section includes an introduction to the project motivation, data, and research question.
-Describe the data and definitions of key variables.
-It should also include some exploratory data analysis.
-All of the EDA won't fit in the paper, so focus on the EDA for the response variable and a few other interesting variables and relationships.
+Nesta sección, presenta os resultados que se poidan tirar da simulción e inclúe unha breve discusión sobre os aspectos mais relevantes que ti considreres.
 
-### Methodology
+Esta sección tamén inclúe interpretacións iniciais e conclusións extraídas do modelo así como a interfaces que vas a presentar ó usuario.
 
-This section includes a brief description of your modeling process.
-Explain the reasoning for the type of model you're fitting, predictor variables considered for the model including any interactions.
-Additionally, show how you arrived at the final model by describing the model selection process, any variable transformations (if needed), and any other relevant considerations that were part of the model fitting process.
+## Informe escrito {#escrito-informe}
 
-### Results
+O seu informe escrito debe completarse no ficheiro `escrito-informe.qmd` e debe ser reproducible.
+Todos os membros do equipo deberían contribuír ao repositorio de GitHub, con compromisos significativos regulares.
 
-In this section, you will output the final model and include a brief discussion of the model assumptions, diagnostics, and any relevant model fit statistics.
+Antes de finalizar a súa escritura, asegúrese de que a impresión de anacos de código está desactivada coa opción `eco = false`.
 
-This section also includes initial interpretations and conclusions drawn from the model.
+** Enviarás o PDF do teu informe final sobre o graduado. **
 
-## Peer review {#peer-review}
-
-Critically reviewing others' work is a crucial part of the scientific process, and STA 210 is no exception.
-Each lab team will be assigned two other teams's projects to review.
-Each team should push their draft to their GitHub repo by the due date.
-One lab in the following week will be dedicated to the peer review, and all reviews will be due by the end of that lab session.
-
-During the peer review process, you will be provided read-only access to your partner teams' GitHub repos.
-Provide your review in the form of GitHub issues to your partner team's GitHub repo using the issue template provided.
-The peer review will be graded on the extent to which it comprehensively and constructively addresses the components of the partner team's report: the research context and motivation, exploratory data analysis, modeling, interpretations, and conclusions.
-
-### Pairings
-
-#### Section 1 - M 1:45PM - 3:00PM
-
-| Team being reviewed | Reviewer 1     | Reviewer 2     |
-|---------------------|----------------|----------------|
-| chaa_chaa_chaa      | yay_stats      | stat_over_flow |
-| dekk                | chaa_chaa_chaa | yay_stats      |
-| eight               | dekk           | chaa_chaa_chaa |
-| housecats           | eight          | dekk           |
-| krafthouse          | housecats      | eight          |
-| rrawr               | krafthouse     | housecats      |
-| stat_over_flow      | rrawr          | krafthouse     |
-| yay_stats           | stat_over_flow | rrawr          |
-
-#### Section 2 - M 3:30PM - 4:45PM
-
-| Team being reviewed | Reviewer 1       | Reviewer 2       |
-|---------------------|------------------|------------------|
-| a_plus_plus_plus    | we_r             | tina             |
-| predictors          | a_plus_plus_plus | we_r             |
-| sixers              | predictors       | a_plus_plus_plus |
-| soy_nuggets         | sixers           | predictors       |
-| tina                | soy_nuggets      | sixers           |
-| we_r                | tina             | soy_nuggets      |
-
-#### Section 3 - M 5:15PM - 6:30PM
-
-| Team being reviewed              | Reviewer 1                       | Reviewer 2                       |
-|------------------------|------------------------|------------------------|
-| down_to_earth_goats              | the_three_musketeers             | team_five                        |
-| ginger_and_stats                 | down_to_earth_goats              | the_three_musketeers             |
-| pineapple_wedge_and_diced_papaya | ginger_and_stats                 | down_to_earth_goats              |
-| statchelorettes                  | pineapple_wedge_and_diced_papaya | ginger_and_stats                 |
-| statisix                         | statchelorettes                  | pineapple_wedge_and_diced_papaya |
-| stats_squad                      | statisix                         | statchelorettes                  |
-| team_five                        | stats_squad                      | statisix                         |
-| the_three_musketeers             | team_five                        | stats_squad                      |
-
-### Process and questions
-
-Spend \~30 mins to review each team's project.
-
--   Find your team name on the **Reviewer 1** and **Reviewer 2** columns.
--   For each of the columns, find the name of the team to review in the **Team being reviewed** column. You should already have access to this team's repo.
--   Open the repo of the team you're reviewing, read their project draft, and browser around the rest of their repo.
--   Then, go to the Issues tab in that repo, click on New issue, and click on Get started for the Peer review issue. Fill out this issue, answering the following questions:
-    -   Peer review by: \[NAME OF TEAM DOING THE REVIEW\]
-
-    -   Names of team members that participated in this review: \[FULL NAMES OF TEAM MEMBERS DOING THE REVIEW\]
-
-    -   Describe the goal of the project.
-
-    -   Describe the data used or collected, if any.
-        If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.
-
-    -   Describe the approaches, tools, and methods that will be used.
-
-    -   Is there anything that is unclear from the proposal?
-
-    -   Provide constructive feedback on how the team might be able to improve their project.
-        Make sure your feedback includes at least one comment on the statistical modeling aspect of the project, but do feel free to comment on aspects beyond the modeling.
-
-    -   What aspect of this project are you most interested in and would like to see highlighted in the presentation.
-
-    -   Provide constructive feedback on any issues with file and/or code organization.
-
-    -   (Optional) Any further comments or feedback?
-
-## Written report {#written-report}
-
-Your written report must be completed in the `written-report.qmd` file and must be reproducible.
-All team members should contribute to the GitHub repository, with regular meaningful commits.
-
-Before you finalize your write up, make sure the printing of code chunks is off with the option `echo = FALSE`.
-
-**You will submit the PDF of your final report on Gradescope.**
-
-The PDF you submit must match the files in your GitHub repository *exactly*.
-The mandatory components of the report are below.
-You are free to add additional sections as necessary.
-The report, including visualizations, should be **no more than 10 pages long.** is no minimum page requirement; however, you should comprehensively address all of the analysis and report.
-
-Be selective in what you include in your final write-up.
-The goal is to write a cohesive narrative that demonstrates a thorough and comprehensive analysis rather than explain every step of the analysis.
-
-You are welcome to include an appendix with additional work at the end of the written report document; however, grading will largely be based on the content in the main body of the report.
-You should assume the reader will not see the material in the appendix unless prompted to view it in the main body of the report.
-The appendix should be neatly formatted and easy for the reader to navigate.
-It is not included in the 10-page limit.
-
-The written report is worth 40 points, broken down as follows
-
-| Total                         | 40 pts |
-|-------------------------------|--------|
-| **Introduction/data**         | 6 pts  |
-| **Methodology**               | 10 pts |
-| **Results**                   | 14 pts |
-| **Discussion + conclusion**   | 6 pts  |
-| **Organization + formatting** | 4 pts  |
+O PDF que envíe debe coincidir cos ficheiros do seu repositorio GitHub *exactamente *.
+Os compoñentes obrigatorios do informe están a continuación.
+Vostede é libre de engadir seccións adicionais segundo sexa necesario.
+O informe, incluídas as visualizacións, debería ser ** non máis de 10 páxinas de longo. ** Non é un requisito mínimo de páxina;Non obstante, debes abordar de xeito exhaustivo toda a análise e informe.
+
+Sexa selectivo no que inclúe na súa redacción final.
+O obxectivo é escribir unha narración cohesionada que demostre unha análise completa e completa en vez de explicar cada paso da análise.
+
+Benvido a incluír un apéndice con traballo adicional ao final do documento de informe escrito;Non obstante, a clasificación basearase en gran medida no contido do corpo principal do informe.
+Debe asumir que o lector non verá o material do apéndice a menos que o solicite no corpo principal do informe.
+O apéndice debe estar formateado e fácil para o lector para navegar.
+Non está incluído no límite de 10 páxinas.
+
+O informe escrito vale 40 puntos, descomprimido do seguinte xeito:
+
+|Total |100 ptos |
+| ------------------------------- | -------- |
+| Introdución | 10 ptos  |
+| Metodoloxía | 25 ptos |
+| Resultados  | 15 pts  |
+| Discusión + Descrición + Conclusións | 20 ptos |
+| Organización + Formato + Interface | 20 ptos |
 
 [Click here](/documents/project-report-rubric.pdf "Project rubric") for a PDF of the written report rubric.
 
@@ -391,35 +294,6 @@ You may not post a question that's already been asked on the discussion thread.
 Additionally, the question should be (i) substantive (i.e. it shouldn't be "Why did you use a bar plot instead of a pie chart"?), (ii) demonstrate your understanding of the content from the course, and (iii) relevant to that group's specific presentation, i.e demonstrating that you've watched the presentation.
 
 *This portion of the project will be assessed individually.*
-
-### Pairings
-
-Find your team name in the first column, watch videos from teams in the second column and leave comments.
-
-| Reviewer                         | First video to review            | Second video to review           |
-|:-----------------------|:-----------------------|:-----------------------|
-| Ginger and Stats                 | Eight                            | We R                             |
-| Krafthouse                       | Ginger and Stats                 | Eight                            |
-| Soy Nuggets                      | Krafthouse                       | Ginger and Stats                 |
-| Down To Earth Goats              | Soy Nuggets                      | Krafthouse                       |
-| A+++                             | Down To Earth Goats              | Soy Nuggets                      |
-| Team Five                        | A+++                             | Down To Earth Goats              |
-| Rrawr                            | Team Five                        | A+++                             |
-| Housecats                        | Rrawr                            | Team Five                        |
-| Dekk                             | Housecats                        | Rrawr                            |
-| Stat OverFlow                    | Dekk                             | Housecats                        |
-| The Three Musketeers             | Stat OverFlow                    | Dekk                             |
-| Predictors                       | The Three Musketeers             | Stat OverFlow                    |
-| Stats Squad                      | Predictors                       | The Three Musketeers             |
-| Statisix                         | Stats Squad                      | Predictors                       |
-| Sixers                           | Statisix                         | Stats Squad                      |
-| Yay Stats                        | Sixers                           | Statisix                         |
-| TINA                             | Yay Stats                        | Sixers                           |
-| Statchelorettes                  | TINA                             | Yay Stats                        |
-| Pineapple Wedge and Diced Papaya | Statchelorettes                  | TINA                             |
-| Chaa Chaa Chaa                   | Pineapple Wedge and Diced Papaya | Statchelorettes                  |
-| We R                             | Chaa Chaa Chaa                   | Pineapple Wedge and Diced Papaya |
-| Eight                            | We R                             | Chaa Chaa Chaa                   |
 
 ## Reproducibility + organization
 
