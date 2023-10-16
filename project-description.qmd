@@ -30,12 +30,13 @@ Antes de pasar á realización do mesmo deberás entregar (entregable en MOOVI) 
 
 Traballarás no proxecto de xeito indicidual.
 
-Os catro entregables primarios para o proxecto final son
+Os entregables obligatorios para o proxecto final son
 
-- Un informe escrito e reproducible que detalla a súa análise, os algoritmos ou métodos numéricos usados, o diagrama de fluxo da programación d a descrición da interface.
-- Un código executable debvidamente documentado acorde ó documento anterior.
-- Unha presentación en formato slides mais unha presentación de vídeo
- 
+- Un **Informe escrito** e reproducible que detalla a súa análise, os algoritmos ou métodos numéricos usados, o diagrama de fluxo da programación d a descrición da interface.
+- Un **Código executable** debvidamente documentado acorde ó documento anterior.
+- Unha **Presentación en formato slides**
+- Un **Vídeo explicativo do proxcto e a súas funcionalidads**
+
 ## Ideas para o proxecto {#topic-ideas}
 
 #### Introduction and data
