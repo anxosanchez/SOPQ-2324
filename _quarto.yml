@@ -47,7 +47,7 @@ website:
           text: "Información da materia" 
         - href: index.qmd
           text: Programación
-        - href: guia.qmd
+        - href: course-syllabus.qmd
           text: Guía Docente
         - href: course-team.qmd
           text: Profesorado
