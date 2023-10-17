@@ -103,9 +103,7 @@ Mete todos os teus ficheiros finais nda proposta e entrégaos nun ficheiro zip, 
 Cada compoñente cualificarase do seguinte xeito:
 
 - Cumpre as expectativas (crédito completo): Todos os elementos necesarios están completados e son precisos. A narración está escrita con claridade, todas as táboas e visualizacións están ben formatadas e o traballo sería presenta nun look profesional.
-
 - Cerca das expectativas (crédito medio): Hai algúns elementos que faltan e/ou imprecisos. Hai algúns problemas co formato.
-
 - Non cumpre as expectativas (sen crédito): Faltan os elementos principais. O traballo non está perfectamente formateado e non presentaría nun look profesional.
 
 ## Borrador de informe {#draft-report}
@@ -134,12 +132,7 @@ Esta sección tamén inclúe interpretacións iniciais e conclusións extraídas
 
 ## Informe escrito {#written-report}
 
-O seu informe escrito debe completarse no ficheiro `escrito-informe.qmd` e debe ser reproducible.
-Todos os membros do equipo deberían contribuír ao repositorio de GitHub, con compromisos significativos regulares.
-
-Antes de finalizar a súa escritura, asegúrese de que a impresión de anacos de código está desactivada coa opción `eco = false`.
-
-** Enviarás o PDF do teu informe final sobre o graduado. **
+O teu informe escrito debe completarse no ficheiro `informe-escrito` e debe estar en formato `pdf` ou `odt`. Antes de finalizar a súa escritura, asegúrese de que a impresión de anacos de código está desactivada e o códiga resaltado, ben indicado.
 
 O PDF que envíe debe coincidir cos ficheiros do seu repositorio GitHub *exactamente *.
 Os compoñentes obrigatorios do informe están a continuación.
@@ -205,7 +198,7 @@ Aquí é onde debes de valorizar a túa simulación.
 - Describe os resultados clave da simulación.
 - O obxectivo non é interpretar todas as variables, senón demostrar que és competente no uso da saídas da simulación para explicar as súas funcionalidades, empregando as interpretacións para apoiar as túas conclusións.
 - Concéntrate nas variables claves da simulación, e en todo aquelo que proporcione un contexto relevante para o usuario da mesma.
-- 
+
 #### Criterios de avaliación
 
 The model fit is clearly assessed, and interesting findings from the model are clearly described.
