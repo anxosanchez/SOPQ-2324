@@ -18,7 +18,7 @@ website:
       Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel
 
   sidebar:
-    background: "#D9E3E4" #"#7eb7c2"  # "#D9E3E4" primary
+    background: "#D9E3E4" # primary # "#D9E3E4" #"#7eb7c2"  #  primary
     logo: "imaxes/logo.png"
     align: center
     tools: 

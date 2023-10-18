@@ -1,19 +1,19 @@
 ---
 title: "Descrición do Proxecto da Asignatura"
 language: custom.yml
+toc: true
+format: 
+  html:
+    page-layout: full
+
 ---
 
 ## Liña de tempo
 
-[Ideas para o proxecto](#topic-ideas) ata Venres, 27 de Outubro
-
-[Propota de proxecto](#project-proposal) ata Venres, 3 de Novembro 
-
-[Borrador de informe](#draft-report) ata Venres, 1 de Decembro
-
-[Informe Final](#written-report) ata Venres, 8 de Decembro 
-
-[Presentación en vídeo + diapositivas](#video-presentation-slides) Venres, 15 de Decembro 
+[Ideas para o proxecto](#topic-ideas) ata Venres, 27 de Outubro  
+[Borrador de informe](#draft-report) ata Venres, 1 de Decembro  
+[Informe Final](#written-report) ata Venres, 8 de Decembro   
+[Presentación en vídeo + diapositivas](#video-presentation-slides) Venres, 15 de Decembro   
 
 ## Introdución
 
@@ -35,7 +35,7 @@ Os entregables obligatorios para o proxecto final son
 
 - Un **Informe escrito** e reproducible que detalla a súa análise, os algoritmos ou métodos numéricos usados, o diagrama de fluxo da programación d a descrición da interface.
 - Un **Código executable** debvidamente documentado acorde ó documento anterior.
-- Unha **Presentación en formato slides**
+- Unha **Presentación en formato diapositivas**
 - Un **Vídeo explicativo do proxcto e a súas funcionalidads**
 
 ## Ideas para o proxecto {#topic-ideas}
@@ -110,7 +110,7 @@ Cada compoñente cualificarase do seguinte xeito:
 
 O propósito do borrador é darche a oportunidade de obter comentarios anticipados sobre a túa simulación. Polo tanto, o borrador e centraranse principalmente nunha análise exploratoria da simulación, modelado de datos e interpretacións iniciais do obxectivo.
 
-Escribe o borrador no ficheiro **escrito-informe** no repo do seu proxecto ou engrégao en **MOOVI**.
+Escribe o borrador no ficheiro **informe-escrito** no repo do seu proxecto ou engrégao en **MOOVI**.
 
 A continuación móstrase unha breve descrición das seccións para centrarse no borrador:
 
@@ -120,9 +120,11 @@ Esta sección inclúe unha introdución á motivación da simulación, datos imp
 
 ### Metodoloxía
 
-Esta sección inclúe unha breve descrición do seu proceso de modelado. Explica o razoamento do tipo de modelo que estás encaixando, as variables de predición consideradas para o modelo incluíndo calquera interacción. Ademais, mostra como chegas ós requeriments finais que lle pos á túa simulación, describindo o proceso de selección de modelos, calquera transformacións variables (se é necesario) e calquera outra consideración relevante que formaron parte ds mesma.
+Esta sección inclúe unha breve descrición do seu proceso de modelado. 
 
-Explica tamén a linguaxe de programacion que vas a usa e cáles son as rzóns da túa elección.
+- Explica o razoamento do tipo de modelo que estás encaixando, as variables de predición consideradas para o modelo incluíndo calquera interacción.   
+- Amosa como chegas ós requeriments finais que lle pos á túa simulación, describindo o proceso de selección de modelos,   calquera transformacións variables (se é necesario) e calquera outra consideración relevante que formaron parte ds mesma.  
+- Explica tamén a linguaxe de programacion que vas a usa e cáles son as rzóns da túa elección.  
 
 ### Resultados
 
@@ -134,18 +136,15 @@ Esta sección tamén inclúe interpretacións iniciais e conclusións extraídas
 
 O teu informe escrito debe completarse no ficheiro `informe-escrito` e debe estar en formato `pdf` ou `odt`. Antes de finalizar a súa escritura, asegúrese de que a impresión de anacos de código está desactivada e o códiga resaltado, ben indicado.
 
-O PDF que envíe debe coincidir cos ficheiros do seu repositorio GitHub *exactamente *.
-Os compoñentes obrigatorios do informe están a continuación.
-Vostede é libre de engadir seccións adicionais segundo sexa necesario.
-O informe, incluídas as visualizacións, debería ser ** non máis de 10 páxinas de longo. ** Non é un requisito mínimo de páxina;Non obstante, debes abordar de xeito exhaustivo toda a análise e informe.
-
-Sexa selectivo no que inclúe na súa redacción final.
-O obxectivo é escribir unha narración cohesionada que demostre unha análise completa e completa en vez de explicar cada paso da análise.
-
-Benvido a incluír un apéndice con traballo adicional ao final do documento de informe escrito;Non obstante, a clasificación basearase en gran medida no contido do corpo principal do informe.
-Debe asumir que o lector non verá o material do apéndice a menos que o solicite no corpo principal do informe.
-O apéndice debe estar formateado e fácil para o lector para navegar.
-Non está incluído no límite de 10 páxinas.
+- O PDF que envíes debe coincidir cos ficheiros de entrega (repositorio GitHub, ficheiro `.zip` ou disco compartido) *exactamente*.  
+- Os compoñentes obrigatorios do informe están numeradas mais adiante no texto, inda que eres libre de engadir seccións adicionais segundo sexa necesario.
+  - O informe, incluídas as visualizacións, debería ser **non máis de 10 páxinas de longo**.
+  - Non hai requerimento dun número mínimo de páxina, non obstante, debes abordar de xeito exhaustivo toda a análise e informe.  
+- Se selectivo no que inclúe na súa redacción final. O obxectivo é escribir unha narración cohesionada que demostre unha análise completa e completa en vez de explicar cada paso da análise.
+- Será valorada a inclusión dun **apéndice** con traballo adicional ao final do documento de informe escrito, non obstante, a cualificación basearase en gran medida no contido do corpo principal do informe.
+  - Debes asumir que o material do apéndice non se consultará a menos que o solicite no corpo principal de texto do informe.  
+  - O apéndice debe estar formateado e ser fácil de navegar por el. 
+  - Non está incluído no límite de 10 páxinas.
 
 O informe escrito vale 40 puntos, descomprimido do seguinte xeito:
 
@@ -201,9 +200,9 @@ Aquí é onde debes de valorizar a túa simulación.
 
 #### Criterios de avaliación
 
-The model fit is clearly assessed, and interesting findings from the model are clearly described.
-Interpretations of model coefficients are used to support the key findings and conclusions, rather than merely listing the interpretation of every model coefficient.
-If the primary modeling objective is prediction, the model's predictive power is thoroughly assessed.
+- O modelo usad axústase ós requerimentos da simulación e é describe claramente os resultados.  
+- As interpretacións dos resultados úsanse para demostrar ou facilitar o tema obxecto da siuacionapoiar, as conclusións clave, en lugar de simplemente enumerar a interpretación de todos os coeficientes do moesmo.  
+- Se o principal obxectivo de modelado é a predición ou o cálculo, avalíase a fondo o poder predictivo do modelo ou a presicisón do cálculo.
 
 ### Discussion + Conclusion
 
@@ -233,7 +232,7 @@ O corpo principal do informe escrito (sen incluír o apéndice) non é superior 
 
 ## Video presentation + slides {#video-presentation-slides}
 
-### Trasnpaencias
+### Diapositivas
 
 - Ademais do informe escrito, o debes creará diapositivas de presentación e grabar unha presentación de vídeo que resuma e mostrará o teu proxecto. Poderemos pedirche que a expoñas na aula.
 - Fai unha introdución da túa simulación, conxunto de datos, representacións gráficas, utilidade, e discute as conclusións pricipais do teu traballo.
@@ -254,22 +253,23 @@ Diapositiva 8: Discusión dos aspectos reevantes
 Diapositiva 9: Conclusións +
 Diapositiva 10: traballo futuro (melloras)
 
-### Video presentation
+### Presentación en Vídeo 
 
 - Para a presentación de vídeo, podes falar sobre as túas de diapositivas, como nas conferencias.
 - A presentación de vídeo non debe ser superior a 5 minutos.
 - Podes usar pode usar calquera plataforma dee soporte de vídeo ou subir a grabación en formato mp4 ou mkv a **MOOVI**.
 - 
 A continuación móstranse algúns recursos na gravación de vídeos:
-- [Presentacións de gravación en Zoom] (https://kb.siue.edu/61721)
+- [Ferramentas de grabación de pantalla de balde:
+  - [Camstudio](https://sourceforge.net/projects/camstudio/)  
+  - [Simple Screen Recorder](https://www.maartenbaert.be/simplescreenrecorder/)  
+  - [OBS Studio]()https://obsproject.com/
 - [Apple QuickTime para a gravación de pantalla] (https://support.apple.com/en-gb/guide/quicktime-player/qtp97b08e666/mac)
 - [Funcionalidade de gravación de pantalla incorporada de Windows 10] (https://www.youtube.com/watch?v=ofpBr1mrduo)
 
 ## Reproducibilidade + organización
 
-Todo o traballo escrito (con excepción das diapositivas de presentación) debe ser reproducible e o repo de GitHub debería estar ben organizado.
-
-O ficheiro comprimido, ou disco compartido, debería ter a seguinte estrutura:
+Todo o traballo escrito (con excepción das diapositivas de presentación) debe ser reproducible e o directorio compartido ou ficheiro `.zip` debería estar ben organizado. Debería ter a seguinte estrutura:
 
 - `README`: descrición curta do proxecto.  
 - `informe-escrito`: informe final escrito en formato `pdf` ou `odt`.  
@@ -279,9 +279,12 @@ O ficheiro comprimido, ou disco compartido, debería ter a seguinte estrutura:
     - Se as diapositivas de presentación están en liña, podes poñer unha ligazón ás diapositivas nun ficheiro `readme` no cartafol `Presentación`.
 - Cartadfol `Vídeo`: cartafol co vídeo.
   - Se o vídeo están en liña, podes poñer unha ligazón nun ficheiro `readme` no cartafol `Vídeo`. 
+- Os puntos para a **reproducibilidade e organización** estarán baseados na reproducibilidade do informe escrito e na organización do ficheiro ou disco de entrega.
+- O repo, disco ou `.zip` debe estar organizado perfectamente como se describe anteriormente, non debería haber ficheiros alleos, todo o texto no **README** debe ser facilmente lexible.
 
-Os puntos para a reproducibilidade + a organización estarán baseados na reproducibilidade do informe escrito e na organización do proxecto GitHub Repo.
-O repo debe estar organizado perfectamente como se describe anteriormente, non debería haber ficheiros alleos, todo o texto no ReadMe debe ser facilmente lexible.
+::: {callout-note}
+A nosa recomendación é que crees un espazo de traballo en [Github](https://github.com), é de balde par auso persoal e podes aprender bastante en cano a gardar o teu traballo de xeito seguro e organizado, incluindo o control de versións, tan importante á hora de eleborar código.
+:::
 ## Puntuación final
 
 A rúbrica de avaliación de do proxecto da asignatura é a seguinte:
