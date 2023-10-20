@@ -11,7 +11,7 @@ website:
   repo-actions: [edit, issue]
   
   page-footer:
-    background: "#D9E3E4" # "#000002"  "#7eb7c2" primary "#D9E3E4"
+    background: "#242424" # "#000002"  "#7eb7c2" primary "#D9E3E4"
     left: |
       &copy; Copyright 2023, Anxo Sánchez
     right: |
@@ -74,8 +74,8 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, theme.scss]
       dark: [solar, theme-dark.scss]
+      light: [cosmo, theme.scss]
     mainfont: "Open Sans"
     code-copy: true
     code-overflow: wrap
