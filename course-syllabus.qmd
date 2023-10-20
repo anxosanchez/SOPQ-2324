@@ -127,23 +127,12 @@ estará rubricada por rúbrica públicada na plataforma de e-learning.
 
 ## Avaliación
 
-| Descrición | Cualificación | Resultados de Formación e Aprendizaxe |
+Actividade | Descrición | Cualificación | 
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | Aprendizaxe baseado en proxectos | Se realizará durante todo o semestre e se entregará ó concluir as clases presenciais e antes do exame final. A cualificación estará rubricada por rúbrica públicada na plataforma de e-learning | 20 |  
 | Simulación                       | O alumno debe realizae e entregar unha simulación que contribúe á avaliación continua e que debe ser realizada de xeito tutelado durante todo o semestre. A cualificación estará rubricada por rúbrica públicada na plataforma de e-learning | 20 |  
 | Resolución de problemas de forma autónoma | Periódicamente o alimno debe entregar resoltos os problemas que se lle plantexan. | 20 |  
-
-
-Exame de preguntas de
-desenvolvemento
-
-
-Correesponde ó exame final da asignatura que, no caso de renuncia
-á avaliación continua, será o total da nota. Está constituído por un ou
-varios casos, ou simulacións e a súa correccióne stará asemesmo
-rubricada.
-
-## 40
+| Exame de preguntas de desenvolvemento     | Correesponde ó exame final da asignatura que, no caso de renuncia á avaliación continua, será o total da nota. Está constituído por un ou varios casos, ou simulacións e a súa correccióne stará asemesmo rubricada. | 40 |  
 
 ### Outros comentarios sobre a Avaliación**
 
