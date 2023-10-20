@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SOPQ 2324 - Project tips + resources</title>
+<title>SOPQ 2324 - Guía Docente</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,7 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./project-description.html" rel="prev">
+<link href="./course-team.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -109,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./project-description.html">Proxecto</a></li><li class="breadcrumb-item"><a href="./project-tips-resources.html">Tips + recusos</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li><li class="breadcrumb-item"><a href="./guia.html">Guía Docente</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -141,13 +108,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Información xeral</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
@@ -162,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="./guia.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Guía Docente</span></a>
   </div>
 </li>
@@ -217,22 +184,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Proxecto</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-description.html" class="sidebar-item-text sidebar-link">
+  <a href="./project-instructions.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrucións</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-tips-resources.html" class="sidebar-item-text sidebar-link active">
+  <a href="./project-tips.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tips + recusos</span></a>
   </div>
 </li>
@@ -249,7 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project tips + resources</h1>
+<h1 class="title">Guía Docente</h1>
 </div>
 
 
@@ -264,145 +231,380 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="dfontes-de-datos" class="level2">
-<h2 class="anchored" data-anchor-id="dfontes-de-datos">DfONTES DE DATOS</h2>
-<section id="algúns-recursos-que-poden-ser-útiles-para-que-atopes-ideas" class="level3">
-<h3 class="anchored" data-anchor-id="algúns-recursos-que-poden-ser-útiles-para-que-atopes-ideas">Algúns recursos que poden ser útiles para que atopes ideas:</h3>
+<section id="simulación-e-optimización-de-procesos-químicos.-curso-2023---2024" class="level1">
+<h1>Simulación e Optimización de Procesos Químicos. Curso 2023 - 2024</h1>
+<section id="datos-identificativos" class="level2">
+<h2 class="anchored" data-anchor-id="datos-identificativos">Datos identificativos</h2>
+<p>Materia: Simulación e optimización de procesos químicos Código: V12G350V Titulación: Grao en Enxeñaría en Química Industrial Descritores:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Creditos ECTS</th>
+<th>Seleción</th>
+<th style="text-align: center;">Curso</th>
+<th style="text-align: center;">Cuadrimestre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>6</td>
+<td>OB</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1c</td>
+</tr>
+<tr class="even">
+<td>Lingua de impartición</td>
+<td>Galego,Inglés</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td>Departamento</td>
+<td>Enxeñaría Química</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td>Coordinador/a</td>
+<td>Sánchez Bermúdez, Ángel Manuel</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td>Profesorado</td>
+<td>Sánchez Bermúdez, Ángel Manuel</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td>Correo-e</td>
+<td>asanchez@uvigo.gal</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td>Web</td>
+<td><a href="http://http://eqea.uvigo.es">http://http://eqea.uvigo.es</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="descrición-xeral" class="level2">
+<h2 class="anchored" data-anchor-id="descrición-xeral">Descrición xeral</h2>
+<p>Asignatura obrigatoria que se imparten no 7º cuadrimestre do Grao en Química Industrial, unha vez que o alumno estudou as materias nas que deben demostrar os coñecementos necesarios sobre:<br>
+- Métodos numéricos empregados na enxeñaría química.<br>
+- Deseño de reactores químicos.<br>
+- Deseño de equipos para operacións de separación.<br>
+- Deseño de equipos de transferencia de calor empregados en procesos químicos.<br>
+- Control e seguridade dos procesos químicos.</p>
+<p>Esta materia impártese no último ano. O alumno accede despois de adquirir e desenvolver habilidades para xestionar facilmente as ferramentas informáticas da informática dixital, nas que o uso seguirá funcionando e afondar.</p>
+</section>
+<section id="resultados-de-formación-e-aprendizaxe" class="level2">
+<h2 class="anchored" data-anchor-id="resultados-de-formación-e-aprendizaxe">Resultados de Formación e Aprendizaxe</h2>
+<table class="table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Descrición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>B3</td>
+<td>CG3 Coñecemento en materias básicas e tecnolóxicas que os capacite para a aprendizaxe de novos métodos e teorías, e os dote de versatilidade para adaptarse a novas situacións.</td>
+</tr>
+<tr class="even">
+<td>B4</td>
+<td>CG4 Capacidade para resolver problemas con iniciativa, toma de decisións, creatividade, razoamento crítico e capacidade para comunicar e transmitir coñecementos, habilidades e destrezas no campo da enxeñaría industrial na mención de Química Industrial.</td>
+</tr>
+<tr class="odd">
+<td>C20</td>
+<td>CE20 Capacidade para a análise, deseño, simulación e optimización de procesos e produtos.</td>
+</tr>
+<tr class="even">
+<td>D2</td>
+<td>T2 Resolución de problemas.</td>
+</tr>
+<tr class="odd">
+<td>D6</td>
+<td>CT6 Aplicación da informática no ámbito de estudo.</td>
+</tr>
+<tr class="even">
+<td>D8</td>
+<td>CT8 Toma de decisións.</td>
+</tr>
+<tr class="odd">
+<td>D9</td>
+<td>CT9 Aplicar coñecementos.</td>
+</tr>
+<tr class="even">
+<td>D10</td>
+<td>CT10 Aprendizaxe e traballo autónomos.</td>
+</tr>
+<tr class="odd">
+<td>D17</td>
+<td>CT17 Traballo en equipo.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="resultados-previstos-na-materia" class="level2">
+<h2 class="anchored" data-anchor-id="resultados-previstos-na-materia">Resultados previstos na materia</h2>
+<table class="table">
+<colgroup>
+<col style="width: 67%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resultados previstos na materia</th>
+<th>Resultados de Formación e Aprendizaxe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simular un diagrama de fluxo dun proceso en réxime estacionario. Coñecer os métodos mais importantes de simulación de procesos (modular e baseado en ecuacións). Analizar as características estructurais dun proceso químico e determinar o orde de cálculo das unidades,establecer o fluxo de información e seleccionar as variables ou correntes de corte de forma axeitada. Resolver problemas de gran escala modelados por sistemas de ecuacións alxebraicas (sistemas dispersos).</td>
+<td>B3 B4 <br> C20 <br> D6 D8 D9 D10 D17</td>
+</tr>
+<tr class="even">
+<td>Analizar un proceso, determinar os seus graos de libertade e escoller as mellores variables para a súa optimización. &gt;br&gt; Coñecer os fundamentos básicos dos algoritmos mais importantes de optimización determinista, tanto en variable continua como discreta. <br> Modelar axeitadamente un problema de optimización e/ou síntese de procesos e utilizar as ferramientas axeitadas para resolverlo.</td>
+<td>B3 B4 <br> C20 <br> D6 D9 D17</td>
+</tr>
+<tr class="odd">
+<td>Coñecer os fundamentos básicos do deseño de procesos mediante simuladores de proceso. A descomposición xerárquica e os fundamentos do deseño baseado en superestructuras. Aplicar os conceptos de integración de enerxía para o deseño de redes de intercambio de calor. Saber adquirir y utilizar información bibliográfica y técnica referida a esta materia. Coñecemento e aplicación da terminología inglesa empregada para descreber os conceptos correspondientes a esta materia.</td>
+<td>B3 B4 <br> C20 <br> D2 D6 D9 D10</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="contidos" class="level2">
+<h2 class="anchored" data-anchor-id="contidos">Contidos</h2>
+<section id="parte-1-simulación" class="level3">
+<h3 class="anchored" data-anchor-id="parte-1-simulación">Parte 1: SIMULACIÓN</h3>
+<pre><code>TEMA 1. SIMULACIÓN DE PROCESOS. DIAGRAMAS DE FLUXO.
+- Simulacións por computador.
+- Tipos de simuladores.
+- Optimización.
+TEMA 2. SIMULACIÓN SECUENCIAL MODULAR.
+- Descomposición de sistemas a gran escala.
+- Algoritmos de particionamento.
+- Descomposición de Redes Cíclicas Máximas.
+TEMA 3. SIMULACIÓN ORIENTADA A ECUACIÓNS.
+- Método de factorización local (criterio de Markowitz).
+- Reordenación "a priori" de matrices dispersas. Fase numérica.
+TEMA 4. GRAOS DE LIBERDADE DUN DIAGRAMA DE FLUXO.
+- Graos de liberdade.
+- Solución de ecuacións
+- Sistemas de ecuacións nonlineais.
+- Selección das variables de deseño.
+TEMA 5. PROPIEDADES FÍSICAS EN SIMULADORES DE PROCESOS QUÍMICOS.
+- Obtención e uso de propiedades físicas.
+- Uso dos sistemas de cálculo de propiedades físicas.
+TEMA 6. DESEÑO CONCEPTUAL DE PROCESOS.
+- Síntese xerárquica.
+- Síntese baseada na programación matemática. 
+EXEMPLOS DE APLICACIÓN
+- Síntese de redes de cambiadores de calor (método de deseño "pinch").
+- Extensións do método de "pinch".</code></pre>
+</section>
+<section id="parte-2-optimización" class="level3">
+<h3 class="anchored" data-anchor-id="parte-2-optimización">Parte 2 OPTIMIZACIÓN</h3>
+<pre><code>TEMA 7. OPTIMIZACIÓN DE PROCESOS QUÍMICOS.
+- Conceptos básicos sobre optimización. 
+- Optimización non liñal sin restriccións.
+- Conceptos básicos da optimización non liñal con restriccións (igualdade e desigualdade).
+TEMA 8. MÉTODOS NUMÉRICOS DE OPTIMIZACIÓN. OPTIMIZACIÓN SIN RESTRICCIÓNS.
+- Optimización multivariable sen restriccións.
+- Método de gradiente.
+- Método de Newton.
+- Métodos da secante.
+TEMA 9. PROGRAMACIÓN LIÑAL (LP).
+- Definicións e teoremas básicos da programación liñal.
+- Resolución do problema.
+- O algoritmo Simplex.
+- Programación cuadrática.
+TEMA 10. MÉTODOS NUMÉRICOS PARA A OPTIMIZACIÓN DE PROBLEMAS NON LIÑAIS CON RESTRICCIÓNS.
+- Métodos de penalización, barreira e Lagranxiana aumentada.
+- Programación cuadrática sucesiva.
+- Método do gradiente reducido.
+ESTUDO DE CASOS
+- Exemplos prácticos de aplicación en industrias químicas e de proceso.
+- Utilizando software de simulación e optimización de procesos.</code></pre>
+</section>
+</section>
+<section id="planificación-horaria-das-clases" class="level2">
+<h2 class="anchored" data-anchor-id="planificación-horaria-das-clases">Planificación horaria das clases</h2>
+<table class="table">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 16%">
+<col style="width: 21%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Actividade</th>
+<th style="text-align: right;">Horas na aula</th>
+<th style="text-align: right;">Horas fóra da aula</th>
+<th style="text-align: right;">Horas totais</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Actividades introdutorias</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td>Lección maxistral</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="odd">
+<td>Aprendizaxe baseado en proxectos</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr class="even">
+<td>Estudo de casos</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td>Simulación</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="even">
+<td>Prácticas con apoio das TIC</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="odd">
+<td>Resolución de problemas de forma autónoma</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="even">
+<td>Metodoloxías baseadas en investigación</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td>Exame de preguntas de desenvolvemento</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<p>*Os datos que aparecen na táboa de planificación son de carácter orientador, considerando a heteroxeneidade do alumnado.</p>
+</section>
+<section id="metodoloxía-docente" class="level2">
+<h2 class="anchored" data-anchor-id="metodoloxía-docente">Metodoloxía docente</h2>
+<p>Descrición | Actividades introdutorias|Presentación e introducción ó uso dos programas de simulación e optimización: Matlab, Pyhton- Cantera, COCO SIMULATOR, CHEMPSEP, DWSIM, HYSYS e ASPEN PLUS Lección maxistral Presentación verbal organizada de temas referidos ós contidos da asignatura, impartidos polo profesor con axudas visuais. Este método didáctico didáctico, implica a comunicación unidireccional do presentador activo ós estudiantes. Aprendizaxe baseado en proxectos</p>
+<p>Os estudantes traballarán nun proxecto durante un período de tempo prolongado (o cuatrimestre) que os involucre na resolución dun problema do mundo real ou na resposta a unha pregunta complexa. Demostran os seus coñecementos e habilidades creando un produto público ou unha presentación para un público real. Estudo de casos Se plantexan escenarios baseados en situacións nas que os alumnos observan, analizan, rexistran, implementan, conclúen, resumen ou recomendan. Os estudos de casos créanse e utilízanse como ferramenta de análise e discusión. Simulación O alumno ten que preparar, e documentar, unha simulación que implique un proceso orixinal, a mellora de un proceso documentado ou a optimización dun proceso ou planta existente, así como crear unha presentación pública do seu traballo. Prácticas con apoio das TIC</p>
+<p>Se plantexarán simulacións de parte de procesos ou unidades de operación para resolver coas distintas ferramentas informáticas que se contemplan na materia (simuladores de proceso, linguaxes de programación, etc.). Resolución de problemas de forma autónoma</p>
+<p>Se plantexará a resolución de problemas de libros tradicionais da enxeñaría química que serán resoltos mediante as ferramentas propostas na materia, como alternativa ós métodos tradicionais de resolución. Metodoloxías baseadas en investigación O alumno deberá documentar o uso de sistemas de busca bibliográfica asi como de datos de interese na web (fontes de información titoriais, etc.).</p>
+</section>
+<section id="atención-personalizada" class="level2">
+<h2 class="anchored" data-anchor-id="atención-personalizada">Atención personalizada</h2>
+<p>Metodoloxías Descrición Simulación O alumno propondrá unha simulación de un proceso novo, mellora de un existente ou optimización de un proceso ou planta ou, no seu caso, debe adoptar o asignado polo profesor que titorará de xeito individualizado ou por grupo cada unha das simulacións da clase. Aprendizaxe baseado en proxectos</p>
+<p>O profesor propondrá pequenos proxectos que os alumnos han de resolver mediante as ferramentas que se lles indiquen na clase e entragar para a súa puntuación dacordo á rúbrica correspondente que será publicada na plataforma de e-learning. Cada alumno debe entragar o traballo realizado en clase ó finalizar a mesma. Os proxectos recibirán unha puntuación acorde á rúbrica que se publicará na plataforma de e-learning. Estudo de casos Se plantexan escenarios baseados en situacións nas que os alumnos observan, analizan, rexistran, implementan, conclúen, resumen ou recomendan. Non haberá probas. Prácticas con apoio das TIC</p>
+<p>Na aula informática ou na aula de teoría se farán simulacións e resolución de problemas mediante ferramentas informáticas que han de ser entregados no memo día polos alumnos. cualificación estará rubricada por rúbrica públicada na plataforma de e-learning.</p>
+</section>
+<section id="avaliación" class="level2">
+<h2 class="anchored" data-anchor-id="avaliación">Avaliación</h2>
+<p>Descrición CualificaciónResultados de Formación e Aprendizaxe Aprendizaxe baseado en proxectos</p>
+<p>Se realizará durante todo o semestre e se entregará ó concluir as clases presenciais e antes do exame final. A cualificación estará rubricada por rúbrica públicada na plataforma de e-learning.</p>
+<p>Simulación O alumno debe realizae e entregar unha simulación que contribúe á avaliación continua e que debe ser realizada de xeito tutelado durante todo o semestre. A cualificación estará rubricada por rúbrica públicada na plataforma de e-learning.</p>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">20</h2>
+<p>Resolución de problemas de forma autónoma</p>
+<p>Periódicamente o alimno debe entregar resoltos os problemas que se lle plantexan.</p>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">20</h2>
+<p>Exame de preguntas de desenvolvemento</p>
+<p>Correesponde ó exame final da asignatura que, no caso de renuncia á avaliación continua, será o total da nota. Está constituído por un ou varios casos, ou simulacións e a súa correccióne stará asemesmo rubricada.</p>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">40</h2>
+<section id="outros-comentarios-sobre-a-avaliación" class="level3">
+<h3 class="anchored" data-anchor-id="outros-comentarios-sobre-a-avaliación">Outros comentarios sobre a Avaliación**</h3>
 <ul>
-<li><p><a href="https://rfun.library.duke.edu/blog/data-sources-for-regression-analysis/">Learcheme</a> Podes atopar en este repositorio:</p></li>
-<li><p><strong>Screencasts</strong>: capturas de pantalla curta dun PC tableta con narración. Inclúen exemplos e solucións de problemas, explicacións de conceptos, tutoriales de software, introdución a temas, descricións do diagrama e críticas.</p></li>
-<li><p><strong>Módulos interactivos de auto-estudo</strong>: inclúindo introducións, exames de conceptos básicos, presentacións, ecuacións importantes, simulacións interactivas, simulacións de autoavaliación, reolución interactiva de problemas en pantalla e puntos clave da Enxeñaría Química.</p></li>
+<li>Alumnos con avaliación continua: A avaliación continua aplicaráse na primeira convocatoria.</li>
+<li>Para os alumnos con renuncia concedida oficialmente polo centro á avaliación continua o exame final valerá o 100%.</li>
+<li>Compromiso ético: Espérase que o alumno presente un comportamento ético adecuado. No caso de detectar un</li>
+<li>comportamento non ético (copia, plaxio, utilización de aparellos electrónicos non autorizados, e outros) considerarase que o alumno non reúne os requisitos necesarios para superar a materia. Neste caso a cualificación global no presente curso académico será de suspenso (0,0).</li>
 </ul>
-<p>Virtual Chemical Engineering Laboratories Three virtual laboratories (VLs) are currently available. In these VLs, students can plan experiments, collect data, and submit results online.</p>
-<p>Instructor Resources Over 2150 ConcepTests with conceptual questions for use with peer instruction. Three OneNote-based course packages with class notes, ConcepTests, reading assignments, screencast recommendations, homework problems, and exam questions.</p>
-<p>Student Resources Resources on how to study/learn, screencasts for FE exam preparation, more than 25 screencasts that explain POLYMATH calculations (and the corresponding files), screencasts that explain spreadsheet calculations (and the corresponding Excel files), and useful links.</p>
-<p>Excel Spreadsheets/PolymathPlus files 17 Excel spreadsheets and 22 PolymathPlus files. Corresponding screencasts help users use the software.</p>
+</section>
+</section>
+<section id="bibliografía.-fontes-de-información" class="level2">
+<h2 class="anchored" data-anchor-id="bibliografía.-fontes-de-información">Bibliografía. Fontes de información</h2>
+<section id="bibliografía-básica" class="level3">
+<h3 class="anchored" data-anchor-id="bibliografía-básica">Bibliografía Básica</h3>
+<p>Kamal I.M. Al-Malah, <strong>Aspen Plus: Chemical Engineering Applications</strong> , 1st Edition, Wiley, 2016 Juma Haydary, <strong>Chemical Process Design and Simulation: Aspen Plus and Aspen Hysys Applications</strong> , 1st Edition, AIChE, 2019. D.M. Himmelblau, K.B. Bischoff, <strong>Análisis y Simulación de Procesos</strong> , Reverté, 2004 Simant Ranjan Upreti, <strong>PROCESS MODELING AND SIMULATION FOR CHEMICAL ENGINEERS</strong> , 1st Edition, Wiley, 2017</p>
+</section>
+<section id="bibliografía-complementaria" class="level3">
+<h3 class="anchored" data-anchor-id="bibliografía-complementaria">Bibliografía Complementaria</h3>
+<p>David. M. Himmelblau, <strong>Optimization of Chemical Processes</strong> , 2nd Edition, McGraw-Hill Higher Education, 2001</p>
+</section>
+</section>
+<section id="recomendacións" class="level2">
+<h2 class="anchored" data-anchor-id="recomendacións">Recomendacións</h2>
+<section id="materias-que-continúan-o-temario" class="level3">
+<h3 class="anchored" data-anchor-id="materias-que-continúan-o-temario">Materias que continúan o temario</h3>
 <ul>
-<li><a href="https://data.fivethirtyeight.com/">FiveThirtyEight data</a></li>
-<li><a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday</a></li>
+<li>Control e instrumentación de procesos químicos/V12G350V</li>
+<li>Deseño de plantas químicas e de proceso/V12G350V</li>
+<li>Modelaxe de procesos biotecnolóxicos/V12G350V</li>
+</ul>
+</section>
+<section id="materias-que-se-recomenda-cursar-simultaneamente" class="level3">
+<h3 class="anchored" data-anchor-id="materias-que-se-recomenda-cursar-simultaneamente">Materias que se recomenda cursar simultaneamente**</h3>
+<ul>
+<li>Xestión e posta en servizo de plantas químicas e de proceso/V12G350V</li>
+<li>Optimización de produtos/V12G350V</li>
+<li>Procesos e produtos biotecnolóxicos/V12G350V</li>
+<li>Química orgánica industrial/V12G350V</li>
+</ul>
+</section>
+<section id="materias-que-se-recomenda-ter-cursado-previamente" class="level3">
+<h3 class="anchored" data-anchor-id="materias-que-se-recomenda-ter-cursado-previamente">Materias que se recomenda ter cursado previamente</h3>
+<ul>
+<li>Enxeñaría química I/V12G350V</li>
+<li>Termodinámica e transmisión de calor/V12G350V</li>
+<li>Experimentación en química industrial I/V12G350V</li>
+<li>Experimentación en química industrial II/V12G350V</li>
+<li>Enxeñaría química II/V12G350V</li>
+<li>Reactores e biotecnoloxía/V12G350V</li>
+<li>Calor e frío na industria de proceso/V12G350V</li>
+<li>Técnicas e xestión medioambientais/V12G350V</li>
 </ul>
 </section>
 </section>
-<section id="tips" class="level2">
-<h2 class="anchored" data-anchor-id="tips">Tips</h2>
-<ul>
-<li><p>Ask questions if any of the expectations are unclear.</p></li>
-<li><p><strong>Code:</strong> In your write up your code should be hidden (<code>echo = FALSE</code>) so that your document is neat and easy to read. However your document should include all your code such that if I re-knit your qmd file I should be able to obtain the results you presented.</p>
-<ul>
-<li><strong>Exception:</strong> If you want to highlight something specific about a piece of code, you’re welcome to show that portion.</li>
-</ul></li>
-<li><p>Merge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.</p></li>
-<li><p>Make sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).</p></li>
-<li><p>All team members are expected to contribute equally to the completion of this assignment and group assessments will be given at its completion - anyone judged to not have sufficient contributed to the final product will have their grade penalized. While different teams members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment works.</p></li>
-</ul>
-</section>
-<section id="formatting-communication-tips" class="level2">
-<h2 class="anchored" data-anchor-id="formatting-communication-tips">Formatting + communication tips</h2>
-<section id="suppress-code-warnings-messages" class="level3">
-<h3 class="anchored" data-anchor-id="suppress-code-warnings-messages">Suppress Code, Warnings, &amp; Messages</h3>
-<ul>
-<li>Include the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header <code>{r set-up, include = FALSE}</code> to suppress this set up code.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">warning =</span> <span class="cn">FALSE</span>, </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">message =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="headers" class="level3">
-<h3 class="anchored" data-anchor-id="headers">Headers</h3>
-<ul>
-<li>Use headers to clearly label each section.</li>
-<li>Inspect the document outline to review your headers and sub-headers.</li>
-</ul>
-</section>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
-<ul>
-<li>Include all references in a section called “References” at the end of the report.</li>
-<li>This course does not have specific requirements for formatting citations and references.</li>
-</ul>
-</section>
-<section id="appendix" class="level3">
-<h3 class="anchored" data-anchor-id="appendix">Appendix</h3>
-<ul>
-<li>If you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.</li>
-<li>The items in the appendix should be properly labeled.</li>
-<li>The appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.</li>
-</ul>
-</section>
-<section id="resize-figures" class="level3">
-<h3 class="anchored" data-anchor-id="resize-figures">Resize figures</h3>
-<p>Resize plots and figures, so you have more space for the narrative.</p>
-</section>
-<section id="arranging-plots" class="level3">
-<h3 class="anchored" data-anchor-id="arranging-plots">Arranging plots</h3>
-<p>Arrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.</p>
-<p>If you’re using ggplot2 functions, the <code>patchwork</code> package makes it easy to arrange plots in a grid. See the documentation and examples <a href="https://patchwork.data-imaginist.com/">here</a>.</p>
-</section>
-<section id="plot-titles-and-axis-labels" class="level3">
-<h3 class="anchored" data-anchor-id="plot-titles-and-axis-labels">Plot titles and axis labels</h3>
-<p>Be sure all plot titles and axis labels are visible and easy to read.</p>
-<ul>
-<li>Use informative titles, <em>not</em> variable names, for titles and axis labels.</li>
-</ul>
-<p>❌ <strong>NO! The x-axis is hard to read because the names overlap.</strong></p>
-<p>✅ <strong>YES! Names are readable</strong>```</p>
-</section>
-<section id="do-a-little-more-to-make-the-plot-look-professional" class="level3">
-<h3 class="anchored" data-anchor-id="do-a-little-more-to-make-the-plot-look-professional">Do a little more to make the plot look professional!</h3>
-<ul>
-<li>Informative title and axis labels</li>
-<li>Flipped coordinates to make names readable</li>
-<li>Arranged bars based on count</li>
-<li>Capitalized manufacturer names</li>
-<li><em>Optional: Added color - Use a coordinated color scheme throughout paper / presentation</em></li>
-<li><em>Optional: Applied a theme - Use same theme throughout paper / presentation</em></li>
-</ul>
-</section>
-<section id="tables-and-model-output" class="level3">
-<h3 class="anchored" data-anchor-id="tables-and-model-output">Tables and model output</h3>
-<ul>
-<li><p>Use the <code>kable</code> function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.</p>
-<ul>
-<li>Use the <code>digits</code> argument to display only 3 or 4 significant digits.</li>
-<li>Use the <code>caption</code> argument to add captions to your table.</li>
-</ul></li>
-</ul>
-</section>
-<section id="guidelines-for-communicating-results" class="level3">
-<h3 class="anchored" data-anchor-id="guidelines-for-communicating-results">Guidelines for communicating results</h3>
-<ul>
-<li><p><strong>Don’t use variable names in your narrative!</strong> Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.</p>
-<ul>
-<li>❌ There is a negative linear relationship between mpg and hp.</li>
-<li>✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.</li>
-</ul></li>
-<li><p><strong>Know your audience:</strong> Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.</p></li>
-<li><p><strong>Avoid subject matter jargon:</strong> Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.</p></li>
-<li><p><strong>Tell the “so what”:</strong> Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e.&nbsp;what you want the audience to know about your topic after reading your report or viewing your presentation.</p>
-<ul>
-<li>❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.</li>
-<li>✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.</li>
-</ul></li>
-<li><p><strong>Tell a story:</strong> All visualizations, tables, model output, and narrative should tell a cohesive story!</p></li>
-<li><p><strong>Use one voice:</strong> Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document.</p></li>
-</ul>
-</section>
-</section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
-<ul>
-<li><p><a href="https://r4ds.had.co.nz/">R for Data Science</a></p></li>
-<li><p><a href="https://quarto.org/">Quarto Documentation</a></p></li>
-<li><p>Data visualization</p>
-<ul>
-<li><a href="https://ggplot2.tidyverse.org/reference/index.html">ggplot2 Reference</a></li>
-<li><a href="https://ggplot2-book.org/">ggplot2: Elegant Graphics for Data Analysis</a></li>
-<li><a href="https://socviz.co/index.html">Data Visualization: A Practice Introduction</a></li>
-<li><a href="https://patchwork.data-imaginist.com/index.html">Patchwork R Package</a></li>
-</ul></li>
-</ul>
+<section id="outros-comentarios" class="level2">
+<h2 class="anchored" data-anchor-id="outros-comentarios">Outros comentarios</h2>
+<p>Os pilares que sustentan esta materia concrétanse no uso das técnicas de cálculo numérico, aplicado ós contidos proprios da enxeñaría química: balances de materia i enerxía , fenómenos de trasporte, termodinámica, fluidodinámica, termotecnia, operacións de separación, reactores , control de procesos , etc.).</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -756,11 +958,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./project-description.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Instrucións</span>
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programación</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./course-team.html" class="pagination-link">
+        <span class="nav-page-text">Profesorado</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -769,7 +974,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">© Copyright 2023, Anxo Sánchez</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/anxosanchez/SOPQ-2324/edit/main/project-tips-resources.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/anxosanchez/SOPQ-2324/edit/main/guia.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</div>
   </div>
 </footer>
