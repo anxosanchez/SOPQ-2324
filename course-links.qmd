@@ -1,5 +1,8 @@
 ---
 title: "Ligazóns"
+format: 
+  html:
+    page-layout: full
 ---
 
 |                            |                                                                                                                                      |

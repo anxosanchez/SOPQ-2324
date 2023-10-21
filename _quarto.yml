@@ -44,15 +44,17 @@ website:
       - section: "Información xeral"
         contents:
         - href: course-overview.qmd
-          text: "Información da materia" 
+          text: "Información xeral" 
         - href: index.qmd
           text: Programación
         - href: course-syllabus.qmd
           text: Guía Docente
         - href: course-team.qmd
           text: Profesorado
-        - href: links.qmd
+        - href: course-links.qmd
           text: Ligazońs
+        - href: course-support.qmd
+          text: Soporte  
         - href: course-faq.qmd            
           text: FAQ
       - section: "Computing"

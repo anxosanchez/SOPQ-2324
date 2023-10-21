@@ -52,7 +52,7 @@ website:
         - href: course-team.qmd
           text: Profesorado
         - href: links.qmd
-          text: Ligazońs
+          text: course-links.qmd
       - section: "Computing"
         contents: 
         - href: computing-access.qmd

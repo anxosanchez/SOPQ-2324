@@ -1,5 +1,8 @@
 ---
 title: "SOPQ-2324: Simulación e Optimización de Procesos Químicos"
+format: 
+  html:
+    page-layout: full
 ---
 DATOS IDENTIFICATIVOS	2023_24
 Materia	Simulación e optimización de procesos químicos	Código	V12G350V01702
