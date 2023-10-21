@@ -178,5 +178,5 @@ David. M. Himmelblau, **Optimization of Chemical Processes** , 2nd Edition, McGr
 
 ## Outros comentarios
 
-Os pilares que sustentan esta materia concrétanse no uso das técnicas de cálculo numérico, aplicado ós contidos proprios da enxeñaría química: balances de materia i enerxía , fenómenos de trasporte, termodinámica, fluidodinámica, termotecnia, operacións de separación, reactores , control de procesos , etc.).
+Os pilares que sustentan esta materia concrétanse no uso das técnicas de cálculo numérico, aplicado ós contidos proprios da enxeñaría química: balances de materia i enerxía , fenómenos de trasporte, termodinámica, fluidodinámica, termotecnia, operacións de separación, reactores , control de procesos , etc.
 
