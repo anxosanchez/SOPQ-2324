@@ -1,7 +1,6 @@
 ---
 title: "Descrición do Proxecto da Asignatura"
 language: custom.yml
-toc: true
 format: 
   html:
     page-layout: full

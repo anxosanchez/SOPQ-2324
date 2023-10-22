@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Blog de SOPQ-2324"
 listing: 
   contents: posts 
 # all Quarto docs in the `posts` directory will be included on your listing page
@@ -11,4 +11,3 @@ listing:
 page-layout: full
 title-block-banner: false
 ---
-

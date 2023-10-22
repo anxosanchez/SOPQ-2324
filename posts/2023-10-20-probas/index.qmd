@@ -1,5 +1,5 @@
 ---
-title: Cálculos separación flash
+title: "Cálculos de separacións flash"
 author: Anxo Sánchez
 format:
   html:
@@ -7,11 +7,6 @@ format:
 jupyter: python3
 ---
 
- 
-
- 
-
- 
 # Cálculos flash             
 
 Tanque de flash
