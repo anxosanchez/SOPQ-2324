@@ -57,22 +57,18 @@ website:
           text: Soporte  
         - href: course-faq.qmd            
           text: FAQ
-      - section: "Computing"
+      - section: "Computación"
         contents: 
         - href: computing-access.qmd
-          text: Access
+          text: Aceso
         - href: computing-troubleshooting.qmd
-          text: Troubleshooting
-        - href: computing-r-resources.qmd
-          text: R resources
+          text: Problemas c servidor
       - section: "Proxecto"
         contents:
         - href: project-description.qmd
           text: Instrucións
         - href: project-tips-resources.qmd
           text: Tips + recusos
-
-        
 format:
   html:
     theme:
