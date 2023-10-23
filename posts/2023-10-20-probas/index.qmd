@@ -8,6 +8,10 @@ jupyter: python3
 ---
 
 # Cálculos flash             
+  
+<a href="https://colab.research.google.com/github/anxosanchez/SOPQ-2324/blob/main/notebooks/Diagramas_Pxy_Txy.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 Tanque de flash
 
