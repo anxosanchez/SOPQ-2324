@@ -92,12 +92,12 @@ Mete todos os teus ficheiros finais nda proposta e entrégaos nun ficheiro zip, 
 
 ### Cualficación das propostas
 
-|Total |10 ptos |
+|Total |100 ptos |
 | ---------------------- | -------- |
-| Introdución |3 ptos |
-| Descrición dos datos |2 ptos |
-| Enfoque da análise |4 ptos |
-| Dicionario de datos |1 pts |
+| Introdución | 30 ptos |
+| Descrición dos datos | 20 ptos |
+| Enfoque da análise | 40 ptos |
+| Dicionario de datos | 10 pts |
 
 Cada compoñente cualificarase do seguinte xeito:
 
