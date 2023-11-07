@@ -1,0 +1,68 @@
+---
+Title: "Configuracion_basica_da_simulacion"
+lang: es
+page-layout: full
+title-block-banner: true
+categories:
+    - "prácticas de simulador"
+---
+
+:::{.callout-important title="Importtante!"}
+Esta práctica non é para facer, senón que é un exemplor dun guión de practicas das que faremos nas tandas de **prácticas de simulador**, as que correspondes ós xoves do calendario.
+:::
+## Obxectivos
+
+1. Selecciona os elementos básicos necesarios para desenvolver unha simulación dun proceso químico en un simulador de procesos: DWSIM, HYSYS ou ASPENPLUS.
+
+2. Xestionar algunhas ferramentas incluídas nos simuladores que permiten determinar as propiedades dos compoñentes.
+
+## Paquetes de fluídos
+
+Os simuladores usan o concepto de paquete fluído como contedor de toda a información necesaria para desenvolver cálculos de propiedades físicas e termodinámicas e evaporacións espontáneas dos fluxos. O paquete fluído permite definir toda a información (propiedades, compoñentes, compoñentes hipotéticos, parámetros de interacción, reaccións, datos tabulados, etc.) dentro dun ficheiro moi sinxelo. Isto ten tres vantaxes, a saber:
+
+1. Toda a información asociada defínese nunha única localización, o que permite crear e modificar facilmente a información
+2. Os paquetes de fluído pódense almacenar como un ficheiro completo para usalos en calquera simulación
+3. Pódense empregar varios paquetes de fluído nunha simulación. Non obstante, todos os paquetes definidos atópanse dentro do xestor de simulación básico
+
+## Administrador del Paquete Básico de la Simulación
+
+O "Basic Simulation Manager" ou "Simulation Basis Manager" (ou como se deseña en cada simulador) é unha programa que permite crear e manipular cada paquete de fluído na simulación. 
+
+Aparecerá un “Administrador Básico de la Simulación”, dependendo do simulador pero que permite facer a misma secuancia de operación e comprobar se as condicións de simulación se van cumplindo mediante semáforos.
+
+1.- O primeiro será selecciona os compoñentes da simulación: “Component Lists” que conteñen “View”, “Add”, “Delete”, “Copy”, “Import”, “Export” e “Refresh” cos cales se observan, engaden, borran, copian, importan, exportan r refrescan os compoñentes incluidos en el paquete fluído. 
+
+Ademais de compostos puuros, temos facilidade para crear compostos mesturados e hipotéticos, “Hypotheticals”, “Oil Manager”, “Reactions”, “Component Maps” y “UserProperty”. 
+
+## Administrador de reaccións químicas
+
+As  ecuacións e as cinéticas das reacciones químicas que interveñen no proceso químico a simular co paquete de fluídos. Tamén soen traer un editor específico de reaccións, pero, en cada caso, depende do tipo de reactor e do simulador polo que se irá vendo a medida que os usemos.
+
+## Sistemas de unidades
+
+Inda que se poden cambiar en cada momento, os simuladores soen pedir un sistema de unidades de cálculo por defecto antes de empezar a simulación. O sistema por defecto é o SI estándar.
+
+## Wizards
+
+Todos os simuladores posúen axudantes que nos van guiando e comprobando que damos todos os pasos previos e necesarios para facer unha simulación, é dicir, que dispoñen de todos os datos necesarios antes de entrar á ferramenta seguinte que soe ser o "Deseñador de Diagramas de proceso", o cal, de novo, ten diferentes designacións en función do programa de simulación que esteamos a usar.
+
+## Bases para unha simulación
+Para definir unha simulación debemos de ter en conta que necesitamos especificar correctamente:
+
+* Compoñentes, tanto puero como hipotéticos.
+
+* Paquetes de fluído ou métodos termodinámicos.
+* Sistema de unidades
+
+## CASO DE ESTUDIO
+
+1. En este caso trátase de crear unha simulación na que os compoñentes sexan N<sub>2</sub>, H<sub>2</sub>S, CO2<sub>2</sub> C<sub>1</sub>, C<sub>2</sub>, C<sub>3</sub>, i-C<sub>4</sub>, n-C<sub>4</sub>, i-C<sub>5</sub>,  n-C<sub>5</sub>, C<sub>6</sub> e H<sub>2</sub>O.
+2. Crear un compoñente hipotético simple que teña como características qiue a súa temperatura de fervura sexa 110 ºC.
+3. Encher a seguinte táboa.
+
+
+| **PROPIEDAD**E             | **C7+** | **C7** | **C8** |
+| -------------------------- | :-----: | :----: | :----: |
+| Temperatura de fervura     |         |        |        |
+| Densidade ideal do líquido |         |        |        |
+| Masa molecular             |         |        |        |
