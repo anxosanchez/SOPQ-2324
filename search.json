@@ -245,6 +245,69 @@
     "text": "Neste caso, coñecemos a composición da fase de vapor \\(y_i\\) (corresponde ao caso en que \\(L\\) é moi pequena (\\(L \\geq 0\\)) e \\(y_i = z_i\\). O punto de orballo dun vapor (gas) é o punto no que comeza a condensaar, é dicir, cando se forma a primeira gota de líquido. A temperatura constante, débese aumentar a presión ata que se forme o primeiro líquido. A presión constante, débese diminuír a temperatura ata que se forme o primeiro líquido. En ámbalos dous casos, isto corresponde axustar \\(T\\) ou \\(p\\) ata que\n\\[\n\\sum x_i = 1\n\\]\nou:\n\\[\n\\Sigma_{i} y_{i} / K_{i}=1\n\\]\nonde \\(y_i\\) ven dado. Para unha mestura ideal que cumpre ca lei de Raoult:\n\\[\n\\Sigma_{i} \\frac{y_{i}}{p_{i}^{\\mathrm{sat}}(T)}=\\frac{1}{p}\n\\]\n\n\nUnha mestura líquida contén 50% de pentano, 30% de hexano e 20% de ciclohexano (en moles), é dicir, \\(x_{pentano} = 0.5; x_{hexano} = 0.3 e x_{ciclohexano} = 0.2\\). A \\(T = 400 K\\) se incrementa a presión gradulmente. Cál é a presión de orballo e a composición do primeiro líquido que condensa?. Supoñer unha mestura líquida ideal e gas ideal (lei de Raoult).\n\n\n\nAtopar o valor de \\(p\\) que satisfai a ecuación anterior. Posto que \\(T\\) ven dada, a solución é trivial; simplementa calculamos \\(1/p\\) a partires dela.\n\ny_pentano     = 0.5\ny_hexano      = 0.3\ny_ciclohexano = 0.2\nT = 400 # K\np_orballo = 1 / ( y_pentano / p_sat_pentano + y_hexano / p_sat_hexano + y_ciclohexano / p_sat_ciclohexano)\nx_pentano = y_pentano * p_orballo / p_sat_pentano\nx_hexano = y_hexano * p_orballo / p_sat_hexano\nx_ciclohexano = y_ciclohexano * p_orballo / p_sat_ciclohexano\n\n\n# print(\"Presión de orballo a {:5.2f} [K]\".format(T))\nprint(\"Temperatura        = {:5.2f} [bar]\".format(T))\nprint(\"Presión de orballo = {:5.2f} [bar]\".format(p_orballo))\nprint(\"  Composición  Composto         x[i]   y[i]\")\nprint(\"               {:10s}     {:6.4}{:6.4} \".format('pentano',x_pentano,y_pentano))\nprint(\"               {:10s}     {:6.4}{:6.4} \".format('hexano',x_hexano,y_hexano))\nprint(\"               {:10s}    {:6.4}{:6.4} \".format('ciclohexano',x_ciclohexano,y_ciclohexano))\n\nTemperatura        = 400.00 [bar]\nPresión de orballo =  5.78 [bar]\n  Composición  Composto         x[i]   y[i]\n               pentano        0.2822   0.5 \n               hexano         0.3734   0.3 \n               ciclohexano    0.3445   0.2 \n\n\n\n\n\nConsidera a mesma mestura do problema anterios. At \\(p\\) = 5 bar, a temperatura vaise diminuindo gradialmente. Cál é a tenmperatura de orballo e a composición do primeiro líquido que se foram?.\n\n\n\nNeste caso, nos dan \\(p\\) e \\(y_i\\), e a ecuación de antes convértese nunha ecuación implícita en \\(T\\) que necesita de resolverse numéricamente por un método numérico, por exemplo iteración.\n\nfrom scipy.optimize import fsolve\n\n\npresion = 5. # bar\nT_gues  = 400. # K \n\ndef orballo(T):\n    fun = ( 1 / presion) - y_pentano / 10 ** ( A_pentano - B_pentano / ( C_pentano + T ) ) - y_hexano / 10 ** ( A_hexano - B_hexano / ( C_hexano + T ) ) - y_ciclohexano / 10 ** ( A_ciclohexano - B_ciclohexano / ( C_ciclohexano + T ) ) \n    return fun\n\nT_orballo = fsolve(orballo, T_gues)\n\n\nprint(\"Temperatura de orballo calculada con fsolve = \", T_orballo)\n\nTemperatura de orballo calculada con fsolve =  [393.30333147]\n\n\n\nfrom scipy.optimize import root\nT = root(orballo, [300,400])\n\n\nprint(\"Temperatura de orballo calculada con fsolve = \", T_orballo)\n\nTemperatura de orballo calculada con fsolve =  [393.30333147]\n\n\n\n# Táboa 7.2 : Datos para exemplos e exercicios de flash: parámetros de Antoine para p sat ( T ), temperatura normal de ebulición ( T b ) e calor de vaporización ∆ vap H ( T b ) para os compoñentes seleccionados. Datos : Poling, Prausnitz e O'Connell, As propiedades de gases e líquidos , 5 th Ed., McGraw-Hill (2001).\n# log10(psat[bar]) = A - B / ( T [K] + C) Tb [ K ] dv a p H b [ J / m o l ]\n# pentano C5H12\nA_C5 = 3.97786\nB_C5 = 1064.840\nC_C5 = -41.136\n# hexano C6H14\nA_C6 = 4.00139\nB_C6 = 1170.875\nC_C6 = -48.833\n# ciclohexano C6H12\nA_CC6 =3.93002\nB_CC6 = 1182.774\nC_CC6 = -52.532"
   },
   {
+    "objectID": "labs/Practica-01.html",
+    "href": "labs/Practica-01.html",
+    "title": "SOPQ-2324",
+    "section": "",
+    "text": "Selecciona os elementos básicos necesarios para desenvolver unha simulación dun proceso químico en un simulador de procesos: DWSIM, HYSYS ou ASPENPLUS.\nXestionar algunhas ferramentas incluídas nos simuladores que permiten determinar as propiedades dos compoñentes."
+  },
+  {
+    "objectID": "labs/Practica-01.html#obxectivos",
+    "href": "labs/Practica-01.html#obxectivos",
+    "title": "SOPQ-2324",
+    "section": "",
+    "text": "Selecciona os elementos básicos necesarios para desenvolver unha simulación dun proceso químico en un simulador de procesos: DWSIM, HYSYS ou ASPENPLUS.\nXestionar algunhas ferramentas incluídas nos simuladores que permiten determinar as propiedades dos compoñentes."
+  },
+  {
+    "objectID": "labs/Practica-01.html#paquetes-de-fluídos",
+    "href": "labs/Practica-01.html#paquetes-de-fluídos",
+    "title": "SOPQ-2324",
+    "section": "Paquetes de fluídos",
+    "text": "Paquetes de fluídos\nOs simuladores usan o concepto de paquete fluído como contedor de toda a información necesaria para desenvolver cálculos de propiedades físicas e termodinámicas e evaporacións espontáneas dos fluxos. O paquete fluído permite definir toda a información (propiedades, compoñentes, compoñentes hipotéticos, parámetros de interacción, reaccións, datos tabulados, etc.) dentro dun ficheiro moi sinxelo. Isto ten tres vantaxes, a saber:\n\nToda a información asociada defínese nunha única localización, o que permite crear e modificar facilmente a información\nOs paquetes de fluído pódense almacenar como un ficheiro completo para usalos en calquera simulación\nPódense empregar varios paquetes de fluído nunha simulación. Non obstante, todos os paquetes definidos atópanse dentro do xestor de simulación básico"
+  },
+  {
+    "objectID": "labs/Practica-01.html#administrador-del-paquete-basico-de-la-simulacion",
+    "href": "labs/Practica-01.html#administrador-del-paquete-basico-de-la-simulacion",
+    "title": "SOPQ-2324",
+    "section": "Administrador del Paquete Básico de la Simulación",
+    "text": "Administrador del Paquete Básico de la Simulación\nO “Basic Simulation Manager” ou “Simulation Basis Manager” (ou como se deseña en cada simulador) é unha programa que permite crear e manipular cada paquete de fluído na simulación.\nAparecerá un “Administrador Básico de la Simulación”, dependendo do simulador pero que permite facer a misma secuancia de operación e comprobar se as condicións de simulación se van cumplindo mediante semáforos.\n1.- O primeiro será selecciona os compoñentes da simulación: “Component Lists” que conteñen “View”, “Add”, “Delete”, “Copy”, “Import”, “Export” e “Refresh” cos cales se observan, engaden, borran, copian, importan, exportan r refrescan os compoñentes incluidos en el paquete fluído.\nAdemais de compostos puuros, temos facilidade para crear compostos mesturados e hipotéticos, “Hypotheticals”, “Oil Manager”, “Reactions”, “Component Maps” y “UserProperty”."
+  },
+  {
+    "objectID": "labs/Practica-01.html#administrador-de-reaccións-químicas",
+    "href": "labs/Practica-01.html#administrador-de-reaccións-químicas",
+    "title": "SOPQ-2324",
+    "section": "Administrador de reaccións químicas",
+    "text": "Administrador de reaccións químicas\nAs ecuacións e as cinéticas das reacciones químicas que interveñen no proceso químico a simular co paquete de fluídos. Tamén soen traer un editor específico de reaccións, pero, en cada caso, depende do tipo de reactor e do simulador polo que se irá vendo a medida que os usemos."
+  },
+  {
+    "objectID": "labs/Practica-01.html#sistemas-de-unidades",
+    "href": "labs/Practica-01.html#sistemas-de-unidades",
+    "title": "SOPQ-2324",
+    "section": "Sistemas de unidades",
+    "text": "Sistemas de unidades\nInda que se poden cambiar en cada momento, os simuladores soen pedir un sistema de unidades de cálculo por defecto antes de empezar a simulación. O sistema por defecto é o SI estándar."
+  },
+  {
+    "objectID": "labs/Practica-01.html#wizards",
+    "href": "labs/Practica-01.html#wizards",
+    "title": "SOPQ-2324",
+    "section": "Wizards",
+    "text": "Wizards\nTodos os simuladores posúen axudantes que nos van guiando e comprobando que damos todos os pasos previos e necesarios para facer unha simulación, é dicir, que dispoñen de todos os datos necesarios antes de entrar á ferramenta seguinte que soe ser o “Deseñador de Diagramas de proceso”, o cal, de novo, ten diferentes designacións en función do programa de simulación que esteamos a usar."
+  },
+  {
+    "objectID": "labs/Practica-01.html#bases-para-unha-simulación",
+    "href": "labs/Practica-01.html#bases-para-unha-simulación",
+    "title": "SOPQ-2324",
+    "section": "Bases para unha simulación",
+    "text": "Bases para unha simulación\nPara definir unha simulación debemos de ter en conta que necesitamos especificar correctamente:\n\nCompoñentes, tanto puero como hipotéticos.\nPaquetes de fluído ou métodos termodinámicos.\nSistema de unidades"
+  },
+  {
+    "objectID": "labs/Practica-01.html#caso-de-estudio",
+    "href": "labs/Practica-01.html#caso-de-estudio",
+    "title": "SOPQ-2324",
+    "section": "CASO DE ESTUDIO",
+    "text": "CASO DE ESTUDIO\n\nEn este caso trátase de crear unha simulación na que os compoñentes sexan N2, H2S, CO22 C1, C2, C3, i-C4, n-C4, i-C5, n-C5, C6 e H2O.\nCrear un compoñente hipotético simple que teña como características qiue a súa temperatura de fervura sexa 110 ºC.\nEncher a seguinte táboa.\n\n\n\n\n\nPROPIEDADE\nC7+\nC7\nC8\n\n\n\n\nTemperatura de fervura\n\n\n\n\n\nDensidade ideal do líquido\n\n\n\n\n\nMasa molecular"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SOPQ 23-24: Simulación e Optimización de Procesos Químicos",
@@ -263,7 +326,7 @@
     "href": "index.html#clases-presenciais",
     "title": "SOPQ 23-24: Simulación e Optimización de Procesos Químicos",
     "section": "Clases presenciais",
-    "text": "Clases presenciais\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemán\nData\nTema\nPreparación\nPresentacións\nExercicios\nLaboratorio\nCasos prácticos\nAvaliación\nProxecto\n\n\n\n\n1\nMér, 6 Set\nTema 0 - Benvida + Presentación\n🖥️🖥️\n\n\n\n🖥️\n\n\n\n\n\nMér, 10 Out\nTema 1 - Introducón\n\n🖥️\n\n💻\n\n\n\n\n\n2\nXov, 11 Set\nPráctica Simuladores 1 - Introducción\n\n🖥️\n\n\n\n\n\n\n\n3\n\n\n\n\n\n\n\n\n\n\n\n4\n\n\n\n\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\n\n\n\n6\n\n\n\n\n\n\n\n\n\n\n\n7\n\n\n\n\n\n\n\n\n\n\n\n8\n\n\n\n\n\n\n\n\n\n\n\n9\n\n\n\n\n\n\n\n\n\n\n\n10\n\n\n\n\n\n\n\n\n\n\n\n\n 11 | | | | | | | | | |\n 12 | | | | | | | | | |\n 13 | | | | | | | | | |\n 14 | | | | | | | | | |\n 15 | | | | | | | | | |"
+    "text": "Clases presenciais\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemán\nData\nTema\nPreparación\nPresentacións\nExercicios\nLaboratorio\nCasos prácticos\nAvaliación\nProxecto\n\n\n\n\n1\nMér, 6 Set\nTema 0 - Benvida + Presentación\n🖥️🖥️\n\n\n\n🖥️\n\n\n\n\n\nMér, 10 Out\nTema 1 - Introducón\n\n🖥️\n\n💻\n\n\n\n\n\n2\nXov, 11 Set\nPráctica Simuladores 1 - Introducción\n\n🖥️\n\n\n\n\n\n\n\n3\n\n📖\n💻\n📋\n✍️\n🗝️\n🖥️\n✅\n📂\n\n\n4\n\n\n\n\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\n\n\n\n6\n\n\n\n\n\n\n\n\n\n\n\n7\n\n\n\n\n\n\n\n\n\n\n\n8\n\n\n\n\n\n\n\n\n\n\n\n9\n\n\n\n\n\n\n\n\n\n\n\n10\n\n\n\n\n\n\n\n\n\n\n\n\n 11 | | | | | | | | | |\n 12 | | | | | | | | | |\n 13 | | | | | | | | | |\n 14 | | | | | | | | | |\n 15 | | | | | | | | | |"
   },
   {
     "objectID": "course-team.html",
@@ -516,6 +579,69 @@
     "title": "Problemas para practicar",
     "section": "",
     "text": "Son opcionales, el tiempo aproximado para resolver este tipo de problemas es de 20 minutos.\n\nIntegrar la ecuación de diseño de un reactor batch\nPara un reactor batch con volumen constante donde ocurre la reacción: \\(A \\rightarrow B\\) con una rapidez de reacción: \\(-r_A = kC_A^2\\), se obtuvo la siguiente ecuación de diseño para el tiempo necesario para alcanzar una conversión.\n\\(t(X) = \\frac{1}{k C_{A0}} \\int_{X=0}^X \\frac{dX}{(1-X)^2}\\)\nsi \\(k = 10^{-3}\\) L/mol s y \\(C_{A0} = 1\\),ol/, estimar el tiempo necesario para llegar a un 90% de conversión.\nLa respuesta es 9000 segundos\n\n\nIntegrar ecuación de capacidad calorífica\nSabemos que la capacidad calorífica se define cómo: \\(C_p=\\left(\\frac{dH}{dT}\\right)_P\\). A partir de esta definición podemos calcular la energía necesaria para cambiar la temperatura de algún material de la forma siguiente:\n\\(H_2 - H_1 = Q = \\int_{T_1}^{T_2} C_p(T) dT\\)\nPara el rango de 298 a 1200K, el \\(C_p\\) de CO2 esta dado por polinomio Shomate:\n\\(C_p(t) = A + B t + C t^2 + D t^3 + E/t^2\\) con unidades de J/molK\ndonde: - t=temperatura(K)/1000\nConstantes:\n\n\n\n\nvalor\n\n\n\n\nA\n24.99735\n\n\nB\n55.18696\n\n\nC\n-33.69137\n\n\nD\n7.948387\n\n\nE\n-0.136638\n\n\nF\n-403.6075\n\n\nG\n228.2431\n\n\nH\n-393.5224\n\n\n\nUsa esta información para obtener la energía necesaria (en kJ/mol) para elevear la temperatura de CO2 de 300K a 600K. Se aconseja utilizar scipy.integrate.quad para realizar la integral\nEl cambio en la entalpía es de 12.941 kJ/mol.\n\n\nEstadística\nLa función de una distribución normal es:\n\\(f(x) = \\frac{1}{\\sigma \\sqrt{2 \\pi}} e^{-0.5 (x - \\mu)^2/\\sigma^2}\\)\nEn esta ecuación μ es la media, σ es la desviación estándar. Para este problema definamos μ=0, σ=1.\nUna propiedad de una distribución normal es \\(\\int_{-\\infty}^{\\infty} f(x) dx = 1\\). Muestra que esto es cierto computando la integral.\nSe sabe que en una distribución normal ± 2σ representa cerca del 95% de la distribución. La tarea es encontrar el valor para \\(x\\) que representa el 95% del área de la distribución. Comparar con la regla de dedo en estadística.\n\\(0.95 = \\int_{-x}^{x} f(x) dx\\)\nPista, el valor de x está cerca de 2\nEl promedio de una distribución continua esta definido como: \\(\\mu = \\int_{-\\infty}^{\\infty} x f(x) dx\\). Muestra que el promedio de la distribución normal definida anteriormente es cero evaluando esta integral.\nLa varianza, \\(\\sigma^2\\) está definida como: \\(\\sigma^2 = \\int_{-\\infty}^{\\infty} (x - \\mu)^2 f(x) dx\\). Muestra que la varianza de la distribución normal definida anteriormente es uno evaluando la integral. Nota μ=0 definida anteriormente."
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html",
+    "href": "labs/exemplo-practica-de-simulador.html",
+    "title": "SOPQ-2324",
+    "section": "",
+    "text": "Importtante!\n\n\n\nEsta práctica non é para facer, senón que é un exemplor dun guión de practicas das que faremos nas tandas de prácticas de simulador, as que correspondes ós xoves do calendario."
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html#obxectivos",
+    "href": "labs/exemplo-practica-de-simulador.html#obxectivos",
+    "title": "SOPQ-2324",
+    "section": "Obxectivos",
+    "text": "Obxectivos\n\nSelecciona os elementos básicos necesarios para desenvolver unha simulación dun proceso químico en un simulador de procesos: DWSIM, HYSYS ou ASPENPLUS.\nXestionar algunhas ferramentas incluídas nos simuladores que permiten determinar as propiedades dos compoñentes."
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html#paquetes-de-fluídos",
+    "href": "labs/exemplo-practica-de-simulador.html#paquetes-de-fluídos",
+    "title": "SOPQ-2324",
+    "section": "Paquetes de fluídos",
+    "text": "Paquetes de fluídos\nOs simuladores usan o concepto de paquete fluído como contedor de toda a información necesaria para desenvolver cálculos de propiedades físicas e termodinámicas e evaporacións espontáneas dos fluxos. O paquete fluído permite definir toda a información (propiedades, compoñentes, compoñentes hipotéticos, parámetros de interacción, reaccións, datos tabulados, etc.) dentro dun ficheiro moi sinxelo. Isto ten tres vantaxes, a saber:\n\nToda a información asociada defínese nunha única localización, o que permite crear e modificar facilmente a información\nOs paquetes de fluído pódense almacenar como un ficheiro completo para usalos en calquera simulación\nPódense empregar varios paquetes de fluído nunha simulación. Non obstante, todos os paquetes definidos atópanse dentro do xestor de simulación básico"
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html#administrador-del-paquete-basico-de-la-simulacion",
+    "href": "labs/exemplo-practica-de-simulador.html#administrador-del-paquete-basico-de-la-simulacion",
+    "title": "SOPQ-2324",
+    "section": "Administrador del Paquete Básico de la Simulación",
+    "text": "Administrador del Paquete Básico de la Simulación\nO “Basic Simulation Manager” ou “Simulation Basis Manager” (ou como se deseña en cada simulador) é unha programa que permite crear e manipular cada paquete de fluído na simulación.\nAparecerá un “Administrador Básico de la Simulación”, dependendo do simulador pero que permite facer a misma secuancia de operación e comprobar se as condicións de simulación se van cumplindo mediante semáforos.\n1.- O primeiro será selecciona os compoñentes da simulación: “Component Lists” que conteñen “View”, “Add”, “Delete”, “Copy”, “Import”, “Export” e “Refresh” cos cales se observan, engaden, borran, copian, importan, exportan r refrescan os compoñentes incluidos en el paquete fluído.\nAdemais de compostos puuros, temos facilidade para crear compostos mesturados e hipotéticos, “Hypotheticals”, “Oil Manager”, “Reactions”, “Component Maps” y “UserProperty”."
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html#administrador-de-reaccións-químicas",
+    "href": "labs/exemplo-practica-de-simulador.html#administrador-de-reaccións-químicas",
+    "title": "SOPQ-2324",
+    "section": "Administrador de reaccións químicas",
+    "text": "Administrador de reaccións químicas\nAs ecuacións e as cinéticas das reacciones químicas que interveñen no proceso químico a simular co paquete de fluídos. Tamén soen traer un editor específico de reaccións, pero, en cada caso, depende do tipo de reactor e do simulador polo que se irá vendo a medida que os usemos."
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html#sistemas-de-unidades",
+    "href": "labs/exemplo-practica-de-simulador.html#sistemas-de-unidades",
+    "title": "SOPQ-2324",
+    "section": "Sistemas de unidades",
+    "text": "Sistemas de unidades\nInda que se poden cambiar en cada momento, os simuladores soen pedir un sistema de unidades de cálculo por defecto antes de empezar a simulación. O sistema por defecto é o SI estándar."
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html#wizards",
+    "href": "labs/exemplo-practica-de-simulador.html#wizards",
+    "title": "SOPQ-2324",
+    "section": "Wizards",
+    "text": "Wizards\nTodos os simuladores posúen axudantes que nos van guiando e comprobando que damos todos os pasos previos e necesarios para facer unha simulación, é dicir, que dispoñen de todos os datos necesarios antes de entrar á ferramenta seguinte que soe ser o “Deseñador de Diagramas de proceso”, o cal, de novo, ten diferentes designacións en función do programa de simulación que esteamos a usar."
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html#bases-para-unha-simulación",
+    "href": "labs/exemplo-practica-de-simulador.html#bases-para-unha-simulación",
+    "title": "SOPQ-2324",
+    "section": "Bases para unha simulación",
+    "text": "Bases para unha simulación\nPara definir unha simulación debemos de ter en conta que necesitamos especificar correctamente:\n\nCompoñentes, tanto puero como hipotéticos.\nPaquetes de fluído ou métodos termodinámicos.\nSistema de unidades"
+  },
+  {
+    "objectID": "labs/exemplo-practica-de-simulador.html#caso-de-estudio",
+    "href": "labs/exemplo-practica-de-simulador.html#caso-de-estudio",
+    "title": "SOPQ-2324",
+    "section": "CASO DE ESTUDIO",
+    "text": "CASO DE ESTUDIO\n\nEn este caso trátase de crear unha simulación na que os compoñentes sexan N2, H2S, CO22 C1, C2, C3, i-C4, n-C4, i-C5, n-C5, C6 e H2O.\nCrear un compoñente hipotético simple que teña como características qiue a súa temperatura de fervura sexa 110 ºC.\nEncher a seguinte táboa.\n\n\n\n\nPROPIEDADE\nC7+\nC7\nC8\n\n\n\n\nTemperatura de fervura\n\n\n\n\n\nDensidade ideal do líquido\n\n\n\n\n\nMasa molecular"
   },
   {
     "objectID": "notebooks/Diagramas_Pxy_Txy.html",

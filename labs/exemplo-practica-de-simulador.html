@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SOPQ-2324 - SOPQ 23-24: Simulación e Optimización de Procesos Químicos</title>
+<title>SOPQ-2324 – exemplo-practica-de-simulador</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./course-syllabus.html" rel="next">
-<link href="./course-overview.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -51,33 +49,33 @@ ul.task-list li input[type="checkbox"] {
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li><li class="breadcrumb-item"><a href="./index.html">Programación</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -86,74 +84,74 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./imaxes/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../imaxes/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/anxosanchez/SOPQ-2324" rel="" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
     <a href="https://www.linkedin.com/in/anxo-s%C3%A1nchez-berm%C3%BAdez-79086321/" rel="" title="Linkedin" class="quarto-navigation-tool px-1" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
 </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Información xeral</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Información xeral</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programación</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guía Docente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-team.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Profesorado</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ligazońs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Soporte</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-faq.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
@@ -163,20 +161,20 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">Computación</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-access.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Aceso</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problemas c servidor</span></a>
   </div>
 </li>
@@ -186,20 +184,20 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Proxecto</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-description.html" class="sidebar-item-text sidebar-link">
+  <a href="../project-description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrucións</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-tips-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../project-tips-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tips + recusos</span></a>
   </div>
 </li>
@@ -209,14 +207,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">Blog</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts.html" class="sidebar-item-text sidebar-link">
+  <a href="../posts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Artigos</span></a>
   </div>
 </li>
@@ -229,200 +227,104 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">SOPQ 23-24: Simulación e Optimización de Procesos Químicos</h1>
+
+
+<div class="callout callout-style-default callout-important callout-titled" title="Importtante!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="introdución" class="level2">
-<h2 class="anchored" data-anchor-id="introdución">Introdución</h2>
-<p>Esta páxina contén un esquema dos temas, contido e tarefas para o semestre. Ten en conta que este horario actualizarase a medida que avanza o semestre, con todos os cambios documentados aquí.</p>
+<div class="callout-title-container flex-fill">
+Importtante!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esta práctica non é para facer, senón que é un exemplor dun guión de practicas das que faremos nas tandas de <strong>prácticas de simulador</strong>, as que correspondes ós xoves do calendario.</p>
+</div>
+</div>
+<section id="obxectivos" class="level2">
+<h2 class="anchored" data-anchor-id="obxectivos">Obxectivos</h2>
+<ol type="1">
+<li><p>Selecciona os elementos básicos necesarios para desenvolver unha simulación dun proceso químico en un simulador de procesos: DWSIM, HYSYS ou ASPENPLUS.</p></li>
+<li><p>Xestionar algunhas ferramentas incluídas nos simuladores que permiten determinar as propiedades dos compoñentes.</p></li>
+</ol>
 </section>
-<section id="clases-presenciais" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="clases-presenciais">Clases presenciais</h2>
-<div class="column-screen-inset-right">
+<section id="paquetes-de-fluídos" class="level2">
+<h2 class="anchored" data-anchor-id="paquetes-de-fluídos">Paquetes de fluídos</h2>
+<p>Os simuladores usan o concepto de paquete fluído como contedor de toda a información necesaria para desenvolver cálculos de propiedades físicas e termodinámicas e evaporacións espontáneas dos fluxos. O paquete fluído permite definir toda a información (propiedades, compoñentes, compoñentes hipotéticos, parámetros de interacción, reaccións, datos tabulados, etc.) dentro dun ficheiro moi sinxelo. Isto ten tres vantaxes, a saber:</p>
+<ol type="1">
+<li>Toda a información asociada defínese nunha única localización, o que permite crear e modificar facilmente a información</li>
+<li>Os paquetes de fluído pódense almacenar como un ficheiro completo para usalos en calquera simulación</li>
+<li>Pódense empregar varios paquetes de fluído nunha simulación. Non obstante, todos os paquetes definidos atópanse dentro do xestor de simulación básico</li>
+</ol>
+</section>
+<section id="administrador-del-paquete-basico-de-la-simulacion" class="level2">
+<h2 class="anchored" data-anchor-id="administrador-del-paquete-basico-de-la-simulacion">Administrador del Paquete Básico de la Simulación</h2>
+<p>O “Basic Simulation Manager” ou “Simulation Basis Manager” (ou como se deseña en cada simulador) é unha programa que permite crear e manipular cada paquete de fluído na simulación.</p>
+<p>Aparecerá un “Administrador Básico de la Simulación”, dependendo do simulador pero que permite facer a misma secuancia de operación e comprobar se as condicións de simulación se van cumplindo mediante semáforos.</p>
+<p>1.- O primeiro será selecciona os compoñentes da simulación: “Component Lists” que conteñen “View”, “Add”, “Delete”, “Copy”, “Import”, “Export” e “Refresh” cos cales se observan, engaden, borran, copian, importan, exportan r refrescan os compoñentes incluidos en el paquete fluído.</p>
+<p>Ademais de compostos puuros, temos facilidade para crear compostos mesturados e hipotéticos, “Hypotheticals”, “Oil Manager”, “Reactions”, “Component Maps” y “UserProperty”.</p>
+</section>
+<section id="administrador-de-reaccións-químicas" class="level2">
+<h2 class="anchored" data-anchor-id="administrador-de-reaccións-químicas">Administrador de reaccións químicas</h2>
+<p>As ecuacións e as cinéticas das reacciones químicas que interveñen no proceso químico a simular co paquete de fluídos. Tamén soen traer un editor específico de reaccións, pero, en cada caso, depende do tipo de reactor e do simulador polo que se irá vendo a medida que os usemos.</p>
+</section>
+<section id="sistemas-de-unidades" class="level2">
+<h2 class="anchored" data-anchor-id="sistemas-de-unidades">Sistemas de unidades</h2>
+<p>Inda que se poden cambiar en cada momento, os simuladores soen pedir un sistema de unidades de cálculo por defecto antes de empezar a simulación. O sistema por defecto é o SI estándar.</p>
+</section>
+<section id="wizards" class="level2">
+<h2 class="anchored" data-anchor-id="wizards">Wizards</h2>
+<p>Todos os simuladores posúen axudantes que nos van guiando e comprobando que damos todos os pasos previos e necesarios para facer unha simulación, é dicir, que dispoñen de todos os datos necesarios antes de entrar á ferramenta seguinte que soe ser o “Deseñador de Diagramas de proceso”, o cal, de novo, ten diferentes designacións en función do programa de simulación que esteamos a usar.</p>
+</section>
+<section id="bases-para-unha-simulación" class="level2">
+<h2 class="anchored" data-anchor-id="bases-para-unha-simulación">Bases para unha simulación</h2>
+<p>Para definir unha simulación debemos de ter en conta que necesitamos especificar correctamente:</p>
+<ul>
+<li><p>Compoñentes, tanto puero como hipotéticos.</p></li>
+<li><p>Paquetes de fluído ou métodos termodinámicos.</p></li>
+<li><p>Sistema de unidades</p></li>
+</ul>
+</section>
+<section id="caso-de-estudio" class="level2">
+<h2 class="anchored" data-anchor-id="caso-de-estudio">CASO DE ESTUDIO</h2>
+<ol type="1">
+<li>En este caso trátase de crear unha simulación na que os compoñentes sexan N<sub>2</sub>, H<sub>2</sub>S, CO2<sub>2</sub> C<sub>1</sub>, C<sub>2</sub>, C<sub>3</sub>, i-C<sub>4</sub>, n-C<sub>4</sub>, i-C<sub>5</sub>, n-C<sub>5</sub>, C<sub>6</sub> e H<sub>2</sub>O.</li>
+<li>Crear un compoñente hipotético simple que teña como características qiue a súa temperatura de fervura sexa 110 ºC.</li>
+<li>Encher a seguinte táboa.</li>
+</ol>
 <table class="table">
-<colgroup>
-<col style="width: 5%">
-<col style="width: 10%">
-<col style="width: 30%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Semán</th>
-<th>Data</th>
-<th>Tema</th>
-<th style="text-align: center;">Preparación</th>
-<th style="text-align: center;">Presentacións</th>
-<th style="text-align: center;">Exercicios</th>
-<th style="text-align: center;">Laboratorio</th>
-<th style="text-align: center;">Casos prácticos</th>
-<th style="text-align: center;">Avaliación</th>
-<th style="text-align: center;">Proxecto</th>
+<th><strong>PROPIEDAD</strong>E</th>
+<th style="text-align: center;"><strong>C7+</strong></th>
+<th style="text-align: center;"><strong>C7</strong></th>
+<th style="text-align: center;"><strong>C8</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="./weeks/week-1.html">1</a></td>
-<td>Mér, 6 Set</td>
-<td>Tema 0 - Benvida + Presentación</td>
-<td style="text-align: center;"><a href="./temas/course-syllabus-0.qmd" aria-label="Lab 1 slides" title="Guía docente">🖥️</a><br><a href="./temas/course-support-0.qmd" aria-label="Lab 1 slides" title="Guía docente">🖥️</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./temas/./exercicios/exemplo-exercicio.qmd" aria-label="Lab 1 slides" title="Guía docente">🖥️</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td>Mér, 10 Out</td>
-<td>Tema 1 - Introducón</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/lec-1.html" aria-label="Lab 1 slides" title="Slides">🖥️</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./labs/lab-1.html" aria-label="Lab 1 instructions" title="Lab instructions">💻</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a href="./weeks/week-2.html">2</a></td>
-<td>Xov, 11 Set</td>
-<td>Práctica Simuladores 1 - Introducción</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="./slides/lec-2.html" aria-label="Lecture 2 slides" title="Lecture slides">🖥️</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td>Temperatura de fervura</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-3.html">3</a></td>
-<td></td>
-<td>📖</td>
-<td style="text-align: center;">💻</td>
-<td style="text-align: center;">📋</td>
-<td style="text-align: center;">✍️</td>
-<td style="text-align: center;">🗝️</td>
-<td style="text-align: center;">🖥️</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">📂</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a href="./weeks/week-3.html">4</a></td>
-<td></td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-3.html">5</a></td>
-<td></td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td>Densidade ideal do líquido</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><a href="./weeks/week-3.html">6</a></td>
-<td></td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-3.html">7</a></td>
-<td></td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a href="./weeks/week-3.html">8</a></td>
-<td></td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="./weeks/week-3.html">9</a></td>
-<td></td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a href="./weeks/week-3.html">10</a></td>
-<td></td>
-<td></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td>Masa molecular</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-<p>&nbsp;<a href="./weeks/week-3.html">11</a> | | | | | | | | | |<br>
-&nbsp;<a href="./weeks/week-3.html">12</a> | | | | | | | | | |<br>
-&nbsp;<a href="./weeks/week-3.html">13</a> | | | | | | | | | |<br>
-&nbsp;<a href="./weeks/week-3.html">14</a> | | | | | | | | | |<br>
-&nbsp;<a href="./weeks/week-3.html">15</a> | | | | | | | | | |</p>
-</div>
 
 
 </section>
@@ -597,12 +499,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -776,25 +678,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./course-overview.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Información xeral</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./course-syllabus.html" class="pagination-link">
-        <span class="nav-page-text">Guía Docente</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2023, Anxo Sánchez</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/anxosanchez/SOPQ-2324/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/anxosanchez/SOPQ-2324/edit/main/labs/exemplo-practica-de-simulador.qmd" class="toc-action">Editar esta página</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Informar de un problema</a></p></div></div></div>
     <div class="nav-footer-right">Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</div>
   </div>
 </footer>
