@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="A. Sánchez">
 
-<title>SOPQ-2324 – untitled</title>
+<title>SOPQ-2324 - Reacción de primeiro orde nun tren de tres reactores CSTR</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,6 +97,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -108,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Reacción de primeiro orde nun tren de tres reactores CSTR</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -263,157 +266,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Reacción de primeiro orde nun tren de tres reactores CSTR</h1>
+</div>
 
 
-<div class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">100</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="kw">lambda</span> x: np.sin(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_num_diff(a, b, n, option<span class="op">=</span><span class="st">'central'</span>, x_range<span class="op">=</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>), num_points<span class="op">=</span><span class="dv">1000</span>):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create an array of x values within the specified range</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(x_range[<span class="dv">0</span>], x_range[<span class="dv">1</span>], num_points)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the step size for differentiation</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> (x_range[<span class="dv">1</span>] <span class="op">-</span> x_range[<span class="dv">0</span>]) <span class="op">/</span> (num_points <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize an array to store the differentiated values</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    dy <span class="op">=</span> np.zeros_like(x)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_points):</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        x_val <span class="op">=</span> x[i]</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate the difference for the specified option</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> option <span class="op">==</span> <span class="st">'forward'</span>:</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> a(x_val) <span class="op">-</span> b(x_val)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> (a(x_val <span class="op">+</span> h) <span class="op">-</span> b(x_val <span class="op">+</span> h) <span class="op">-</span> a(x_val) <span class="op">+</span> b(x_val)) <span class="op">/</span> (h <span class="op">**</span> n)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> option <span class="op">==</span> <span class="st">'backward'</span>:</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> a(x_val) <span class="op">-</span> b(x_val)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> (a(x_val) <span class="op">-</span> b(x_val) <span class="op">-</span> a(x_val <span class="op">-</span> h) <span class="op">+</span> b(x_val <span class="op">-</span> h)) <span class="op">/</span> (h <span class="op">**</span> n)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> option <span class="op">==</span> <span class="st">'central'</span>:</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> a(x_val) <span class="op">-</span> b(x_val)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> (a(x_val <span class="op">+</span> h) <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> a(x_val) <span class="op">+</span> a(x_val <span class="op">-</span> h) <span class="op">-</span> b(x_val <span class="op">+</span> h) <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> b(x_val) <span class="op">-</span> b(x_val <span class="op">-</span> h)) <span class="op">/</span> (h <span class="op">**</span> n)</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Invalid option. Use 'forward', 'backward', or 'central'."</span>)</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [dy, x]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[dyf, Xf] <span class="op">=</span> my_num_diff(f, <span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">10</span>, <span class="st">'forward'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>UFuncTypeError: ufunc 'multiply' did not contain a loop with signature matching types (dtype('&lt;U1'), dtype('float64')) -&gt; None</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[dyb, Xb] <span class="op">=</span> np.diff(f, <span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">10</span>, <span class="st">'backward'</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>[dyc, Xc] <span class="op">=</span> np.diff(f, <span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">10</span>, <span class="st">'central'</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">12</span>, <span class="dv">8</span>))</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, np.cos(x), label <span class="op">=</span> <span class="st">'analytic'</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.plot(Xf, dyf, label <span class="op">=</span> <span class="st">'forward'</span>)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.plot(Xb, dyb, label <span class="op">=</span> <span class="st">'backward'</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plt.plot(Xc, dyc, label <span class="op">=</span> <span class="st">'central'</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Analytic and Numerical Derivatives of Sine'</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>TypeError: cannot unpack non-iterable function object</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> diff(a, b, n, option<span class="op">=</span><span class="st">'central'</span>, x_range<span class="op">=</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>), num_points<span class="op">=</span><span class="dv">1000</span>):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create an array of x values within the specified range</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(x_range[<span class="dv">0</span>], x_range[<span class="dv">1</span>], num_points)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the step size for differentiation</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> (x_range[<span class="dv">1</span>] <span class="op">-</span> x_range[<span class="dv">0</span>]) <span class="op">/</span> (num_points <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize an array to store the differentiated values</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    dy <span class="op">=</span> np.zeros_like(x)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_points):</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        x_val <span class="op">=</span> x[i]</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate the difference for the specified option</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> option <span class="op">==</span> <span class="st">'forward'</span>:</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> a(x_val) <span class="op">-</span> b(x_val)</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> (a(x_val <span class="op">+</span> h) <span class="op">-</span> b(x_val <span class="op">+</span> h) <span class="op">-</span> a(x_val) <span class="op">+</span> b(x_val)) <span class="op">/</span> (h <span class="op">**</span> n)</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> option <span class="op">==</span> <span class="st">'backward'</span>:</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> a(x_val) <span class="op">-</span> b(x_val)</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> (a(x_val) <span class="op">-</span> b(x_val) <span class="op">-</span> a(x_val <span class="op">-</span> h) <span class="op">+</span> b(x_val <span class="op">-</span> h)) <span class="op">/</span> (h <span class="op">**</span> n)</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> option <span class="op">==</span> <span class="st">'central'</span>:</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> a(x_val) <span class="op">-</span> b(x_val)</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>                dy[i] <span class="op">=</span> (a(x_val <span class="op">+</span> h) <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> a(x_val) <span class="op">+</span> a(x_val <span class="op">-</span> h) <span class="op">-</span> b(x_val <span class="op">+</span> h) <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> b(x_val) <span class="op">-</span> b(x_val <span class="op">-</span> h)) <span class="op">/</span> (h <span class="op">**</span> n)</span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Invalid option. Use 'forward', 'backward', or 'central'."</span>)</span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [dy, x]</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage:</span></span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(x):</span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(x)</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> diff(f, g, <span class="dv">2</span>, option<span class="op">=</span><span class="st">'central'</span>, x_range<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi), num_points<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>dy, x <span class="op">=</span> result</span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dy)</span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[2.         2.06340263 2.12654997 2.18918773 2.2510637  2.31192872
- 2.37153772 2.42965066 2.48603356 2.54045937 2.59270894 2.64257188
- 2.68984741 2.73434516 2.77588597 2.81430256 2.84944024 2.88115753
- 2.9093267  2.93383434 2.95458176 2.97148541 2.98447723 2.99350491
- 2.9985321  2.99953855 2.99652021 2.98948924 2.97847394 2.96351867
- 2.94468366 2.92204473 2.89569306 2.86573475 2.83229043 2.79549477
- 2.75549593 2.71245498 2.66654522 2.61795152 2.56686955 2.51350499
- 2.45807273 2.40079597 2.34190535 2.281638   2.22023659 2.15794837
- 2.09502414 2.03171728 1.96828272 1.90497586 1.84205163 1.77976341
- 1.718362   1.65809465 1.59920403 1.54192727 1.48649501 1.43313045
- 1.38204848 1.33345478 1.28754502 1.24450407 1.20450523 1.16770957
- 1.13426525 1.10430694 1.07795527 1.05531634 1.03648133 1.02152606
- 1.01051076 1.00347979 1.00046145 1.0014679  1.00649509 1.01552277
- 1.02851459 1.04541824 1.06616566 1.0906733  1.11884247 1.15055976
- 1.18569744 1.22411403 1.26565484 1.31015259 1.35742812 1.40729106
- 1.45954063 1.51396644 1.57034934 1.62846228 1.68807128 1.7489363
- 1.81081227 1.87345003 1.93659737 2.        ]
-[0.         0.06346652 0.12693304 0.19039955 0.25386607 0.31733259
- 0.38079911 0.44426563 0.50773215 0.57119866 0.63466518 0.6981317
- 0.76159822 0.82506474 0.88853126 0.95199777 1.01546429 1.07893081
- 1.14239733 1.20586385 1.26933037 1.33279688 1.3962634  1.45972992
- 1.52319644 1.58666296 1.65012947 1.71359599 1.77706251 1.84052903
- 1.90399555 1.96746207 2.03092858 2.0943951  2.15786162 2.22132814
- 2.28479466 2.34826118 2.41172769 2.47519421 2.53866073 2.60212725
- 2.66559377 2.72906028 2.7925268  2.85599332 2.91945984 2.98292636
- 3.04639288 3.10985939 3.17332591 3.23679243 3.30025895 3.36372547
- 3.42719199 3.4906585  3.55412502 3.61759154 3.68105806 3.74452458
- 3.8079911  3.87145761 3.93492413 3.99839065 4.06185717 4.12532369
- 4.1887902  4.25225672 4.31572324 4.37918976 4.44265628 4.5061228
- 4.56958931 4.63305583 4.69652235 4.75998887 4.82345539 4.88692191
- 4.95038842 5.01385494 5.07732146 5.14078798 5.2042545  5.26772102
- 5.33118753 5.39465405 5.45812057 5.52158709 5.58505361 5.64852012
- 5.71198664 5.77545316 5.83891968 5.9023862  5.96585272 6.02931923
- 6.09278575 6.15625227 6.21971879 6.28318531]</code></pre>
-</div>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>A. Sánchez </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Considera tres <strong>CSTR</strong> en serie, que operam a volume constante de <span class="math inline">\(V\)</span> = 100 L. Unha reacción de primeiro orde, <span class="math inline">\(A → B + C\)</span> ten lugar no sistema, con taxa de reacción = r = 0,09CA.As condicións de entrada ao primeiro reactor son constantes co tempo: Concentración de entrada = CA, 0 = 2,7 mol/L a un caudal de F0 en = 15,8 l/min.A saída do primeiro reactor, CA, 1, é a entrada ao segundo reactor, e a toma do segundo reactor, CA, 2, pasa ao terceiro reactor.A saída do terceiro reactor, CA, 3, pódese usar para calcular a conversión global = CA, 0 - CA, 3</p>
+<pre class="{python}"><code>CA0 = 5</code></pre>
+<p>Os saldos dinámicos en cada reactor son:</p>
+<p><span class="math display">\[
+\frac { dC_{_1_} } { dt } = F V_1
+\]</span></p>
+<p>dCA,1(t) dt = F V1  CA,0 − CA,1  − kCA,1 dCA,2(t) dt = F V2  CA,1 − CA,2  − kCA,2 dCA,3(t) dt = F V3  CA,2 − CA,3  − kCA,3</p>
+<p>Describe como resolverías o sistema de ecuacións <span class="math inline">\(f(x) = 0\)</span> onde:</p>
+<p><span class="math display">\[
+x = C_{A_1},C_{A_2},C_{A_3}
+\]</span></p>
+<p>Use un solucionador ODE para atopar os valores en estado estacionario de <span class="math inline">\(C_{A_1}\)</span>, <span class="math inline">\(C_{A_2}\)</span> e <span class="math inline">\(C_{A_3}\)</span>, e tamén a conversion global do tren de reactores.</p>
+<p>You are tasked with increasing the conversion of the overall system. You are investigating two possibilities: adding a recycle stream, and operating at larger tank volumes.</p>
+<ol type="1">
+<li>What are the new steady state values of x =</li>
+</ol>
+<p>CA,1, CA,2, CA,3</p>
+<p>and the overall conversion when V1 = V2 = V3 = 150 L? Why does operating at a larger tank volumes increase conversion? You can answer this question even if you haven’t taken the reactor design course yet - hint: interpret the above modelling equations. 3. Let’s take a look at what happens when a disturbance enters the system. Simulate the case when a step change of +1.2 mol/L in CA,0 is made at time t = 50 (i.e.&nbsp;the inlet concentration is 2.7 mol/L for 50 minutes, then increased to 3.9 mol/L for the rest of the time). Choose suitable initial conditions so that your system is roughly at steady state before t = 50, continue the simulation on until the new steady state is reached. What do you notice about the shape of the concentration vs time trajectories from each reactor (superimpose the 3 trajectories on the same plot). Adding a recycle stream from the final reactor to the first or second reactor is an exercise that you can complete on your own. It leads to a counter-intuitive phenomenon: you’d expect an increase in conversion, but ….</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>CA0 <span class="op">=</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -773,7 +668,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">© Copyright 2023, Anxo Sánchez</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.dev/anxosanchez/SOPQ-2324/blob/main/Untitled.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.dev/anxosanchez/SOPQ-2324/blob/main/Untitled-1.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</div>
   </div>
 </footer>
