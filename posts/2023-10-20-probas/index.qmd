@@ -37,7 +37,7 @@ $$
 onde $y_i$ é a fraccións molares de cada compoñente $i$ na fase vapor e $x_i$ as fraccións molares de cada compoñente $i$ na fase líquida. En xeral, valor de $K$ depende da temperatura $T$ , a presión, $p$ e a composición (ambas, $x_i$ e $y_i$). Supoñemos mestura idal, e usamos a _Lei de Raoult_. Neste caso, $K_i$ depende de $T$ e $p$ somentes:
   
 $$
-Lei \; de \; Raoult: K_i = \frac {p^{saturación}_i (T)} {p}
+Lei \; de \; Raoult: K_i = \frac {p^{sat}_i (T)} {p}
 $$
   
 A presión de saturación, $p^{sat} (T)$ utilizando os parámetros de _Antoine_.
