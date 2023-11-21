@@ -77,8 +77,10 @@ format:
   html:
     theme:
       dark: [solar, theme-dark.scss]
+
       light: [cosmo, theme.scss]
-    mainfont: "Open Sans"
+    header-includes: |
+      <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/tex-gyre-adventor" type="text/css"/>
     code-copy: true
     code-overflow: wrap
     toc: false
