@@ -318,7 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 A presión de vapor do heptano puro é de 0.7462 bar.</code></pre>
 </div>
 </div>
-<div class="cell" data-outputid="1f4c28f1-f196-4e4a-d51a-9da3dc20fcc4" data-execution_count="10">
+<div class="cell" data-outputid="1f4c28f1-f196-4e4a-d51a-9da3dc20fcc4" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector de valores de x</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x_heptano <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">11</span>)</span>
@@ -341,7 +341,7 @@ A presión de vapor do heptano puro é de 0.7462 bar.</code></pre>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x, y (heptano)'</span>)</span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Presión (bar)'</span>)</span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Diagrama P-x,y'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Text(0.5, 1.0, 'Diagrama P-x,y')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -350,10 +350,10 @@ A presión de vapor do heptano puro é de 0.7462 bar.</code></pre>
 </div>
 <section id="aparatdo-2-.-diagrama-t-xy-a-partires-da-presión-total-dada" class="level2">
 <h2 class="anchored" data-anchor-id="aparatdo-2-.-diagrama-t-xy-a-partires-da-presión-total-dada">Aparatdo 2 . Diagrama T-xy a partires da presión total dada</h2>
-<div class="cell" data-execution_count="15">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> fsolve</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-outputid="ea9582ef-6443-47e3-ff95-080837297ecf" data-execution_count="16">
+<div class="cell" data-outputid="ea9582ef-6443-47e3-ff95-080837297ecf" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Datos do exercicio</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>P_t <span class="op">=</span> <span class="fl">1.5</span> <span class="co">#bar</span></span>
@@ -393,7 +393,7 @@ A presión de vapor do heptano puro é de 0.7462 bar.</code></pre>
 [0.0, 0.1837276326189331, 0.33830109800891695, 0.4693199994809487, 0.581154434977709, 0.6772413410638028, 0.7603047808262194, 0.832520410718438, 0.895638942399593, 0.9510793956603304, 1.0000000000003693]</code></pre>
 </div>
 </div>
-<div class="cell" data-outputid="9ad39563-eb5a-49dc-f72c-b0f43f5e0954" data-execution_count="18">
+<div class="cell" data-outputid="9ad39563-eb5a-49dc-f72c-b0f43f5e0954" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Representación do diagrama T-xy</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -402,14 +402,14 @@ A presión de vapor do heptano puro é de 0.7462 bar.</code></pre>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x, y (heptano)'</span>)</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Temperatura (K)'</span>)</span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Diagrama T-x,y'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>Text(0.5, 1.0, 'Diagrama T-x,y')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="Diagramas_Pxy_Txy_files/figure-html/cell-8-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-outputid="20a1b2a1-4c31-415f-fea6-0967f6ad307f" data-execution_count="20">
+<div class="cell" data-outputid="20a1b2a1-4c31-415f-fea6-0967f6ad307f" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#También se puede realizar con fsolve aplicado a la ecuación de Antoine, y no al sumatorio de y - 1</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>z<span class="op">=</span>np.linspace(<span class="dv">0</span>,<span class="dv">1</span>, num<span class="op">=</span><span class="dv">11</span>) <span class="co">#composición inicial</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -442,7 +442,7 @@ A presión de vapor do heptano puro é de 0.7462 bar.</code></pre>
 A temperatura á que hierve o octano  á presión externa é 413.56 K.</code></pre>
 </div>
 </div>
-<div class="cell" data-outputid="f76130b8-b984-48bd-d60b-3155f994f3c3" data-execution_count="21">
+<div class="cell" data-outputid="f76130b8-b984-48bd-d60b-3155f994f3c3" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>T<span class="op">=</span>np.linspace(Tinf,Tsup, num<span class="op">=</span><span class="dv">11</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> (P<span class="op">-</span>Psat2(T))<span class="op">/</span>(Psat1(T)<span class="op">-</span>Psat2(T))</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>x<span class="op">*</span>Psat1(T)<span class="op">/</span>P</span>
@@ -451,7 +451,7 @@ A temperatura á que hierve o octano  á presión externa é 413.56 K.</code></p
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x, y'</span>)</span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'T'</span>)</span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Diagrama T-x, y'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>Text(0.5, 1.0, 'Diagrama T-x, y')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
