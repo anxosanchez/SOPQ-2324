@@ -14,7 +14,7 @@ Ten en conta que este horario actualizarase a medida que avanza o semestre, con 
 ::: column-screen-inset-right
 | Semán | Data | Tema | Preparación | Presentacións | Exercicios | Laboratorio | Casos prácticos | Avaliación | Proxecto |  
 |:------:|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|  
-|  [1](/weeks/week-1.html)  | Mér, 6 Set | Tema 0 - Benvida + Presentación | [🖥️](/temas/course-syllabus-0.qmd "Guía docente"){aria-label="Lab 1 slides"}<br>[🖥️](/temas/course-support-0.qmd "Guía docente"){aria-label="Lab 1 slides"} |  |  | | [🖥️](/temas/./exercicios/exemplo-exercicio.qmd "Guía docente"){aria-label="Lab 1 slides"} | | |    
+|  [1](/weeks/week-1.html)  | Mér, 6 Set | Tema 0 - Benvida + Presentación | [🖥️](/temas/course-syllabus.qmd "Guía docente"){aria-label="Lab 1 slides"}<br>[🖥️](/temas/course-support.qmd "Guía docente"){aria-label="Lab 1 slides"} |  |  | | [🖥️](/temas/./exercicios/exemplo-exercicio.qmd "Guía docente"){aria-label="Lab 1 slides"} | | |    
 |  | Mér, 10 Out  | Tema 1 - Introducón | | [🖥️](/slides/lec-1.html "Slides"){aria-label="Lab 1 slides"} | | [💻](/labs/lab-1.html "Lab instructions"){aria-label="Lab 1 instructions"} | | | |  
 |  [2](/weeks/week-2.html) | Xov, 11 Set | Práctica Simuladores 1 - Introducción | |  [🖥️](/slides/lec-2.html "Lecture slides"){aria-label="Lecture 2 slides"}  | | | | | |  
 |  [3](/weeks/week-3.html)  |          | 📖 | 💻 | 📋 | ✍️ | 🗝️ | 🖥️ | ✅ | 📂 |  

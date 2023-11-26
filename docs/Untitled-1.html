@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="A. Sánchez">
 
-<title>SOPQ-2324 - Blog de SOPQ-2324</title>
+<title>SOPQ-2324 - Reacción de primeiro orde nun tren de tres reactores CSTR</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,9 +65,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./project-tips-resources.html" rel="prev">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -64,42 +96,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -108,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./posts.html">Blog</a></li><li class="breadcrumb-item"><a href="./posts.html">Artigos</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Reacción de primeiro orde nun tren de tres reactores CSTR</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -118,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
@@ -239,16 +242,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">Blog</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts.html" class="sidebar-item-text sidebar-link active">
+  <a href="./posts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Artigos</span></a>
   </div>
 </li>
@@ -259,20 +262,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog de SOPQ-2324</h1>
+<h1 class="title">Reacción de primeiro orde nun tren de tres reactores CSTR</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>A. Sánchez </p>
+          </div>
+  </div>
     
   
     
@@ -281,67 +289,31 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>Considera tres <strong>CSTR</strong> en serie, que operam a volume constante de <span class="math inline">\(V\)</span> = 100 L. Unha reacción de primeiro orde, <span class="math inline">\(A → B + C\)</span> ten lugar no sistema, con taxa de reacción = r = 0,09CA.As condicións de entrada ao primeiro reactor son constantes co tempo: Concentración de entrada = CA, 0 = 2,7 mol/L a un caudal de F0 en = 15,8 l/min.A saída do primeiro reactor, CA, 1, é a entrada ao segundo reactor, e a toma do segundo reactor, CA, 2, pasa ao terceiro reactor.A saída do terceiro reactor, CA, 3, pódese usar para calcular a conversión global = CA, 0 - CA, 3</p>
+<pre class="{python}"><code>CA0 = 5</code></pre>
+<p>Os saldos dinámicos en cada reactor son:</p>
+<p><span class="math display">\[
+\frac { dC_{_1_} } { dt } = F V_1
+\]</span></p>
+<p>dCA,1(t) dt = F V1  CA,0 − CA,1  − kCA,1 dCA,2(t) dt = F V2  CA,1 − CA,2  − kCA,2 dCA,3(t) dt = F V3  CA,2 − CA,3  − kCA,3</p>
+<p>Describe como resolverías o sistema de ecuacións <span class="math inline">\(f(x) = 0\)</span> onde:</p>
+<p><span class="math display">\[
+x = C_{A_1},C_{A_2},C_{A_3}
+\]</span></p>
+<p>Use un solucionador ODE para atopar os valores en estado estacionario de <span class="math inline">\(C_{A_1}\)</span>, <span class="math inline">\(C_{A_2}\)</span> e <span class="math inline">\(C_{A_3}\)</span>, e tamén a conversion global do tren de reactores.</p>
+<p>You are tasked with increasing the conversion of the overall system. You are investigating two possibilities: adding a recycle stream, and operating at larger tank volumes.</p>
+<ol type="1">
+<li>What are the new steady state values of x =</li>
+</ol>
+<p>CA,1, CA,2, CA,3</p>
+<p>and the overall conversion when V1 = V2 = V3 = 150 L? Why does operating at a larger tank volumes increase conversion? You can answer this question even if you haven’t taken the reactor design course yet - hint: interpret the above modelling equations. 3. Let’s take a look at what happens when a disturbance enters the system. Simulate the case when a step change of +1.2 mol/L in CA,0 is made at time t = 50 (i.e.&nbsp;the inlet concentration is 2.7 mol/L for 50 minutes, then increased to 3.9 mol/L for the rest of the time). Choose suitable initial conditions so that your system is roughly at steady state before t = 50, continue the simulation on until the new steady state is reached. What do you notice about the shape of the concentration vs time trajectories from each reactor (superimpose the 3 trajectories on the same plot). Adding a recycle stream from the final reactor to the first or second reactor is an exercise that you can complete on your own. It leads to a counter-intuitive phenomenon: you’d expect an increase in conversion, but ….</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>CA0 <span class="op">=</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1700997248753" data-listing-reading-time-sort="9">
-<div class="thumbnail">
-<p><a href="./posts/2023-10-20-probas/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-10-20-probas/index.html">
-<h3 class="no-anchor listing-title">
-Cálculos de separacións flash
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Tanque de flash
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-10-20-probas/index.html">
-<div class="listing-author">
-Anxo Sánchez
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1700997248753" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/2023-10-30-week-01/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-10-30-week-01/index.html">
-<h3 class="no-anchor listing-title">
-Cálculos de separacións flash
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-10-30-week-01/index.html">
-<div class="listing-author">
-Anxo Sánchez
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -690,22 +662,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
-      <a href="./project-tips-resources.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tips + recusos</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2023, Anxo Sánchez</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/anxosanchez/SOPQ-2324/edit/main/posts.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.dev/anxosanchez/SOPQ-2324/blob/main/Untitled-1.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</div>
   </div>
 </footer>
