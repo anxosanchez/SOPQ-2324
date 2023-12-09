@@ -1,0 +1,11 @@
+{
+  "hash": "a116b6358d7669a9a4995c909f849e6e",
+  "result": {
+    "markdown": "---\ntitle: Obtención do diagrama P-x para unha temperatura de 115 ºC para unha mestura de hepano e octano.\nengine: jupyter\nexecute:\n  eval: true\n  echo: true\n  include: false\n  output: asis\n---\n\n\n\n# Cálculo da presión de vapor dos compoñentes puros (ecuación de Antoine)\n\n\n\n## Aparatdo 2 . Diagrama T-xy a partires da presión total dada\n\n\n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
