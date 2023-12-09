@@ -16,7 +16,9 @@ Ten en conta que este horario actualizarase a medida que avanza o semestre, con 
 |:------:|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|  
 |  [1](/weeks/week-1.html)  | Mér, 6 Set   | Tema 0 - Benvida + Presentación |  |  |  | | | | |    
 |  | Mér, 10 Out  | Tema 1 - Introducón | | [🖥️](/slides/lec-1.html "Slides"){aria-label="Lab 1 slides"} | | [💻](/labs/lab-1.html "Lab instructions"){aria-label="Lab 1 instructions"} | | | |  
-|  [2](/weeks/week-2.html) | Xov, 11 Set | Práctica Simuladores 1 - Introducción | |  [🖥️](/slides/lec-2.html "Lecture slides"){aria-label="Lecture 2 slides"}  | | | | | |  
+|  [2](/weeks/week-2.html) | Xov, 14 Set | Introducción ó Python e outras ferramnentas | ![🖥️Curso de Python](|  [2](/weeks/week-2.html) | Xov, 14 Set | Práctica Simuladores 1 - Introducción | |  [🖥️Presentación](/slides/lec-2.html "Lecture slides"){aria-label="Lecture 2 slides"}  | | | | | |  
+) | | | | | | |  
+| | Xov, 14 Set | Práctica Simuladores 1 - Introducción | |  [🖥️](/slides/lec-2.html "Lecture slides"){aria-label="Lecture 2 slides"}  | | | | | |  
 |  [3](/weeks/week-3.html)  |          | | | | | | | | |  
 |  [4](/weeks/week-3.html)  |          | | | | | | | | |  
 |  [5](/weeks/week-3.html)  |          | | | | | | | | |  
