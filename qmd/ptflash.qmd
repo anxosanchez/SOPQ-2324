@@ -1,6 +1,10 @@
 ---
 title: Cálculos Flash
 jupyter: python3
+categories:
+  - Equilibrio VLE
+  - Separacións FLASH
+  - Puntos orballo e burbulla
 ---
 
 
@@ -240,10 +244,7 @@ Tsol = fsolve(Tbub, T_guess)
 print (f'A temperatura de burbulla, a presión de {P:.1f} bar é de {Tsol[0]:.2f} K')
 ```
 
-
-
-
-
+No caso de querer usar un estilo mais condensado, podemos facer como antes e tirar de funcións lambda e diccionario de datos. O código sería o seguinte:
 
 ```{python}
 from scipy.optimize import fsolve
@@ -266,3 +267,135 @@ print(f'A temperatura de burbulla da mestura é {T:.2f} ºK')
 for s in compostos:
     print(f'A fracción molar no vapor do compoñente [s] da mestura é {y[s]:.4f}')
 ```
+
+## Cálculos do punto de orballo
+
+Consideremos a continuación os cálculos do punto de orballo. Neste caso, a composición en fase de vapor $y_i$ dáse (corresponde ao caso en que **L** é moi pequeno (L $\geqq$ 0) e $y_i = z_i$.
+
+O punto de orballo dun vapor (gas) é o punto onde o vapor comeza a condensar, é dicir, cando se forma a primeira pinga de líquido. Se mentén a temperatura,
+entón debemos aumentar a presión ata que se forme o primeiro líquido. Se a o que se mantén é a presión, débese baixar a temperatura ata que se forme o líquido. En ambolosdous casos, isto corresponde a axustar $T$ ou $p$ ata que se cumpra qie:
+  
+$$
+\sum_i x_i = 1
+$$
+  
+ou
+  
+$$
+\sum_i \frac {y_i}{K_i} = 1
+$$
+
+onde $y_i$ ven dado. Para unha mestura ideal onde se cumpre a $lei de Raoult$ dá:
+  
+$$
+\sum_i \frac { y_i } { P_i^sat (T)} = \frac { 1 } { p } 
+$$
+
+### Exemplo 3. Punto de orballo a determinada temperatura T. 
+Unha mestura de vapor contén 50% pentano (1), 30% de hexano (2) e 20% de ciclohexano (3) (todo en mol-%), é dicir, $y_1 = 0.5$, $y_2 = 0.3$ 3 $y_3 = 0.2$. A $T$ = 400 K, e a presión aumentase gradualmente. Cal é a presión do punto de orballo e a composición do primeiro líquido que se forma?. Supón mestura líquida ideal e gas ideal (**lei de Raoult**).
+
+### Solución.
+
+A tarefa é atopar o valor de $p$ que satisfaga a ecuación anterior. Como se dá $T$ constante, isto é trivial. Simplemente podemos calcular a inversa de $p$ a partires da ecuación:
+
+```{python}
+T = 400 # K
+y_pentano     = 0.5
+y_hexano      = 0.3
+y_ciclohexano = 0.2
+
+p_sat_pentano     = 10 ** (A_pentano - B_pentano / ( T + C_pentano)) 
+p_sat_hexano      = 10 ** (A_hexano - B_hexano / ( T + C_hexano)) 
+p_sat_ciclohexano = 10 ** (A_ciclohexano - B_ciclohexano / ( T + C_ciclohexano))
+
+p = 1 / ( y_pentano / p_sat_pentano + y_hexano /p_sat_hexano + y_ciclohexano / p_sat_ciclohexano )
+
+x_pentano     = y_pentano     * p / p_sat_pentano
+x_hexano      = y_hexano      * p / p_sat_hexano
+x_ciclohexano = y_ciclohexano * p / p_sat_ciclohexano
+
+print(f'Á temperatura de 400 K, a presión de orballo da mestura é de {p:.2f} bar.')
+print(f' A fracción molar de pentano     no líquido é {x_pentano:.4f}')
+print(f' A fracción molar de hexano      no líquido é {x_hexano:.4f}')
+print(f' A fracción molar de ciclohexano no líquido é {x_ciclohexano:.4f}')
+```
+
+Facéndoo coas funcións lambda e o diccionario de datos:
+
+```{python}
+y = z
+
+T = 400 # K
+Porb = 1 / (sum([y[s]/Psat[s](T) for s in compostos]))
+
+for s in compostos:
+    print(f'Presión de vapor do {s} = {x[s]*Psat[s](T):.2f} bar')
+
+print('Presión de orballo a {:2d} K = {:.4f} bar'.format(T,Porb))    
+
+```
+
+E as fraccións molares no líquido:
+
+```{python}
+for s in compostos:
+    print(f'Fracción molar no vapor de {s} = {y[s]*p/Psat[s](T):.4f}')
+```
+
+## Exemplo 4. Punto de orballo á presión dada p.
+
+Considere a mesma mestura de vapor con 50% pentano (1), 30% hexano (2) e 20% ciclohexano (3). En $p$ = 5 bar, a temperatura báixase gradualmente. Cal é a temperatura do punto de orballo e a composición do primeiro líquido que condensa?.
+
+### Solución.
+
+Neste caso, dannos $p$ e $y_i$ e coñecemos unha ecuación implícita para
+$T$ que debe resolverse numericamente (por exemplo, usando `fsolve`). Imos aló:
+
+```{python}
+
+y_pentano     = 0.5
+y_hexano      = 0.3
+y_ciclohexano = 0.2
+
+def Torb(T):
+    return 1/p-y_pentano/(10**(A_pentano-B_pentano/(T+C_pentano)))-y_hexano/(10**(A_hexano-B_hexano/(T+C_hexano)))-y_ciclohexano/(10**(A_ciclohexano-B_ciclohexano/(T+C_ciclohexano)))
+
+p = 5
+
+from scipy.optimize import fsolve
+
+T_guess = 400 # K
+
+Tsol = fsolve(Torb, T_guess)
+
+print (f'A temperatura de burbulla, a presión de {P:.1f} bar é de {Tsol[0]:.2f} K')
+
+```
+
+Para calcular as composición do líquido recurrimos a:
+  
+$$
+x_i = \frac { y_i p } { P_i^{sat} }
+$$
+  
+Logo:
+
+```{python}
+
+T = Tsol[0]
+
+p_sat_pentano     = 10 ** (A_pentano - B_pentano / ( T + C_pentano)) 
+p_sat_hexano      = 10 ** (A_hexano - B_hexano / ( T + C_hexano)) 
+p_sat_ciclohexano = 10 ** (A_ciclohexano - B_ciclohexano / ( T + C_ciclohexano))
+ 
+x_pentano = y_pentano * p / p_sat_pentano
+x_hexano = y_hexano * p / p_sat_hexano
+x_ciclohexano = y_ciclohexano * p / p_sat_ciclohexano
+
+print(f' A fracción molar de pentano     no líquido é {y_pentano * p / p_sat_pentano:.4f}')
+print(f' A fracción molar de hexano      no líquido é {x_hexano:.4f}')
+print(f' A fracción molar de ciclohexano no líquido é {x_ciclohexano:.4f}')
+
+```
+
+

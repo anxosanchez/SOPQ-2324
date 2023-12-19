@@ -268,7 +268,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Cálculos Flash</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Equilibrio VLE</div>
+    <div class="quarto-category">Separacións FLASH</div>
+    <div class="quarto-category">Puntos orballo e burbulla</div>
+  </div>
+  </div>
 
 
 
@@ -590,6 +595,7 @@ Fracción molar no vapor de ciclohexano = 0.0934</code></pre>
 <pre><code>A temperatura de burbulla, a presión de 5.0 bar é de 382.64 K</code></pre>
 </div>
 </div>
+<p>No caso de querer usar un estilo mais condensado, podemos facer como antes e tirar de funcións lambda e diccionario de datos. O código sería o seguinte:</p>
 <div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> fsolve</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -615,6 +621,139 @@ Fracción molar no vapor de ciclohexano = 0.0934</code></pre>
 A fracción molar no vapor do compoñente [s] da mestura é 0.7240
 A fracción molar no vapor do compoñente [s] da mestura é 0.1870
 A fracción molar no vapor do compoñente [s] da mestura é 0.0889</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="cálculos-do-punto-de-orballo" class="level2">
+<h2 class="anchored" data-anchor-id="cálculos-do-punto-de-orballo">Cálculos do punto de orballo</h2>
+<p>Consideremos a continuación os cálculos do punto de orballo. Neste caso, a composición en fase de vapor <span class="math inline">\(y_i\)</span> dáse (corresponde ao caso en que <strong>L</strong> é moi pequeno (L <span class="math inline">\(\geqq\)</span> 0) e <span class="math inline">\(y_i = z_i\)</span>.</p>
+<p>O punto de orballo dun vapor (gas) é o punto onde o vapor comeza a condensar, é dicir, cando se forma a primeira pinga de líquido. Se mentén a temperatura, entón debemos aumentar a presión ata que se forme o primeiro líquido. Se a o que se mantén é a presión, débese baixar a temperatura ata que se forme o líquido. En ambolosdous casos, isto corresponde a axustar <span class="math inline">\(T\)</span> ou <span class="math inline">\(p\)</span> ata que se cumpra qie:</p>
+<p><span class="math display">\[
+\sum_i x_i = 1
+\]</span></p>
+<p>ou</p>
+<p><span class="math display">\[
+\sum_i \frac {y_i}{K_i} = 1
+\]</span></p>
+<p>onde <span class="math inline">\(y_i\)</span> ven dado. Para unha mestura ideal onde se cumpre a <span class="math inline">\(lei de Raoult\)</span> dá:</p>
+<p><span class="math display">\[
+\sum_i \frac { y_i } { P_i^sat (T)} = \frac { 1 } { p }
+\]</span></p>
+<section id="exemplo-3.-punto-de-orballo-a-determinada-temperatura-t." class="level3">
+<h3 class="anchored" data-anchor-id="exemplo-3.-punto-de-orballo-a-determinada-temperatura-t.">Exemplo 3. Punto de orballo a determinada temperatura T.</h3>
+<p>Unha mestura de vapor contén 50% pentano (1), 30% de hexano (2) e 20% de ciclohexano (3) (todo en mol-%), é dicir, <span class="math inline">\(y_1 = 0.5\)</span>, <span class="math inline">\(y_2 = 0.3\)</span> 3 <span class="math inline">\(y_3 = 0.2\)</span>. A <span class="math inline">\(T\)</span> = 400 K, e a presión aumentase gradualmente. Cal é a presión do punto de orballo e a composición do primeiro líquido que se forma?. Supón mestura líquida ideal e gas ideal (<strong>lei de Raoult</strong>).</p>
+</section>
+<section id="solución.-1" class="level3">
+<h3 class="anchored" data-anchor-id="solución.-1">Solución.</h3>
+<p>A tarefa é atopar o valor de <span class="math inline">\(p\)</span> que satisfaga a ecuación anterior. Como se dá <span class="math inline">\(T\)</span> constante, isto é trivial. Simplemente podemos calcular a inversa de <span class="math inline">\(p\)</span> a partires da ecuación:</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">400</span> <span class="co"># K</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>y_pentano     <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>y_hexano      <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>y_ciclohexano <span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>p_sat_pentano     <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> (A_pentano <span class="op">-</span> B_pentano <span class="op">/</span> ( T <span class="op">+</span> C_pentano)) </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>p_sat_hexano      <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> (A_hexano <span class="op">-</span> B_hexano <span class="op">/</span> ( T <span class="op">+</span> C_hexano)) </span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>p_sat_ciclohexano <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> (A_ciclohexano <span class="op">-</span> B_ciclohexano <span class="op">/</span> ( T <span class="op">+</span> C_ciclohexano))</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> ( y_pentano <span class="op">/</span> p_sat_pentano <span class="op">+</span> y_hexano <span class="op">/</span>p_sat_hexano <span class="op">+</span> y_ciclohexano <span class="op">/</span> p_sat_ciclohexano )</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>x_pentano     <span class="op">=</span> y_pentano     <span class="op">*</span> p <span class="op">/</span> p_sat_pentano</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>x_hexano      <span class="op">=</span> y_hexano      <span class="op">*</span> p <span class="op">/</span> p_sat_hexano</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>x_ciclohexano <span class="op">=</span> y_ciclohexano <span class="op">*</span> p <span class="op">/</span> p_sat_ciclohexano</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Á temperatura de 400 K, a presión de orballo da mestura é de </span><span class="sc">{</span>p<span class="sc">:.2f}</span><span class="ss"> bar.'</span>)</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f' A fracción molar de pentano     no líquido é </span><span class="sc">{</span>x_pentano<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f' A fracción molar de hexano      no líquido é </span><span class="sc">{</span>x_hexano<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f' A fracción molar de ciclohexano no líquido é </span><span class="sc">{</span>x_ciclohexano<span class="sc">:.4f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Á temperatura de 400 K, a presión de orballo da mestura é de 5.78 bar.
+ A fracción molar de pentano     no líquido é 0.2822
+ A fracción molar de hexano      no líquido é 0.3734
+ A fracción molar de ciclohexano no líquido é 0.3445</code></pre>
+</div>
+</div>
+<p>Facéndoo coas funcións lambda e o diccionario de datos:</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> z</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">400</span> <span class="co"># K</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>Porb <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="bu">sum</span>([y[s]<span class="op">/</span>Psat[s](T) <span class="cf">for</span> s <span class="kw">in</span> compostos]))</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> s <span class="kw">in</span> compostos:</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Presión de vapor do </span><span class="sc">{</span>s<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>x[s]<span class="op">*</span>Psat[s](T)<span class="sc">:.2f}</span><span class="ss"> bar'</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Presión de orballo a </span><span class="sc">{:2d}</span><span class="st"> K = </span><span class="sc">{:.4f}</span><span class="st"> bar'</span>.<span class="bu">format</span>(T,Porb))    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Presión de vapor do pentano = 5.12 bar
+Presión de vapor do hexano = 1.39 bar
+Presión de vapor do ciclohexano = 0.67 bar
+Presión de orballo a 400 K = 5.7830 bar</code></pre>
+</div>
+</div>
+<p>E as fraccións molares no líquido:</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> s <span class="kw">in</span> compostos:</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Fracción molar no vapor de </span><span class="sc">{</span>s<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>y[s]<span class="op">*</span>p<span class="op">/</span>Psat[s](T)<span class="sc">:.4f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fracción molar no vapor de pentano = 0.2822
+Fracción molar no vapor de hexano = 0.3734
+Fracción molar no vapor de ciclohexano = 0.3445</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="exemplo-4.-punto-de-orballo-á-presión-dada-p." class="level2">
+<h2 class="anchored" data-anchor-id="exemplo-4.-punto-de-orballo-á-presión-dada-p.">Exemplo 4. Punto de orballo á presión dada p.</h2>
+<p>Considere a mesma mestura de vapor con 50% pentano (1), 30% hexano (2) e 20% ciclohexano (3). En <span class="math inline">\(p\)</span> = 5 bar, a temperatura báixase gradualmente. Cal é a temperatura do punto de orballo e a composición do primeiro líquido que condensa?.</p>
+<section id="solución.-2" class="level3">
+<h3 class="anchored" data-anchor-id="solución.-2">Solución.</h3>
+<p>Neste caso, dannos <span class="math inline">\(p\)</span> e <span class="math inline">\(y_i\)</span> e coñecemos unha ecuación implícita para <span class="math inline">\(T\)</span> que debe resolverse numericamente (por exemplo, usando <code>fsolve</code>). Imos aló:</p>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>y_pentano     <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>y_hexano      <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>y_ciclohexano <span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Torb(T):</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span><span class="op">/</span>p<span class="op">-</span>y_pentano<span class="op">/</span>(<span class="dv">10</span><span class="op">**</span>(A_pentano<span class="op">-</span>B_pentano<span class="op">/</span>(T<span class="op">+</span>C_pentano)))<span class="op">-</span>y_hexano<span class="op">/</span>(<span class="dv">10</span><span class="op">**</span>(A_hexano<span class="op">-</span>B_hexano<span class="op">/</span>(T<span class="op">+</span>C_hexano)))<span class="op">-</span>y_ciclohexano<span class="op">/</span>(<span class="dv">10</span><span class="op">**</span>(A_ciclohexano<span class="op">-</span>B_ciclohexano<span class="op">/</span>(T<span class="op">+</span>C_ciclohexano)))</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> fsolve</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>T_guess <span class="op">=</span> <span class="dv">400</span> <span class="co"># K</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>Tsol <span class="op">=</span> fsolve(Torb, T_guess)</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="ss">f'A temperatura de burbulla, a presión de </span><span class="sc">{</span>P<span class="sc">:.1f}</span><span class="ss"> bar é de </span><span class="sc">{</span>Tsol[<span class="dv">0</span>]<span class="sc">:.2f}</span><span class="ss"> K'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A temperatura de burbulla, a presión de 5.0 bar é de 393.30 K</code></pre>
+</div>
+</div>
+<p>Para calcular as composición do líquido recurrimos a:</p>
+<p><span class="math display">\[
+x_i = \frac { y_i p } { P_i^{sat} }
+\]</span></p>
+<p>Logo:</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> Tsol[<span class="dv">0</span>]</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>p_sat_pentano     <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> (A_pentano <span class="op">-</span> B_pentano <span class="op">/</span> ( T <span class="op">+</span> C_pentano)) </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>p_sat_hexano      <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> (A_hexano <span class="op">-</span> B_hexano <span class="op">/</span> ( T <span class="op">+</span> C_hexano)) </span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>p_sat_ciclohexano <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> (A_ciclohexano <span class="op">-</span> B_ciclohexano <span class="op">/</span> ( T <span class="op">+</span> C_ciclohexano))</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>x_pentano <span class="op">=</span> y_pentano <span class="op">*</span> p <span class="op">/</span> p_sat_pentano</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>x_hexano <span class="op">=</span> y_hexano <span class="op">*</span> p <span class="op">/</span> p_sat_hexano</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>x_ciclohexano <span class="op">=</span> y_ciclohexano <span class="op">*</span> p <span class="op">/</span> p_sat_ciclohexano</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f' A fracción molar de pentano     no líquido é </span><span class="sc">{</span>y_pentano <span class="op">*</span> p <span class="op">/</span> p_sat_pentano<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f' A fracción molar de hexano      no líquido é </span><span class="sc">{</span>x_hexano<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f' A fracción molar de ciclohexano no líquido é </span><span class="sc">{</span>x_ciclohexano<span class="sc">:.4f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> A fracción molar de pentano     no líquido é 0.2778
+ A fracción molar de hexano      no líquido é 0.3748
+ A fracción molar de ciclohexano no líquido é 0.3474</code></pre>
 </div>
 </div>
 
