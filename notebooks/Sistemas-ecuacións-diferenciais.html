@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SOPQ-2324 - SOPQ-2324: Simulación e Optimización de Procesos Químicos</title>
+<title>SOPQ-2324 - Sistemas de ecuacións diferenciais de primeira orde</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./index.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,10 +104,39 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/tex-gyre-adventor" type="text/css">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -83,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Sistemas de ecuacións diferenciais de primeira orde</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -93,12 +155,12 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./imaxes/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../imaxes/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/anxosanchez/SOPQ-2324" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -115,52 +177,52 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Información xeral</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link active">
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Información xeral</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programación</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guía Docente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-team.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Profesorado</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ligazońs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Soporte</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-faq.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
@@ -177,13 +239,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-access.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Aceso</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problemas c servidor</span></a>
   </div>
 </li>
@@ -200,13 +262,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-description.html" class="sidebar-item-text sidebar-link">
+  <a href="../project-description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrucións</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-tips-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../project-tips-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tips + recusos</span></a>
   </div>
 </li>
@@ -223,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts.html" class="sidebar-item-text sidebar-link">
+  <a href="../posts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Artigos</span></a>
   </div>
 </li>
@@ -236,16 +298,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SOPQ-2324: Simulación e Optimización de Procesos Químicos</h1>
+<h1 class="title">Sistemas de ecuacións diferenciais de primeira orde</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta">
 
     
   
@@ -257,16 +319,140 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>DATOS IDENTIFICATIVOS 2023_24 Materia Simulación e optimización de procesos químicos Código V12G350V01702 Titulación<br>
-Grao en Enxeñaría en Química Industrial Descritores Cr.totais Sinale Curso Cuadrimestre 6 OB 4 1c Lingua de impartición<br>
-Galego Inglés Prerrequisitos<br>
-Departamento<br>
-Coordinador/a<br>
-Sánchez Bermúdez, Ángel Manuel Correo-e asanchez@uvigo.gal Profesorado Sánchez Bermúdez, Ángel Manuel Web http://http://eqea.uvigo.es Descrición xeral Asignatura obrigatoria que se imparten no 7º cuadrimestre do Grao en Química Industrial, unha vez que o alumno estudou as materias nas que deben demostrar os coñecementos necesarios sobre: - Métodos numéricos empregados na enxeñaría química. - Deseño de reactores químicos. - Deseño de equipos para operacións de separación. - Deseño de equipos de transferencia de calor empregados en procesos químicos. - Control e seguridade dos procesos químicos.</p>
-<p>Esta materia impártese no último ano. O alumno accede despois de adquirir e desenvolver habilidades para xestionar facilmente as ferramentas informáticas da informática dixital, nas que o uso seguirá funcionando e afondar.</p>
-<p><img src="./imaxes/50228974867_a810331216_o.png" class="img-fluid" alt="" width="800"></p>
+<section id="sistemas-de-ecuacións-diferenciais-de-primeira-orde" class="level2">
+<h2 class="anchored" data-anchor-id="sistemas-de-ecuacións-diferenciais-de-primeira-orde">Sistemas de ecuacións diferenciais de primeira orde</h2>
+<p>Considera un problema de mestura nun tanque.</p>
+<div class="img-fluid quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1IwCctMgeOKM8ziJAoQU1ZdTY0iIJRuRr.png" class="img-fluid figure-img"></p>
+<figcaption>tanques_mestura</figcaption>
+</figure>
+</div>
+<p>Temos dous tanques: - O depósito <strong>A</strong> contén 30 litros con 550 gramos de sal disolta - O depósito <strong>B</strong> contén 20 litros con 260 gramos de sal disolta</p>
+<p>Ademais:</p>
+<ul>
+<li>Un fluxo entra no tanque A cunha concentración de 10 g/L e un caudal de 1,5 L/min.</li>
+<li>Unha corrente entra no tanque B cunha concentración de 30 g/L e un caudal de 1L/min</li>
+<li>Hai un caudal do tanque <strong>A</strong> ao <strong>B</strong> de 3 L/min</li>
+<li>Hai un caudal do tanque <strong>B</strong> ao <strong>A</strong> de 1,5 L/min</li>
+<li>A corrente de saída está no tanque <strong>B</strong> cun caudal de 2,5 L/min</li>
+</ul>
+<p>A súa tarefa é representar gráficamente a concentración de sal nos tanques A e B en función do tempo.</p>
+<p>Comeza coas seguintes definicións:</p>
+<div id="cell-1" class="cell" data-executioninfo="{&quot;elapsed&quot;:241,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702455130930,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="640503b1-b339-415d-a6e4-5b466ac2d595" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>V_A <span class="op">=</span> <span class="dv">30</span> <span class="co"># L</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>V_B <span class="op">=</span> <span class="dv">20</span> <span class="co"># L</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>C_A0 <span class="op">=</span> <span class="dv">550</span> <span class="op">/</span> V_A <span class="co"># g/L</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>C_B0 <span class="op">=</span> <span class="dv">260</span> <span class="op">/</span> V_B <span class="co"># g/L</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'C_A0 </span><span class="sc">{</span>C_A0<span class="sc">:.2f}</span><span class="ss"> g/L'</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'C_B0 </span><span class="sc">{</span>C_B0<span class="sc">:.2f}</span><span class="ss"> g/L'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>C_A0 18.33 g/L
+C_B0 13.00 g/L</code></pre>
+</div>
+</div>
+<p>Agora definamos os caudais dos tanques e vexamos o balance xeral:</p>
+<div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:244,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702459637003,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="aa6f8c23-4963-44c5-8f3b-178c914cce5c" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>f_A <span class="op">=</span> <span class="fl">1.5</span>  <span class="co"># L/min</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>C_A <span class="op">=</span> <span class="dv">10</span>   <span class="co"># g/L</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>f_B <span class="op">=</span> <span class="dv">1</span>      <span class="co"># L/min</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>C_B <span class="op">=</span> <span class="dv">30</span>     <span class="co"># g/L</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>f_AB <span class="op">=</span> <span class="dv">3</span>     <span class="co"># L/min</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>f_BA <span class="op">=</span> <span class="fl">1.5</span>   <span class="co"># L/min</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>f_Bsae <span class="op">=</span> <span class="fl">2.5</span> <span class="co"># L/min</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>bal_A <span class="op">=</span> f_A <span class="op">+</span> f_BA <span class="op">-</span> f_AB</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>bal_B <span class="op">=</span> f_B <span class="op">+</span> f_AB <span class="op">-</span> f_BA <span class="op">-</span> f_Bsae</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Balance de materia tanque A: </span><span class="sc">{</span>bal_A<span class="sc">:.2f}</span><span class="ss"> L/min'</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Balance de materia tanque B: </span><span class="sc">{</span>bal_B<span class="sc">:.2f}</span><span class="ss"> L/min'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Balance de materia tanque A: 0.00 L/min
+Balance de materia tanque B: 0.00 L/min</code></pre>
+</div>
+</div>
+<p>Logo, non temos que preocuparnos polo cambio de volume dentro de los tanques.</p>
+<p>As ecuaciones que establecen o cambio da concentración en cada tanque, <span class="math inline">\(S_A(t)\)</span> y <span class="math inline">\(S_B(t)\)</span> representa la concentración en g/L, ó longo do tempo:</p>
+<p><span class="math inline">\(\frac{\delta S_A}{\delta t} = \frac{1}{V_A}(f_A C_A - f_{AB} S_A(t) + f_{BA} S_B(t))\)</span></p>
+<p>e:</p>
+<p><span class="math inline">\(\frac{dS_B}{dt} = \frac{1}{V_B}(f_B C_B + f_{AB} S_A(t) - f_{BA} S_B(t) - f_{Bout} S_B(t))\)</span></p>
+<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:288,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460098121,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="7037124a-8d60-44f2-ba01-49e686ae527c" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dSdt(t,S):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    S_A,S_B <span class="op">=</span> S</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    dSAdt <span class="op">=</span> ( f_A <span class="op">*</span> C_A <span class="op">-</span> f_AB <span class="op">*</span> S[<span class="dv">0</span>] <span class="op">+</span> f_BA <span class="op">*</span> S[<span class="dv">1</span>] ) <span class="op">/</span> V_A</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    dSBdt <span class="op">=</span> (f_B <span class="op">*</span> C_B <span class="op">+</span> f_AB <span class="op">*</span> S[<span class="dv">0</span>] <span class="op">-</span> f_BA <span class="op">*</span> S[<span class="dv">1</span>] <span class="op">-</span>f_Bsae <span class="op">*</span> S[<span class="dv">1</span>] ) <span class="op">/</span> V_B</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([dSAdt,dSBdt])</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>dSdt(<span class="dv">0</span>,[<span class="dv">18</span>,<span class="dv">15</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>array([-0.55,  1.2 ])</code></pre>
+</div>
+</div>
+<div id="cell-6" class="cell" data-executioninfo="{&quot;elapsed&quot;:324,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460326077,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="7c468d2a-8880-4808-f077-2d98b7dc673b" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>S0 <span class="op">=</span>(C_A0,C_B0)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>t_span <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">200</span>) <span class="co"># min</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>t_eval <span class="op">=</span> np.linspace(t_span[<span class="dv">0</span>],t_span[<span class="dv">1</span>],<span class="dv">100</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> solve_ivp(dSdt,t_span,S0,t_eval <span class="op">=</span> t_eval)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>sol</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>  message: The solver successfully reached the end of the integration interval.
+  success: True
+   status: 0
+        t: [ 0.000e+00  2.020e+00 ...  1.980e+02  2.000e+02]
+        y: [[ 1.833e+01  1.722e+01 ...  1.401e+01  1.400e+01]
+            [ 1.300e+01  1.558e+01 ...  1.798e+01  1.799e+01]]
+      sol: None
+ t_events: None
+ y_events: None
+     nfev: 134
+     njev: 0
+      nlu: 0</code></pre>
+</div>
+</div>
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:680,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460496421,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="9c43053f-aa93-491b-ec33-379372def992" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y  [<span class="dv">0</span>], label<span class="op">=</span><span class="st">'tanque A'</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y  [<span class="dv">1</span>], label<span class="op">=</span><span class="st">'tanque B'</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'t (min)'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Concentración sal (g/L)'</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Sistemas-ecuacións-diferenciais_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-8" class="cell" data-executioninfo="{&quot;elapsed&quot;:633,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460584294,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="263dae26-77b0-405f-981f-21fd049c7cfc" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y[<span class="dv">0</span>] <span class="op">*</span> V_A, label<span class="op">=</span><span class="st">'tanque A'</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y[<span class="dv">1</span>] <span class="op">*</span> V_B, label<span class="op">=</span><span class="st">'tanque B'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'t (min)'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Cantidade de sal (g)'</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Sistemas-ecuacións-diferenciais_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -795,15 +981,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./index.html" class="pagination-link" aria-label="Programación">
-        <span class="nav-page-text">Programación</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -812,7 +989,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/anxosanchez/SOPQ-2324/edit/main/course-overview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.dev/anxosanchez/SOPQ-2324/blob/main/notebooks/Sistemas-ecuacións-diferenciais.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</p>
 </div>

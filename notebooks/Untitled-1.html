@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SOPQ-2324 - SOPQ-2324: Simulación e Optimización de Procesos Químicos</title>
+<title>SOPQ-2324</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./index.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -83,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -93,12 +126,12 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./imaxes/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../imaxes/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/anxosanchez/SOPQ-2324" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -115,52 +148,52 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Información xeral</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link active">
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Información xeral</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programación</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Guía Docente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-team.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Profesorado</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ligazońs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Soporte</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-faq.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
@@ -177,13 +210,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-access.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Aceso</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problemas c servidor</span></a>
   </div>
 </li>
@@ -200,13 +233,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-description.html" class="sidebar-item-text sidebar-link">
+  <a href="../project-description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrucións</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-tips-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../project-tips-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tips + recusos</span></a>
   </div>
 </li>
@@ -223,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./posts.html" class="sidebar-item-text sidebar-link">
+  <a href="../posts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Artigos</span></a>
   </div>
 </li>
@@ -236,37 +269,173 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li><li class="breadcrumb-item"><a href="./course-overview.html">Información xeral</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">SOPQ-2324: Simulación e Optimización de Procesos Químicos</h1>
+
+
+
+<div id="cell-0" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-1" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pentano     <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">3.97786</span>,<span class="st">"B"</span>:<span class="fl">1064.840</span>,<span class="st">"C"</span>:<span class="fl">41.136</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>hexano      <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">4.00139</span>,<span class="st">"B"</span>:<span class="fl">1170.875</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">48.833</span>}</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>ciclohexano <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">3.93002</span>,<span class="st">"B"</span>:<span class="fl">1182.774</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">52.532</span>}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>metanol     <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">5.20277</span>,<span class="st">"B"</span>:<span class="fl">1580.080</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">33.650</span>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>auga        <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">5.11564</span>,<span class="st">"B"</span>:<span class="fl">1687.537</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">42.98</span>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>amoniaco    <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">4.48540</span>,<span class="st">"B"</span>:<span class="fl">926.132</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">32.98</span>}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>propano     <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">3.92828</span>,<span class="st">"B"</span>:<span class="fl">803.997</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">26.11</span>}</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>octano      <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">4.05075</span>,<span class="st">"B"</span>:<span class="fl">1356.360</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">63.515</span>}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>dodecano    <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">4.12285</span>,<span class="st">"B"</span>:<span class="fl">1639.270</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">91.310</span>}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>benceno     <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">3.98523</span>,<span class="st">"B"</span>:<span class="fl">1184.24</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">55.578</span>}</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>tolueno     <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">4.05043</span>,<span class="st">"B"</span>:<span class="fl">1327.62</span>,<span class="st">"C"</span>:<span class="op">-</span><span class="fl">55.525</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-2" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>nome<span class="op">=</span><span class="st">'octano'</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>octano[<span class="st">'C'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>-63.515</code></pre>
+</div>
+</div>
+<p>o[’A]</p>
+<section id="parámetros-de-antoine-para-psatt-temperatura-de-fervura-normal-tb-e-calort-de-vaporización-hvaptb-para-varios-hicrocarburos-log10psatbara-btkc-tbk-vaphb-jmol." class="level2">
+<h2 class="anchored" data-anchor-id="parámetros-de-antoine-para-psatt-temperatura-de-fervura-normal-tb-e-calort-de-vaporización-hvaptb-para-varios-hicrocarburos-log10psatbara-btkc-tbk-vaphb-jmol.">Parámetros de <strong>Antoine</strong> para psat(T), temperatura de fervura normal (Tb) e calort de vaporización ∆H<sub>vap</sub>(Tb) para varios hicrocarburos (log10(psat[bar])=A-B/(T[K]+C) Tb[K] ∆vapHb [J/mol]).</h2>
+<table class="table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 35%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Nome</strong></th>
+<th style="text-align: left;"><strong>Fórmula</strong></th>
+<th style="text-align: right;"><strong>A</strong></th>
+<th style="text-align: right;"><strong>B</strong></th>
+<th style="text-align: right;"><strong>C</strong></th>
+<th style="text-align: right;"><strong>T<sub>b</sub> (K)</strong></th>
+<th style="text-align: right;"><strong>∆H<sub>vap</sub> (J/mol)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Propano</td>
+<td style="text-align: left;">C<sub>2</sub>H<sub>6</sub></td>
+<td style="text-align: right;">3.92828</td>
+<td style="text-align: right;">803.997</td>
+<td style="text-align: right;">-26.11</td>
+<td style="text-align: right;">231.02</td>
+<td style="text-align: right;">19040</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">n- Pentano</td>
+<td style="text-align: left;">C<sub>5</sub>H<sub>12</sub></td>
+<td style="text-align: right;">3.97786</td>
+<td style="text-align: right;">1064.840</td>
+<td style="text-align: right;">-41.136</td>
+<td style="text-align: right;">309.22</td>
+<td style="text-align: right;">25790</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">n-Hexano</td>
+<td style="text-align: left;">C<sub>6</sub>H<sub>14</sub></td>
+<td style="text-align: right;">4.00139</td>
+<td style="text-align: right;">1170.875</td>
+<td style="text-align: right;">-48.833</td>
+<td style="text-align: right;">341.88</td>
+<td style="text-align: right;">28850</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ciclohexano</td>
+<td style="text-align: left;">C<sub>6</sub>H<sub>12</sub></td>
+<td style="text-align: right;">3.93002</td>
+<td style="text-align: right;">1182.774</td>
+<td style="text-align: right;">-52.532</td>
+<td style="text-align: right;">353.93</td>
+<td style="text-align: right;">9970</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">n-Octano</td>
+<td style="text-align: left;">C<sub>8</sub>H<sub>18</sub></td>
+<td style="text-align: right;">4.05075</td>
+<td style="text-align: right;">1356.360</td>
+<td style="text-align: right;">-63.515</td>
+<td style="text-align: right;">398.82</td>
+<td style="text-align: right;">34410</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Metanol</td>
+<td style="text-align: left;">CH<sub>3</sub>OH</td>
+<td style="text-align: right;">5.20277</td>
+<td style="text-align: right;">1580.080</td>
+<td style="text-align: right;">-33.650</td>
+<td style="text-align: right;">337.69</td>
+<td style="text-align: right;">35210</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Auga</td>
+<td style="text-align: left;">H<sub>2</sub>O</td>
+<td style="text-align: right;">5.11564</td>
+<td style="text-align: right;">1687.537</td>
+<td style="text-align: right;">-42.980</td>
+<td style="text-align: right;">373.15</td>
+<td style="text-align: right;">40660</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Amoníaco</td>
+<td style="text-align: left;">NH<sub>3</sub></td>
+<td style="text-align: right;">4.48540</td>
+<td style="text-align: right;">926.132</td>
+<td style="text-align: right;">-32.980</td>
+<td style="text-align: right;">239.82</td>
+<td style="text-align: right;">23350</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dodecano</td>
+<td style="text-align: left;">C<sub>12</sub>H<sub>26</sub></td>
+<td style="text-align: right;">4.12285</td>
+<td style="text-align: right;">1639.270</td>
+<td style="text-align: right;">-91.310</td>
+<td style="text-align: right;">489.48</td>
+<td style="text-align: right;">43400</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Benceno</td>
+<td style="text-align: left;">C<sub>6</sub>H<sub>5</sub></td>
+<td style="text-align: right;">3.98523</td>
+<td style="text-align: right;">1184.24</td>
+<td style="text-align: right;">-55.578</td>
+<td style="text-align: right;">353.24</td>
+<td style="text-align: right;">30720</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tolueno</td>
+<td style="text-align: left;">C<sub>6</sub>H<sub>5</sub></td>
+<td style="text-align: right;">4.05043</td>
+<td style="text-align: right;">1327.62</td>
+<td style="text-align: right;">-55.525</td>
+<td style="text-align: right;">383.79</td>
+<td style="text-align: right;">33180</td>
+</tr>
+</tbody>
+</table>
+<div id="cell-7" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>compostos <span class="op">=</span> [<span class="st">'octano'</span>,<span class="st">'hexano'</span>,<span class="st">'benceno'</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i,composto <span class="kw">in</span> <span class="bu">enumerate</span>(compostos):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i,composto)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 octano
+1 hexano
+2 benceno</code></pre>
+</div>
 </div>
 
 
-
-<div class="quarto-title-meta column-page-right">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>DATOS IDENTIFICATIVOS 2023_24 Materia Simulación e optimización de procesos químicos Código V12G350V01702 Titulación<br>
-Grao en Enxeñaría en Química Industrial Descritores Cr.totais Sinale Curso Cuadrimestre 6 OB 4 1c Lingua de impartición<br>
-Galego Inglés Prerrequisitos<br>
-Departamento<br>
-Coordinador/a<br>
-Sánchez Bermúdez, Ángel Manuel Correo-e asanchez@uvigo.gal Profesorado Sánchez Bermúdez, Ángel Manuel Web http://http://eqea.uvigo.es Descrición xeral Asignatura obrigatoria que se imparten no 7º cuadrimestre do Grao en Química Industrial, unha vez que o alumno estudou as materias nas que deben demostrar os coñecementos necesarios sobre: - Métodos numéricos empregados na enxeñaría química. - Deseño de reactores químicos. - Deseño de equipos para operacións de separación. - Deseño de equipos de transferencia de calor empregados en procesos químicos. - Control e seguridade dos procesos químicos.</p>
-<p>Esta materia impártese no último ano. O alumno accede despois de adquirir e desenvolver habilidades para xestionar facilmente as ferramentas informáticas da informática dixital, nas que o uso seguirá funcionando e afondar.</p>
-<p><img src="./imaxes/50228974867_a810331216_o.png" class="img-fluid" alt="" width="800"></p>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -795,15 +964,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./index.html" class="pagination-link" aria-label="Programación">
-        <span class="nav-page-text">Programación</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -812,7 +972,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/anxosanchez/SOPQ-2324/edit/main/course-overview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.dev/anxosanchez/SOPQ-2324/blob/main/notebooks/Untitled-1.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</p>
 </div>
