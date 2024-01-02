@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.533">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -81,7 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -90,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -100,6 +107,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-sidebar docked fullcontent">
@@ -108,12 +142,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Sistemas de ecuacións diferenciais de primeira orde</li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Sistemas de ecuacións diferenciais de primeira orde</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -123,14 +157,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../imaxes/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/anxosanchez/SOPQ-2324" rel="" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
-    <a href="https://www.linkedin.com/in/anxo-s%C3%A1nchez-berm%C3%BAdez-79086321/" rel="" title="Linkedin" class="quarto-navigation-tool px-1" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+    <a href="https://github.com/anxosanchez/SOPQ-2324" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/anxo-s%C3%A1nchez-berm%C3%BAdez-79086321/" title="Linkedin" class="quarto-navigation-tool px-1" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
@@ -260,7 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -281,13 +315,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
 
+
+<section id="sistemas-de-ecuacións-diferenciais-de-primeira-orde" class="level2">
+<h2 class="anchored" data-anchor-id="sistemas-de-ecuacións-diferenciais-de-primeira-orde">Sistemas de ecuacións diferenciais de primeira orde</h2>
 <p>Considera un problema de mestura nun tanque.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="img-fluid quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://drive.google.com/uc?export=view&amp;id=1IwCctMgeOKM8ziJAoQU1ZdTY0iIJRuRr.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">tanques_mestura</figcaption>
+<figcaption>tanques_mestura</figcaption>
 </figure>
 </div>
 <p>Temos dous tanques: - O depósito <strong>A</strong> contén 30 litros con 550 gramos de sal disolta - O depósito <strong>B</strong> contén 20 litros con 260 gramos de sal disolta</p>
@@ -301,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>A súa tarefa é representar gráficamente a concentración de sal nos tanques A e B en función do tempo.</p>
 <p>Comeza coas seguintes definicións:</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:241,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702455130930,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="640503b1-b339-415d-a6e4-5b466ac2d595" data-execution_count="1">
+<div id="cell-1" class="cell" data-executioninfo="{&quot;elapsed&quot;:241,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702455130930,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="640503b1-b339-415d-a6e4-5b466ac2d595" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>V_A <span class="op">=</span> <span class="dv">30</span> <span class="co"># L</span></span>
@@ -317,7 +355,7 @@ C_B0 13.00 g/L</code></pre>
 </div>
 </div>
 <p>Agora definamos os caudais dos tanques e vexamos o balance xeral:</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:244,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702459637003,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="aa6f8c23-4963-44c5-8f3b-178c914cce5c" data-execution_count="2">
+<div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:244,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702459637003,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="aa6f8c23-4963-44c5-8f3b-178c914cce5c" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>f_A <span class="op">=</span> <span class="fl">1.5</span>  <span class="co"># L/min</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>C_A <span class="op">=</span> <span class="dv">10</span>   <span class="co"># g/L</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -344,7 +382,7 @@ Balance de materia tanque B: 0.00 L/min</code></pre>
 <p><span class="math inline">\(\frac{\delta S_A}{\delta t} = \frac{1}{V_A}(f_A C_A - f_{AB} S_A(t) + f_{BA} S_B(t))\)</span></p>
 <p>e:</p>
 <p><span class="math inline">\(\frac{dS_B}{dt} = \frac{1}{V_B}(f_B C_B + f_{AB} S_A(t) - f_{BA} S_B(t) - f_{Bout} S_B(t))\)</span></p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:288,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460098121,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="7037124a-8d60-44f2-ba01-49e686ae527c" data-execution_count="3">
+<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:288,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460098121,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="7037124a-8d60-44f2-ba01-49e686ae527c" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dSdt(t,S):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    S_A,S_B <span class="op">=</span> S</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    dSAdt <span class="op">=</span> ( f_A <span class="op">*</span> C_A <span class="op">-</span> f_AB <span class="op">*</span> S[<span class="dv">0</span>] <span class="op">+</span> f_BA <span class="op">*</span> S[<span class="dv">1</span>] ) <span class="op">/</span> V_A</span>
@@ -356,7 +394,7 @@ Balance de materia tanque B: 0.00 L/min</code></pre>
 <pre><code>array([-0.55,  1.2 ])</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:324,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460326077,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="7c468d2a-8880-4808-f077-2d98b7dc673b" data-execution_count="4">
+<div id="cell-6" class="cell" data-executioninfo="{&quot;elapsed&quot;:324,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460326077,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="7c468d2a-8880-4808-f077-2d98b7dc673b" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>S0 <span class="op">=</span>(C_A0,C_B0)</span>
@@ -382,7 +420,7 @@ Balance de materia tanque B: 0.00 L/min</code></pre>
       nlu: 0</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:680,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460496421,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="9c43053f-aa93-491b-ec33-379372def992" data-execution_count="5">
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:680,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460496421,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="9c43053f-aa93-491b-ec33-379372def992" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y  [<span class="dv">0</span>], label<span class="op">=</span><span class="st">'tanque A'</span>)</span>
@@ -390,28 +428,31 @@ Balance de materia tanque B: 0.00 L/min</code></pre>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'t (min)'</span>)</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Concentración sal (g/L)'</span>)</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>&lt;matplotlib.legend.Legend at 0x7fd16f61bd90&gt;</code></pre>
-</div>
 <div class="cell-output cell-output-display">
-<p><img src="Sistemas-ecuacións-diferenciais_files/figure-html/cell-6-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="Sistemas-ecuacións-diferenciais_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:633,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460584294,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="263dae26-77b0-405f-981f-21fd049c7cfc" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y[<span class="dv">0</span>] <span class="op">*</span> V_A, label<span class="op">=</span><span class="st">'tanque A'</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y[<span class="dv">1</span>] <span class="op">*</span> V_B, label<span class="op">=</span><span class="st">'tanque B'</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'t (min)'</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Cantidade de sal (g)'</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>&lt;matplotlib.legend.Legend at 0x7fd16df2bfd0&gt;</code></pre>
 </div>
+<div id="cell-8" class="cell" data-executioninfo="{&quot;elapsed&quot;:633,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1702460584294,&quot;user&quot;:{&quot;displayName&quot;:&quot;Anxo Sanchez&quot;,&quot;userId&quot;:&quot;02509210005225030042&quot;},&quot;user_tz&quot;:-60}" data-outputid="263dae26-77b0-405f-981f-21fd049c7cfc" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y[<span class="dv">0</span>] <span class="op">*</span> V_A, label<span class="op">=</span><span class="st">'tanque A'</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.plot(sol.t,sol.y[<span class="dv">1</span>] <span class="op">*</span> V_B, label<span class="op">=</span><span class="st">'tanque B'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'t (min)'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Cantidade de sal (g)'</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="Sistemas-ecuacións-diferenciais_files/figure-html/cell-7-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="Sistemas-ecuacións-diferenciais_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -455,6 +496,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -523,13 +591,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'alternate';
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -608,10 +678,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -621,8 +690,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -635,6 +713,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -678,6 +870,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -703,6 +896,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -765,13 +984,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2023, Anxo Sánchez</div>   
+    <div class="nav-footer-left">
+<p>© Copyright 2023, Anxo Sánchez</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.dev/anxosanchez/SOPQ-2324/blob/main/notebooks/Sistemas-ecuacións-diferenciais.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
-    <div class="nav-footer-right">Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</div>
+    <div class="toc-actions"><ul><li><a href="https://github.dev/anxosanchez/SOPQ-2324/blob/main/notebooks/Sistemas-ecuacións-diferenciais.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/anxosanchez/SOPQ-2324/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Este site está inspirado no site STA 210, deseñado por Mine Çetinkaya-Rundel</p>
+</div>
   </div>
 </footer>
+
 
 
 
