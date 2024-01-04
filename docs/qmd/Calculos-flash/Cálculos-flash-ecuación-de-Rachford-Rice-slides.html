@@ -415,12 +415,12 @@ x_i = \frac{p_i}{p_{total}}
 <section id="solución-con-python" class="level3">
 <h3 class="anchored" data-anchor-id="solución-con-python">Solución con python</h3>
 <p>Importamos librerías necesarias</p>
-<div class="cell" data-execution_count="1">
+<div id="0203782d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> fsolve</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="2">
+<div id="9436052c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Datos</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x_pentano     <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x_hexano      <span class="op">=</span> <span class="fl">0.3</span></span>
@@ -440,7 +440,7 @@ x_i = \frac{p_i}{p_{total}}
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>C_ciclohexano <span class="op">=</span> <span class="op">-</span><span class="fl">52.532</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Despois, calculamos as presións de vapor dos compoñentes puros:</p>
-<div class="cell" data-execution_count="3">
+<div id="00825df5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p_sat_pentano <span class="op">=</span>  <span class="dv">10</span> <span class="op">**</span> (A_pentano <span class="op">-</span> B_pentano <span class="op">/</span> ( C_pentano <span class="op">+</span> T ))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>p_sat_hexano <span class="op">=</span>  <span class="dv">10</span> <span class="op">**</span> (A_hexano <span class="op">-</span> B_hexano <span class="op">/</span> ( C_hexano <span class="op">+</span> T ))</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>p_sat_ciclohexano <span class="op">=</span>  <span class="dv">10</span> <span class="op">**</span> (A_ciclohexano <span class="op">-</span> B_ciclohexano <span class="op">/</span> ( C_ciclohexano <span class="op">+</span> T ))</span>
@@ -453,7 +453,7 @@ Presión de saturación do hexano puro      ( 400 ) K =  4.64675917786267 bar
 Presión de saturación do ciclohexano puro ( 400 ) K =  3.3576881112499817 bar</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="4">
+<div id="aef4f8d8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>p_pentano     <span class="op">=</span> x_pentano     <span class="op">*</span> p_sat_pentano</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>p_hexano      <span class="op">=</span> x_hexano      <span class="op">*</span> p_sat_hexano</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>p_ciclohexano <span class="op">=</span> x_ciclohexano <span class="op">*</span> p_sat_ciclohexano</span>
@@ -471,7 +471,7 @@ Presión parcial do ciclohexano        ( 400 ) K =  0.6715376222499964 bar</code
 p_{total} = \sum_i p_i
 \]</span></p>
 <p>por tanto aó queda sumar as presións parciais e imprimir o resultado:</p>
-<div class="cell" data-execution_count="5">
+<div id="cb40b483" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>p_burbulla    <span class="op">=</span> p_pentano <span class="op">+</span> p_hexano <span class="op">+</span> p_ciclohexano</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Presión de burbulla                  '</span>, <span class="st">'('</span>, T, <span class="st">') K = '</span>, p_burbulla, <span class="st">'bar'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -491,7 +491,7 @@ p_i = p_{total}*x_i
 <p><span class="math display">\[
 x_i = \frac{p_i}{p_{total}}
 \]</span></p>
-<div class="cell" data-execution_count="6">
+<div id="b5d63392" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x_pentano     <span class="op">=</span> p_pentano <span class="op">/</span> p_burbulla</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>x_hexano      <span class="op">=</span> p_hexano <span class="op">/</span> p_burbulla</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>x_ciclohexano <span class="op">=</span> p_ciclohexano <span class="op">/</span> p_burbulla</span>
